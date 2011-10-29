@@ -3,5 +3,6 @@ layout: post
 title: 你懂的
 summary: 哇哈哈
 ---
+h1. {{ page.title }}
 
 用这个测试中文
