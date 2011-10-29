@@ -7,7 +7,7 @@ javascript:
  
 
 <div id="search_results_area">
-  <h2>Posts <span id="result_count"></span></h2>
+  <h2>Posts<span id="result_count"></span></h2>
   <ul id="search_results" class="posts">
   </ul>
 </div>
@@ -18,7 +18,7 @@ javascript:
     {% for post in site.posts %}
       <li>
         <li><span>{{ post.date | date_to_string }}</span> &raquo;<a href="{{ post.url }}">{{ post.title }}</a>
-        <p>"            "{{ post.summary }}</p>
+        <p>{{ post.summary }}</p>
       </li>
     {% endfor %}
   </ul>
