@@ -8,7 +8,7 @@
 jQuery(document).ready(function (a) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
-        showMessage("秘密通道:<br /><a href=\"http://www.dao-gu.com/feed/\" title=\"订阅\">订阅</a>    <a href=\"http://www.dao-gu.com\" title=\"首页\">首页</a>    <a href=\"http://www.dao-gu.com/search\" title=\"搜索\">搜索</a>    <a href=\"http://www.dao-gu.com/admin/\" title=\"管理\">管理</a>    <a href=\"http://www.baidu.com/\" title=\"\">百度</a>",10000);
+        showMessage("传送门:<br /><a href=\"http://forum.ubuntu.org.cn\" title=\"乌班免\">乌班免</a>    <a href=\"http://maplebeats.github.com\" title=\"首页\">首页</a>    <a href=\"http://www.google.com.hk\" title=\"搜索\">搜索</a>",10000);
 }
 });
 $("#spig").bind("contextmenu", function(e) {
@@ -118,7 +118,7 @@ jQuery(document).ready(function (a) {
 jQuery(document).ready(function (a) {
 
     window.setInterval(function () {
-        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "陪我聊天吧！", "<a href=\"http://www.dao-gu.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"订阅捣鼓笔记\" alt=\"Feed\" src=\"http://static.dao-gu.com/usr/themes/y/images/rss.png\"></a>", "好无聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可爱吧！嘻嘻!~^_^!~~","谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
+        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "陪我聊天吧！", "<a href=\"http://maplebeats.github.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"订阅捣鼓笔记\" alt=\"Feed\" src=\"http://static.dao-gu.com/usr/themes/y/images/rss.png\"></a>", "好无聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可爱吧！嘻嘻!~^_^!~~","谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i], 10000);
     }, 35000);
@@ -127,7 +127,7 @@ jQuery(document).ready(function (a) {
 //无聊动动
 jQuery(document).ready(function (a) {
     window.setInterval(function () {
-        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "快快订阅我的博客吧！<a href=\"http://www.dao-gu.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"订阅捣鼓笔记\" alt=\"Feed\" src=\"http://static.dao-gu.com/usr/themes/y/images/rss.png\"></a>", "乾坤大挪移！", "我飘过来了！~", "我飘过去了", "德尔一个飘！~飘！~"];
+        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "快快订阅我的博客吧！<a href=\"http://maplebeats.github.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"订阅捣鼓笔记\" alt=\"Feed\" src=\"http://static.dao-gu.com/usr/themes/y/images/rss.png\"></a>", "乾坤大挪移！", "我飘过来了！~", "我飘过去了", "德尔一个飘！~飘！~"];
         var i = Math.floor(Math.random() * msgs.length);
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
