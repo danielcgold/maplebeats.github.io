@@ -65,6 +65,20 @@
          </div>
       </div>
       
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6/prototype.js"></script>
+      
+      <div id="content">
+        {{ content }}
+      </div>
+      
+      <div class="clear"></div>
+      
+    </div>
+
+    {% for js in page.javascript %}
+      <script type="text/javascript" src="{{ js }}"></script>
+    {% endfor %}
+
 <html>
 <head>
 <script type="text/javascript" src="http://static.dao-gu.com/usr/themes/y/js/jquery.min.js"></script>
@@ -120,6 +134,7 @@ background-image:url("/images/spig.png");
 <div >
 </body>
 </html>
+
     </script>
   </body>
 </html>
