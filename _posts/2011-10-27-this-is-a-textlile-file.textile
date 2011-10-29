@@ -1,0 +1,7 @@
+---
+layout: post
+title: 你懂的
+summary: 哇哈哈
+---
+
+用这个测试中文
