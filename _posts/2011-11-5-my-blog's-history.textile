@@ -1,0 +1,7 @@
+---
+layout: post
+title: 我的博客经历
+summary: 年轻气盛总是喜欢做些错事傻事
+---
+
+come back next day
