@@ -55,7 +55,7 @@ jQuery(document).ready(function (a) {
         }
     }
     else {
-        showMessage('欢迎' + vistor + '来到￥捣鼓笔记￥阅读《' + title + '》', 6000);
+        showMessage('欢迎' + vistor + '来到maple阅读《' + title + '》', 6000);
     }
     a(".spig").animate({
         top: a(".spig").offset().top + 300,
@@ -77,8 +77,8 @@ jQuery(document).ready(function (a) {
         showMessage('正在用吃奶的劲加载《<span style="color:red;">' + a(this).text() + '</span>》请稍候');
         a(this).text('看灰机，灰过来，灰过去，呀~灰走了...');
     });
-    a('.title a,.one li a').mouseover(function () {
-        showMessage('要看看《<span style="color:red;">' + a(this).text() + '</span>》这篇文章么？');
+    a('.post.url').mouseover(function () {
+        showMessage('要看看《<span style="color:red;">' + post.title + '</span>》这篇文章么？');
     });
     a('.recentcomments li').mouseover(function () {
         showMessage('伟大的 <span style="color:red;">' + a(this).children(".comment_author").text() + '</span>' + a(this).children(".comment_content").text());
@@ -118,7 +118,7 @@ jQuery(document).ready(function (a) {
 jQuery(document).ready(function (a) {
 
     window.setInterval(function () {
-        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "陪我聊天吧！", "<a href=\"http://maplebeats.github.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"订阅捣鼓笔记\" alt=\"Feed\" src=\"http://static.dao-gu.com/usr/themes/y/images/rss.png\"></a>", "好无聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可爱吧！嘻嘻!~^_^!~~","谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
+        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "陪我聊天吧！", "<a href=\"http://maplebeats.github.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"别点我\" alt=\"Feed\" src=\"/images/spig.png\"></a>", "好无聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可爱吧！嘻嘻!~^_^!~~","谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i], 10000);
     }, 35000);
@@ -228,7 +228,7 @@ jQuery(document).ready(function (a) {
                 var i = Math.floor(Math.random() * msgs.length);
                 //showMessage(msgs[i]);
             } else {
-                msgs = ["筋斗云！~我飞！", "我跑呀跑呀跑！~~", "别摸我，大男人，有什么好摸的！", "惹不起你，我还躲不起你么？", "不要摸我了，我会告诉老婆来打你的！", "干嘛动我呀！小心我咬你！"];
+                msgs = ["筋斗云！~我飞！", "我跑呀跑呀跑！~~", "别摸我，大男人，有什么好摸的！", "惹不起你，我还躲不起你么？", "不要摸我了，我会告诉老公来打你的！", "干嘛动我呀！小心我咬你！"];
                 var i = Math.floor(Math.random() * msgs.length);
                 //showMessage(msgs[i]);
             }
