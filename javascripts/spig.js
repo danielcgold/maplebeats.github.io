@@ -127,7 +127,7 @@ jQuery(document).ready(function (a) {
 //无聊动动
 jQuery(document).ready(function (a) {
     window.setInterval(function () {
-        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "快快订阅我的博客吧！<a href=\"http://maplebeats.github.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"订阅捣鼓笔记\" alt=\"Feed\" src=\"http://static.dao-gu.com/usr/themes/y/images/rss.png\"></a>", "乾坤大挪移！", "我飘过来了！~", "我飘过去了", "德尔一个飘！~飘！~"];
+        msgs = ["播报明日天气<iframe name=\"xidie\" src=\"http://t.xidie.com/skin/2010-0601.html\"frameborder=\“0\” scrolling=\"no\" height=\"15px\"  width=\"130px\" allowtransparency=\"true\" ></iframe>", "快快订阅我的博客吧！<a href=\"http://maplebeats.github.com/feed/\" target=\"_blank\" rel=\"external\" tip=\"Feed\"><img border=\"0\" title=\"订阅捣鼓笔记\" alt=\"Feed\" src=\"/images/spig.png\"></a>", "乾坤大挪移！", "我飘过来了！~", "我飘过去了", "德尔一个飘！~飘！~"];
         var i = Math.floor(Math.random() * msgs.length);
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
