@@ -77,7 +77,7 @@ jQuery(document).ready(function (a) {
         showMessage('正在用吃奶的劲加载《<span style="color:red;">' + a(this).text() + '</span>》请稍候');
         a(this).text('看灰机，灰过来，灰过去，呀~灰走了...');
     });
-    a('post.url').mouseover(function () {
+    a('test1').mouseover(function () {
         showMessage('要看看《<span style="color:red;">' + post.title + '</span>》这篇文章么？');
     });
     a('.recentcomments li').mouseover(function () {
