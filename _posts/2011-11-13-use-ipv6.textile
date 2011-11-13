@@ -1,0 +1,94 @@
+---
+layout: post
+title: 教程
+summary: 当被逼急了的时候，总得想办法去解决
+---
+
+
+{% highlight sh %}
+maplebeats@maplebeats:~$ sudo apt-get install miredo
+[sudo] password for maplebeats:
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+将会安装下列额外的软件包：
+  libjudydebian1
+下列【新】软件包将被安装：
+  libjudydebian1 miredo
+升级了 0 个软件包，新安装了 2 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+需要下载 289 kB 的软件包。
+解压缩后会消耗掉 709 kB 的额外空间。
+您希望继续执行吗？[Y/n]y
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ oneiric/universe libjudydebian1 i386 1.0.5-1 [75.6 kB]
+获取：2 http://cn.archive.ubuntu.com/ubuntu/ oneiric/universe miredo i386 1.2.3-1 [213 kB]
+下载 289 kB，耗时 0秒 (297 kB/s)
+选中了曾被取消选择的软件包 libjudydebian1。
+(正在读取数据库 ... 系统当前共安装有 205696 个文件和目录。)
+正在解压缩 libjudydebian1 (从 .../libjudydebian1_1.0.5-1_i386.deb) ...
+选中了曾被取消选择的软件包 miredo。
+正在解压缩 miredo (从 .../miredo_1.2.3-1_i386.deb) ...
+正在处理用于 ureadahead 的触发器...
+ureadahead will be reprofiled on next reboot
+正在处理用于 man-db 的触发器...
+正在设置 libjudydebian1 (1.0.5-1) ...
+正在设置 miredo (1.2.3-1) ...
+* Starting Teredo IPv6 tunneling daemon miredo                          [ OK ]
+正在处理用于 libc-bin 的触发器...
+ldconfig deferred processing now taking place
+maplebeats@maplebeats:~$ sudo /etc/init.d/miredo start
+* Starting Teredo IPv6 tunneling daemon miredo                          [ OK ]
+maplebeats@maplebeats:~$ ifconfig
+eth0      Link encap:以太网  硬件地址 00:24:21:e1:d7:8d 
+          inet6 地址: fe80::224:21ff:fee1:d78d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  跃点数:1
+          接收数据包:11684 错误:0 丢弃:0 过载:0 帧数:0
+          发送数据包:10514 错误:0 丢弃:0 过载:0 载波:0
+          碰撞:0 发送队列长度:1000
+          接收字节:11455589 (11.4 MB)  发送字节:1720228 (1.7 MB)
+          中断:43 基本地址:0x4000
+
+lo        Link encap:本地环回 
+          inet 地址:127.0.0.1  掩码:255.0.0.0
+          inet6 地址: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  跃点数:1
+          接收数据包:6 错误:0 丢弃:0 过载:0 帧数:0
+          发送数据包:6 错误:0 丢弃:0 过载:0 载波:0
+          碰撞:0 发送队列长度:0
+          接收字节:300 (300.0 B)  发送字节:300 (300.0 B)
+
+ppp0      Link encap:点对点协议 
+          inet 地址:xxx.xxx.xxx.xx  点对点:xxx.xxx.x.x  掩码:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  跃点数:1
+          接收数据包:11625 错误:0 丢弃:0 过载:0 帧数:0
+          发送数据包:10412 错误:0 丢弃:0 过载:0 载波:0
+          碰撞:0 发送队列长度:3
+          接收字节:11196224 (11.1 MB)  发送字节:1437596 (1.4 MB)
+
+teredo    Link encap:未指定  硬件地址 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00 
+          inet6 地址: fe80::ffff:ffff:ffff/64 Scope:Link
+          inet6 地址: 2001:0:53aa:64c:c9b:2128:846f:9daa/32 Scope:Global
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1280  跃点数:1
+          接收数据包:0 错误:0 丢弃:0 过载:0 帧数:0
+          发送数据包:3 错误:0 丢弃:0 过载:0 载波:0
+          碰撞:0 发送队列长度:500
+          接收字节:0 (0.0 B)  发送字节:144 (144.0 B)
+
+maplebeats@maplebeats:~$ echo "miredo" >> /etc/rc.local
+bash: /etc/rc.local: 权限不够
+maplebeats@maplebeats:~$ sudo echo "miredo" >> /etc/rc.local
+bash: /etc/rc.local: 权限不够
+maplebeats@maplebeats:~$ sudo vi /etc/rc.local
+maplebeats@maplebeats:~/Desktop$ ping www.google.com
+PING www.l.google.com (74.125.71.105) 56(84) bytes of data.
+64 bytes from hx-in-f105.1e100.net (74.125.71.105): icmp_req=1 ttl=51 time=43.8 ms
+64 bytes from hx-in-f105.1e100.net (74.125.71.105): icmp_req=2 ttl=51 time=40.5 ms
+64 bytes from hx-in-f105.1e100.net (74.125.71.105): icmp_req=3 ttl=51 time=39.6 ms
+^C
+--- www.l.google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 39.613/41.355/43.870/1.821 ms
+{% endhighlight %}
+
+
+ <a href="https://www.deleak.com/blog/2011/03/08/ipv6/">delectate原贴</a>.
+
