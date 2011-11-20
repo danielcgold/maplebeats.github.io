@@ -1,38 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-	>
 
-<channel>
-	<title>枫叶饭团的博客</title>
-	<atom:link href="http://maplebeats.github.com/feed/" rel="self" type="application/rss+xml" />
-	<link>http://maplebeats.github.com</link>
-	<description>这个就是拿来骗人的</description>
-	<lastBuildDate>Sat, 19 Nov 2011 13:30:37 +0000</lastBuildDate>
-
-	<language>en</language>
-	<sy:updatePeriod>hourly</sy:updatePeriod>
-	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>http://wordpress.org/?v=3.2.1</generator>
-		<item>
 <div id="home">
+  <h2>骗你的</h2>
   <ul class="posts">
-    {% for post in site.posts limit:8 %}
+    {% for post in site.posts %}
       <li>
         <li><span>{{ post.date | date_to_string }}</span> &raquo;<a href="{{ post.url }}">{{ post.title }}</a>
         <p>{{ post.summary }}</p>
       </li>
     {% endfor %}
   </ul>
-
-			<wfw:commentRss>http://maplebeats.github.com/feed/</wfw:commentRss>
-		<slash:comments>1</slash:comments>
-		</item>
-	</channel>
-</rss>
-
