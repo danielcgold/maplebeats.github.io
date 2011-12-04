@@ -1,18 +1,21 @@
----
-layout: default
-javascript:
-  - /javascripts/home.js
-  - /javascripts/spig.js
----
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-  <h2>这里并不是一个rss点</h2>
-  <h2>这里是以前文章的一个列表</h2>
-  <ul class="world">
-    {% for post in site.posts %}
-      <li>
-        <li><span>{{ post.date | date_to_string }}</span> &raquo;<a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+<channel>
+<title>rss鏍囬</title>
+<atom:link href="feed鍦板潃" rel="self" type="application/rss+xml"/>
+<link>缃戠珯鍦板潃</link>
+<description>缃戠珯鎻忚堪</description>
+<lastBuildDate>鏈€鍚庝慨鏀规椂闂碨at, 26 Nov 2011 16:17:18 +0000</lastBuildDate>
+<language>en</language>
+     <item>
+      <title>鏍囬</title>
+      <link>閾炬帴鍦板潃</link>
+      <pubDate>鍙戝竷鏃ユ湡 Sun, 20 Nov 2011 14:19:31 +0000</pubDate>
+     <dc:creator>鏂囨。鍒涘缓鑰�</dc:creator>
+     <description>
+      <![CDATA[
+       鎻忚堪
+      ]]>
+</description>
+     </item>
+</channel>
