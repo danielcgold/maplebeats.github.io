@@ -1,0 +1,11 @@
+---
+layout: post
+title: 一直把Ctrl当成Alt了
+summary: ctrl?alt?
+---
+
+死了好多次机了.每次用AltSys+reisub都不成功.老是无奈重启键..
+今天死机死得好奇怪,歌还放着.鼠标能动.....切不了tty.离奇啊~
+AltSys+reisub还是用不了.
+重启好了之后,再看看.发现,我一直按的是CtrlSys.....
+我就奇怪怎么一次也没起作用,原来按错键了.......

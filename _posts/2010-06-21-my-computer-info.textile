@@ -1,0 +1,82 @@
+---
+layout: post
+title: my computer
+summary: my computer infomation
+---
+
+硬件信息
+主板名称:
+GF615M-P33  (MS-7597)
+主板制造商:
+MICRO-STAR INTERNATIONAL CO.,LTD
+BIOS 提供商:
+American Megatrends Inc.
+BIOS 版本:
+V1.1
+BIOS 出厂日期:
+06/17/2009
+CPU 1 名称:
+AMD Athlon(tm) II X3 425 Processor
+CPU 1 一级缓存大小:
+64K Data cache. 64K Instruction cache. 
+CPU 1 二级缓存大小:
+512K Unified cache. 
+CPU 1 Mips:
+5424.52
+CPU 2 名称:
+AMD Athlon(tm) II X3 425 Processor
+CPU 2 一级缓存大小:
+64K Data cache. 64K Instruction cache. 
+CPU 2 二级缓存大小:
+512K Unified cache. 
+CPU 2 Mips:
+5424.73
+CPU 3 名称:
+AMD Athlon(tm) II X3 425 Processor
+CPU 3 一级缓存大小:
+64K Data cache. 64K Instruction cache. 
+CPU 3 二级缓存大小:
+512K Unified cache. 
+CPU 3 Mips:
+5424.73
+是64位CPU吗?
+是!
+内存总量:
+2.0 GB
+Linux 信息
+主机名称:
+xxx-desktop
+当前用户:
+xxx(UID: 1000, GID: 1000)
+持续运行时间:
+1 小时 28 分钟
+内核版本:
+2.6.32-22-generic
+内核架构:
+i686
+X 服务器版本:
+X.Org X Server 1.7.6
+OpenGL 硬件渲染:
+Yes
+OpenGL 提供商:
+NVIDIA Corporation
+OpenGL 渲染器:
+GeForce GT 220/PCI/SSE2/3DNOW!
+OpenGL 版本:
+3.2.0 NVIDIA 195.36.24
+GCC 版本:
+4.4.3
+Python 版本:
+2.6.5
+GTK版本
+2.20.1
+PyGTK版本
+2.17.0
+Firefox 版本:
+Mozilla Firefox 3.6.3
+Ubuntu 版本:
+10.04
+GNOME 版本:
+2.30.0
+GNOME 语言:
+zh_CN.utf8
