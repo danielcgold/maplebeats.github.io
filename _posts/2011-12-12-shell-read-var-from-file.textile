@@ -27,5 +27,5 @@ cat anime.tmp > $temp_file
 {% endhighlight %}
 
 今天算是while和数组学会了点.有点小收获...纠结了这么久,终于可以去吃饭了!
- <a href="https://github.com/maplebeats/shells">plaV</a>.
+ <a href="https://github.com/maplebeats/shells">playV</a>.
 
