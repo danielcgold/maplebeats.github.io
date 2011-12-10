@@ -5,13 +5,13 @@ summary: 纠结了好久,没想到这么简单...郁闷
 ---
 我打算给我的playV加上记录时间点的功能,于是要把时间保存在文件里,下次再直接从文件里读取.
 一开始设想的是用管道+read把文件里的参数赋给open_time和end_time
-{% highlight sh %}
+
 while read x y;do echo $x $y ;done < file
-{% endhighlight %}
+
 表面上输出是成功了,但是这样子赋的值并不能使用.这是在子shell中运行的,成局部变量了.在while以外是不能调用的.
 搜了半天,终于找到解决办法了.可以用重定向防止开启子shell.
 于是乎就有了下面的语句
-{% highlight sh %}
+
 cat anime.tmp > $temp_file 
 	  n=0
 	  while read line
@@ -21,7 +21,7 @@ cat anime.tmp > $temp_file
 	  done < $temp_file
 	  open_time=${array[0]}
 	  end_time=${array[1]}
-{% endhighlight %}
+
 今天算是while和数组学会了点.有点小收获...纠结了这么久,终于可以去吃饭了!
  <a href="https://github.com/maplebeats/shells">plaV</a>.
 
