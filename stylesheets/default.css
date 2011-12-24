@@ -122,7 +122,7 @@ h3 {
 
 
 #basic-accordian{ 
-width:auto; 
+width:20%; 
 z-index:2; 
 margin-top: 2%; 
 border-top-style: solid; 
@@ -171,7 +171,7 @@ color: #FF0099;
 margin-top: 2%; 
 width: 96%; 
 margin-right: auto; 
-margin-left: 5cm; 
+margin-left: auto; 
 } 
 /*特殊样式-------------------------*/ 
 
