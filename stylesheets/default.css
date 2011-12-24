@@ -135,7 +135,7 @@ margin-bottom: 2%;
 }/*菜单背景*/ 
 .accordion_headings{ 
 padding:2px; 
-color:#FFFFFF; 
+color:#9F35FF; 
 cursor:pointer; 
 font-weight:bold; 
 font-size: 14px; 
@@ -163,7 +163,7 @@ color: #666666;
 color: #FFFFFF; 
 } 
 .header_highlight{ 
-background-color: #000000; 
+background-color: #000; 
 color: #FF0099; 
 }/*当前显示菜单分类样式*/ 
 /*菜单样式结束*/ 
