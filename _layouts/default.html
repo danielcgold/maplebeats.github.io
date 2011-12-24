@@ -58,15 +58,7 @@
 		<li><a href="http://liaochenyuan.sourceforge.net">了尘缘</a></li>
 		<li><a href="http://http://www.lainme.com">laime</a></li>
         </ul>
-      </div>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6/prototype.js"></script>
-      <script type="text/javascript" src="javascripts/home.js"></script>
-      <div id="content">
-        {{ content }}
-      </div>
-      
-      <div class="clear"></div>
-      
+              
 	<div id="basic-accordian" ><!--菜单开始--> 
 	<div id="test-header" class="accordion_headings" >test</div><!--test--> 
 	<div id="test-content"> 
@@ -77,7 +69,16 @@
 	</div> 
 	</div> 
 	</div><!--菜单结束--> 
-	</div><!--main结束-->      
+	</div><!--main结束-->     
+      </div>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6/prototype.js"></script>
+      <script type="text/javascript" src="javascripts/home.js"></script>
+      <div id="content">
+        {{ content }}
+      </div>
+      
+      <div class="clear"></div>
+ 
     </div>
 
     {% for js in page.javascript %}
