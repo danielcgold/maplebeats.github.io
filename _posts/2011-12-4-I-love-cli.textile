@@ -9,7 +9,7 @@ summary: 其实黑黑的界面并不可怕
 
 对于日常来说,用的命令很少...下面就是我这几天常用命令前十.
 
-{% highlight sh }
+{% highlight sh %}
      1	87  17.4%  cd
      2	86  17.2%  git
      3	57  11.4%  gcc
@@ -25,7 +25,8 @@ summary: 其实黑黑的界面并不可怕
 习惯成自然,慢慢的就好用起来~man文档和--help也是非常牛的,读文档比死背该死的参数明智很多.
 
 查看自己最近常用命令:
-{% highlight sh }
+
+{% highlight sh %}
 history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
 { endhighlight %}
 
