@@ -10,7 +10,7 @@ body {
   line-height: 130%;
   font-size: 100%;
   color: #222;
-  background:/images/background.gif;
+  background: url(/images/background.gif);
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
