@@ -20,7 +20,7 @@ summary: 其实黑黑的界面并不可怕
      8	9   1.8%   auto-apt
      9	8   1.6%   rm
     10	8   1.6%   find
-{ endhighlight %}
+{% endhighlight %}
 
 习惯成自然,慢慢的就好用起来~man文档和--help也是非常牛的,读文档比死背该死的参数明智很多.
 
@@ -28,7 +28,7 @@ summary: 其实黑黑的界面并不可怕
 
 {% highlight sh %}
 history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
-{ endhighlight %}
+{% endhighlight %}
 
 从这个能看出这个人是做什么,还有用的什么系统...非常的好玩~
 <a href="http://forum.ubuntu.org.cn/viewtopic.php?f=15&t=94661">可以在这里看看其他人的常用命令</a>.
