@@ -202,7 +202,7 @@
 	//close
 	setTimeout(function(){
 		var close = document.createElement('div');
-		close.innerHTML = '{Stop snowing.}';
+		close.innerHTML = '太卡了，受不了，给我停下来！';
 		close.style.cssText += ';cursor:pointer;text-shadow:0 0 5px #fff;color#aaa;font-size:16px;position:fixed;top:20px;right:20px;font-family:arial,sans-erif;z-index:100002';
 		document.body.appendChild(close);
 		close.addEventListener('click',function(){
