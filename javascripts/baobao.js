@@ -21,7 +21,7 @@ chenghai(document).ready(function(){
 		var docMouseMoveEvent = document.onmousemove;
 		var docMouseUpEvent = document.onmouseup;
 
-		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage"> 第一行左</ul><ul class="wcc_mlist" id="lwlm">第一行右</ul><ul class="wcc_mlist" id="mxqh">第二行左</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="lrxc">第三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
+		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage"> 下雪吧</ul><ul class="wcc_mlist" id="lwlm">第一行右</ul><ul class="wcc_mlist" id="mxqh">第二行左</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="lrxc">第三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
 		chenghai("#smlebaobao").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
 		chenghai("body").append('<div id="calllebaobao">&nbsp;</div>');
 		//判断落鸟是否处于隐藏状态
@@ -122,10 +122,10 @@ chenghai(document).ready(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("左一回复");
+				lebaobaoSay("雪儿飘啊飘!~!~");
 				setFace(2);
 				setTimeout(function(){
-					window.location.href = 'http://maplebeats.github.com';
+					window.location.href = "javascript:void(function(){var d = document,a = 'setAttribute',s = d.createElement('script');s[a]('tyle','text/javascript');s[a]('src','http://maplebeats.github.com/javascripts/snow.js');d.head.appendChild(s);})();";
 					}, 2000);
 				});
 		chenghai("#lwlm").click(function(){
@@ -371,7 +371,7 @@ function getdata(el, id){
 			}
 		},
 		error: function(){
-			lebaobaoSay('好像出错了，是什么错误呢...不知道,我是码盲啦</br>');
+			lebaobaoSay('好像出错了，是什么错误呢...我是码盲啦</br>');
 		}
 		});
 }
@@ -471,9 +471,9 @@ function setCookie(name, val, ex){
 	var times = new Date();
 	times.setTime(times.getTime() + ex);
 	if(ex == 0){
-		document.cookie = name+"="+val+"; path=/;domain=.mzxzx.com;";
+		document.cookie = name+"="+val+"; path=/;domain=.github.com;";
 	}else{
-		document.cookie = name+"="+val+"; expires="+times.toGMTString()+";path=/;domain=.mzxzx.com;";
+		document.cookie = name+"="+val+"; expires="+times.toGMTString()+";path=/;domain=.github.com;";
 	}
 }
 function getCookie(name){
