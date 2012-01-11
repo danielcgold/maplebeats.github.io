@@ -1,0 +1,8 @@
+---
+layout: default
+javascript:
+  - /javascripts/home.js
+---
+<h1>
+<a>这是一个动漫列表,但是还没开始写....</a>
+</h1>
