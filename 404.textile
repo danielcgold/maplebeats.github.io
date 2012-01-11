@@ -2,4 +2,4 @@
 layout: default
 ---
 
-<embed src="http://player.youku.com/player.php/sid/XMzI4NTAxMDA0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+<EMBED align=middle src="http://player.youku.com/player.php/sid/XMzI4NTAxMDA0/v.swf" width=480 height=400 type=application/x-shockwave-flash wmode="opaque" flashvars="isAutoPlay=true" allowscriptaccess="sameDomain" quality="high"></EMBED>
