@@ -234,7 +234,7 @@ function lebaobaoMenu(){
 	//chenghai("#showlebaobaomenu").slideDown('fast').show();
 	clearlebaobaoSay();
 	closeInput();
-	lebaobaoSay("尊贵的主人你好！我是玄萌萌~。</br>有什么问题你都可以来找我喔。</br>下面由我来向你介绍纸玄！");
+	lebaobaoSay("我会做很多事哦。</br>有什么问题你都可以来找我喔。");
 	chenghai("#showlebaobaomenu").css("display", "block");
 	chenghai("#getmenu").css("display", "none");
 	chenghai("#lebaobaosaying").css("display", "none");
