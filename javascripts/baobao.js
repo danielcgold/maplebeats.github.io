@@ -30,7 +30,7 @@ chenghai(document).ready(function(){
 			closelebaobao_init();
 		}
 		//设置初始状态
-		lebaobaoSay('欢迎来到这里maplebeats的blog</br>我叫乌贼娘，也可以叫我乌萌萌</br>主人有什么吩咐没？</br>！');
+		lebaobaoSay('陆地已经被我占领了</br>你们这群人类都给我跪下</br>哇哈哈哈哈^_^</br>');
 		setFace(1);
 
 		chenghai("#smlebaobao").css('left', width+'px');
