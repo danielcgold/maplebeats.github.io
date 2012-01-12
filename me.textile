@@ -1,8 +1,19 @@
 ---
 layout: default
+title: about me
 javascript:
   - /javascripts/home.js
 ---
-<h1>
-<a>此人很懒,还没开始写呢</a>
-</h1>
+
+我?热爱计算机,热爱WOW,热爱动漫,还~还~还喜欢...哦,妹子!
+作为一个坚定的linuxer,编程语言当然以shell和C为主.最近正在学习python
+我的中文呢称枫叶饭团(源自Maplestory),英文叫maplebeats(源自Angel Beats)~
+平日就在学校读那该死的电子信息工程,空闲的时候喜欢上ubuntu论坛灌水 杀bot 移帖子^_^
+我还是一个忠实的WOWer,虽然不像以前那样尽心尽力的玩了.但是新版本出来的时候,还是会把它升到满级玩两天.比如最近4.3我就把死亡之翼推了,虽然是随机团队模式下......
+动漫是我的最爱...为此我建了一个动漫列表,将我看过的动漫一一列出来.但是现在没开始写haha~
+
+Gmail:maplebeats@gmail.com
+Weibo:weibo.com/maplebeats
+twitter:twitter.com/maplebeats
+facebook...
+
