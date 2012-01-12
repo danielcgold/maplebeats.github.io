@@ -21,7 +21,7 @@ chenghai(document).ready(function(){
 		var docMouseMoveEvent = document.onmousemove;
 		var docMouseUpEvent = document.onmouseup;
 
-		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage"> 下雪吧</ul><ul class="wcc_mlist" id="lwlm">文章列表</ul><ul class="wcc_mlist" id="mxqh">第二行左</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="lrxc">第三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
+		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage">下雪吧</ul><ul class="wcc_mlist" id="lwlm">文章列表</ul><ul class="wcc_mlist" id="mxqh">第二行左</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="lrxc">第三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
 		chenghai("#smlebaobao").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
 		chenghai("body").append('<div id="calllebaobao">&nbsp;</div>');
 		//判断落鸟是否处于隐藏状态
@@ -145,7 +145,7 @@ chenghai(document).ready(function(){
 				lebaobaoSay("左二回复");
 				setFace(2);
 				setTimeout(function(){
-					window.location.href = 'http://maplebeats.github.com';
+					window.location.href = '#';
 					}, 2000);
 				});
 		chenghai("#zkty").click(function(){
@@ -155,7 +155,7 @@ chenghai(document).ready(function(){
 				lebaobaoSay("右二回复");
 				setFace(2);
 				setTimeout(function(){
-					window.location.href = 'http://maplebeats.github.com';
+					window.location.href = '#';
 					}, 2000);
 				});
 		chenghai("#lrxc").click(function(){
@@ -165,7 +165,7 @@ chenghai(document).ready(function(){
 				lebaobaoSay("左三回复");
 				setFace(2);
 				setTimeout(function(){
-					window.location.href = 'http://maplebeats.github.com';
+					window.location.href = '#';
 					}, 2000);
 				});
 		chenghai("#kgmb").click(function(){
@@ -175,7 +175,7 @@ chenghai(document).ready(function(){
 				lebaobaoSay("右三回复");
 				setFace(2);
 				setTimeout(function(){
-					window.location.href = 'http://maplebeats.github.com';
+					window.location.href = '#';
 					}, 2000);
 				});
 		chenghai("#foods").click(function(){
@@ -221,7 +221,7 @@ function eatfood(obj){
 		lebaobaoSay("我已经吃饱了，不要再吃啦......");
 		setFace(3);
 	}else if(parseInt(gettimes) == parseInt(3)){
-		lebaobaoSay("多谢款待，我吃饱啦～～～ t（￣￣）q");
+		lebaobaoSay("多谢款待，我吃饱啦～～～ ╰（￣▽￣）╭");
 		setFace(2);
 	}else{
 		var id = obj.replace("f",'');
@@ -234,7 +234,7 @@ function lebaobaoMenu(){
 	//chenghai("#showlebaobaomenu").slideDown('fast').show();
 	clearlebaobaoSay();
 	closeInput();
-	lebaobaoSay("尊贵的主人你好！我是乌贼娘~。</br>有什么问题你都可以来找我喔。</br>");
+	lebaobaoSay("尊贵的主人你好！我是玄萌萌~。</br>有什么问题你都可以来找我喔。</br>下面由我来向你介绍纸玄！");
 	chenghai("#showlebaobaomenu").css("display", "block");
 	chenghai("#getmenu").css("display", "none");
 	chenghai("#lebaobaosaying").css("display", "none");
@@ -398,7 +398,7 @@ function setTime(){
 		closelebaobaoMenu();
 		closeNotice();
 		closeInput();
-		lebaobaoSay("主人刚刚跑去哪里玩了");
+		lebaobaoSay("主人跑到哪里去了呢....");
 		setFace(3);
 		stoptime();
 	}
@@ -414,30 +414,42 @@ var talkself = 30;
 var talkobj;
 var tsi = 0;
 var talkself_arr = [
-	["想人家就订阅我吧","4"]
-	["要过年了...过年钱钱!","2"]
 	["饭团又跑去玩了，总是不带上偶", "2"],
-    ["英语帝是神马东西？可以吃吗？呵呵~~", "2"],
-    ["什么？不会是真的吧？我不相信！我坚决不会相信哦！你是女女？？", "3"],
-	["纸玄猫3？别怕,萌萌的小弟哦~~我保护你~喔喔I(^ω^)J", "2"],
+        ["饭团要表白啦，好害羞哦，我也想找个人表白一下下了", "2"],
+        ["想要表白的，可以找来给你传达哟", "2"],
+        ["英语帝是神马东西？可以吃吗？呵呵~~", "2"],
+        ["::>_<:: 饭团昨晚摸着人家睡觉~~害人家都没睡好...π_π好困哦~~", "3"],
+        ["什么？不会是真的吧？我不相信！我坚决不会相信哦！你是女女？？", "3"],
+	["三人行必有饭团也", "3"],
+	["魔王塔!!我怕怕哦~~不敢去~你又不带人家去,我想去玩我想去,带我去", "3"],
+	["没有偶的地方是不完整的地方，没有你的地方是寂寞的，哦~人家念台词呢", "1"],
+	["哦哦哦....~每天都要来看看我哟", "2"],
 	["萝卜，好奇怪的名字哦，哈哈，哇哦~~难道是个小正太吗？不敢想了哦~~哇卡卡", "1"],
 	["昨晚优子姐姐把人家弄哭了……", "3"],
 	["大叔又抛我的裙子了TAT", "3"],
 	["嗯嗯嗯，圣诞节要怎么过呢，真是好期待哦", "2"],
+	["大E哥哥老是在上体育课的时候总盯着人家…讨厌死了…", "2"],
+	["~^o^~ 饭团其实是NTR控，最爱萝莉，所以~~好可怕！！呜呜呜~", "3"],
+	["我的的真身是皮卡丘，皮卡~皮卡~~", "4"],
+	["某人经常偷偷网购女仆装，晚上在家穿着照镜子 -哟哟", "2"],
+	["小玄姐说要带我去唱K哦！好开心喔....", "2"],
+	["某人竟然说要找人搞基！嘘~~别说我告诉你的~", "3"],
+	["今天我溜街的时候看见有人很像你哦~我跟着走走走，竟然走到这里面来了哦~好神奇的哦", "2"],
 	["鼠标滑过不点我的同学最讨厌了~~!你无视我，我也会无视你的哦~讨厌你啦", "3"],
-	["蔷薇馆是神马哟？喔喔~~淫家真的不好意思啦哦~~", "2"],
+	["还是喜欢饭团~嘻嘻！！！", "1"],
+	["讨厌！讨厌！讨厌！看文章不回复的人人家最讨厌了！！", "3"],
 	["那个..主人..我是先给你捶背...还是.......", "1"],
 	["夏天了,我想食雪糕,买给我!买给我!", "2"],
 	["等人家生日了~要礼物", "2"],
 	["昨天我好像看见主人又在众人之前卖萌了哦～", "3"]
-	["因为忙着看帖，把作业完全忘记了阿鲁！", "1"],
 	["再等一下就可以吃了哦，因为图案的肉有点不好煮的。哈~哈~哈~", "1"],
 	["没有西瓜的冬天是不完整滴！！人家要吃西瓜啦~~", "2"],
 	["看到你在吃蛋糕哦，不给我的话，我就去喝水，呜呜呜呜呜呜呜呜~", "3"],
 	["不要轻易的把我关闭哦，我会恨你一辈子的，晚上梦里小心哦，嘿嘿", "3"],
-    ["都说我卡哇伊，我一点都不卡哇伊，人家只是可爱了，哈哈！", "2"],
-    ["鼠标可以把我拖拽到任何地方哦！我很厉害吧~~", "4"],
-    ];
+        ["都说我卡哇伊，我一点都不卡哇伊，人家只是可爱了，哈哈！", "2"],
+        ["鼠标可以把我拖拽到任何地方哦！我很厉害吧~~", "4"],
+        [">.<一定一定不要灌水哟，那可是要被惩罚的哦~", "3"],
+        ];
 function talkSelf(talktime){
 	talktime++;
 	var tslen = talkself_arr.length;
@@ -472,9 +484,9 @@ function setCookie(name, val, ex){
 	var times = new Date();
 	times.setTime(times.getTime() + ex);
 	if(ex == 0){
-		document.cookie = name+"="+val+"; path=/;domain=.github.com;";
+		document.cookie = name+"="+val+"; path=/;domain=maplebeats.github.com;";
 	}else{
-		document.cookie = name+"="+val+"; expires="+times.toGMTString()+";path=/;domain=.github.com;";
+		document.cookie = name+"="+val+"; expires="+times.toGMTString()+";path=/;maplebeats.github.com;";
 	}
 }
 function getCookie(name){
