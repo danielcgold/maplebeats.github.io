@@ -21,7 +21,7 @@ chenghai(document).ready(function(){
 		var docMouseMoveEvent = document.onmousemove;
 		var docMouseUpEvent = document.onmouseup;
 
-		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage"> 下雪吧</ul><ul class="wcc_mlist" id="lwlm">第一行右</ul><ul class="wcc_mlist" id="mxqh">第二行左</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="lrxc">第三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
+		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage"> 下雪吧</ul><ul class="wcc_mlist" id="lwlm">文章列表</ul><ul class="wcc_mlist" id="mxqh">第二行左</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="lrxc">第三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
 		chenghai("#smlebaobao").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
 		chenghai("body").append('<div id="calllebaobao">&nbsp;</div>');
 		//判断落鸟是否处于隐藏状态
@@ -30,7 +30,7 @@ chenghai(document).ready(function(){
 			closelebaobao_init();
 		}
 		//设置初始状态
-		lebaobaoSay('欢迎来到这里</br>我叫乌贼娘，也可以叫我乌萌萌</br>主人有什么吩咐没？</br>不做任何操作我就和你聊天！');
+		lebaobaoSay('欢迎来到这里maplebeats的blog</br>我叫乌贼娘，也可以叫我乌萌萌</br>主人有什么吩咐没？</br>！');
 		setFace(1);
 
 		chenghai("#smlebaobao").css('left', width+'px');
@@ -132,10 +132,10 @@ chenghai(document).ready(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("右一回复");
+				lebaobaoSay("快来看啊,主人写了这么多垃圾文章!");
 				setFace(2);
 				setTimeout(function(){
-					window.location.href = 'http://maplebeats.github.com';
+					window.location.href = '/category';
 					}, 2000);
 				});
 		chenghai("#mxqh").click(function(){
@@ -251,7 +251,7 @@ function showNotice(){
 }
 function closelebaobao(){
 	stopTalkSelf();
-	lebaobaoSay("怎么不让我再多呆一会呢？</br>主人最讨厌了～哼!");
+	lebaobaoSay("主人居然叫我滚开</br>主人最讨厌了～哼!</br>再也不理你了!");
 	chenghai("#showlebaobaomenu").css("display", "none");
 	setTimeout(function(){
 			chenghai("#smlebaobao").fadeOut(1200);
@@ -398,7 +398,7 @@ function setTime(){
 		closelebaobaoMenu();
 		closeNotice();
 		closeInput();
-		lebaobaoSay("主人跑到哪里去了呢....");
+		lebaobaoSay("主人刚刚跑去哪里玩了");
 		setFace(3);
 		stoptime();
 	}
@@ -414,15 +414,16 @@ var talkself = 30;
 var talkobj;
 var tsi = 0;
 var talkself_arr = [
+	["想人家就订阅我吧","4"]
+	["要过年了...过年钱钱!","2"]
 	["饭团又跑去玩了，总是不带上偶", "2"],
-        ["英语帝是神马东西？可以吃吗？呵呵~~", "2"],
-        ["什么？不会是真的吧？我不相信！我坚决不会相信哦！你是女女？？", "3"],
+    ["英语帝是神马东西？可以吃吗？呵呵~~", "2"],
+    ["什么？不会是真的吧？我不相信！我坚决不会相信哦！你是女女？？", "3"],
 	["纸玄猫3？别怕,萌萌的小弟哦~~我保护你~喔喔I(^ω^)J", "2"],
 	["萝卜，好奇怪的名字哦，哈哈，哇哦~~难道是个小正太吗？不敢想了哦~~哇卡卡", "1"],
 	["昨晚优子姐姐把人家弄哭了……", "3"],
 	["大叔又抛我的裙子了TAT", "3"],
 	["嗯嗯嗯，圣诞节要怎么过呢，真是好期待哦", "2"],
-	["南宫经常偷偷网购女仆装，晚上在家穿着照镜子 -哟哟", "2"],
 	["鼠标滑过不点我的同学最讨厌了~~!你无视我，我也会无视你的哦~讨厌你啦", "3"],
 	["蔷薇馆是神马哟？喔喔~~淫家真的不好意思啦哦~~", "2"],
 	["那个..主人..我是先给你捶背...还是.......", "1"],
@@ -434,9 +435,9 @@ var talkself_arr = [
 	["没有西瓜的冬天是不完整滴！！人家要吃西瓜啦~~", "2"],
 	["看到你在吃蛋糕哦，不给我的话，我就去喝水，呜呜呜呜呜呜呜呜~", "3"],
 	["不要轻易的把我关闭哦，我会恨你一辈子的，晚上梦里小心哦，嘿嘿", "3"],
-        ["都说我卡哇伊，我一点都不卡哇伊，人家只是可爱了，哈哈！", "2"],
-        ["鼠标可以把我拖拽到任何地方哦！我很厉害吧~~", "4"],
-        ];
+    ["都说我卡哇伊，我一点都不卡哇伊，人家只是可爱了，哈哈！", "2"],
+    ["鼠标可以把我拖拽到任何地方哦！我很厉害吧~~", "4"],
+    ];
 function talkSelf(talktime){
 	talktime++;
 	var tslen = talkself_arr.length;
