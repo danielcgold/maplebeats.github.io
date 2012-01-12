@@ -1,0 +1,26 @@
+---
+layout: post
+title: 自动生成文章script
+summary: 以后写文章就方便啦
+---
+很多github博客的博主都有一个rakefile文件,用来生成新文章.苦B的我基本看不懂那些ruby代码,于是还是自己老老实实的用shell写了一个简单版.
+实现方法很2,基本是曲线救国.先得到date,然后用xargs合并date与title.再将其中的空格替换掉...从而生成了文件名.
+然后被大大的一行代码秒杀了...
+
+{% highlight sh %}
+echo -n `LANG=C date +%F`-"$1".textile
+{% endhighlight %}
+
+中间有个问题卡了我很久,就是在命令就使用命令的结果...像echo touch这些不支持标准输入不好用管道的,想了半天没想到办法.
+然后,又被大大秒杀了...
+
+{% highlight sh %}
+`function`
+{% endhighlight %}
+
+不过还好,最后成功实现了我想要的功能.不过才用了第一次就发现了问题.在终端输入中文重定向进文章之后就成乱码了...想了想应该是中文环境变量的问题,于是加了一句
+
+{% highlight sh %}
+LANG=zh
+{% endhighlight %}
+
