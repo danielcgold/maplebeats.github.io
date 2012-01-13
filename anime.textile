@@ -3,12 +3,31 @@ layout: default
 javascript:
   - /javascripts/home.js
 ---
- <h2><font color="red">非常喜欢</font></h2>
- <h4>
- 《×××HOLiC》（动画译名《次元魔女》，大陆翻译《四月一日灵异事件簿》)
+
+<h3><font color="red">非常喜欢的</font></h3>
+	<h5>
+	《×××HOLiC》（动画译名《次元魔女》，大陆翻译《四月一日灵异事件簿》)
+	《寒蝉鸣泣之时》(ひぐらしのなく顷に)
+	《凉宫春日的忧郁》（凉宫ハルヒの忧郁/Suzumiya Haruhi no Yuuutsu ）
+	《Code Geass 反叛的鲁路修》(コードギアス 反逆のルルーシュ)
+	《CLANNAD》（クラナド）
+	《日常》
+	《犬夜叉》(InuYasha)
+	《地狱少女》(Hell Girl)
+
+	</h5>
  
- </h4>
- <h2><font color="read">才看过的</font></h2>
-<h4>
-《心跳回忆》（ときめきメモリアル、Tokimeki Memorial）
-</h4>
+<h3><font color="read"> 已看过的</font></h3>
+	<h5>
+	《心跳回忆》（ときめきメモリアル、Tokimeki Memorial）
+	《不可思议的教室》（Pani Poni Dash!）
+	《YURUYURI（ゆるゆり）》
+	《迷茫管家与懦弱的我》
+	《曾几何时天魔的黑兔》（いつか天魔の黒ウサギ）
+	《侵略！乌贼娘》（侵略！イカ娘 / The invader comes from the bottom of the sea!/Squid Girl）
+	《绯弹的亚里亚 》(ひだんのアリア/Aria the Scarlet Ammo)
+	《出包王女》（To LOVEる -とらぶる-）
+	《游魂 -Kiss on my Deity-》（タユタマ -Kiss on my Deity-）
+	</h5>
+
+
