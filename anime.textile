@@ -3,6 +3,12 @@ layout: default
 javascript:
   - /javascripts/home.js
 ---
-<h1>
-<a>这是一个动漫列表,但是还没开始写....</a>
-</h1>
+ <h2><font color="red">非常喜欢</font></h2>
+ <h4>
+ 《×××HOLiC》（动画译名《次元魔女》，大陆翻译《四月一日灵异事件簿》)
+ 
+ </h4>
+ <h2><font color="read">才看过的</font></h2>
+<h4>
+《心跳回忆》（ときめきメモリアル、Tokimeki Memorial）
+</h4>
