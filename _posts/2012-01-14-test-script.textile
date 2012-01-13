@@ -1,6 +1,0 @@
----
-layout: post
-title: test the script
-summary: 小游测试下这个脚本能不能工作
----
-dsaf dsfasdf
