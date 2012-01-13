@@ -121,7 +121,7 @@ h3 {
 
 
 #basic-accordian{ 
-width:6cm; 
+width:auto; 
 z-index:2; 
 margin-top: 2%; 
 padding-top: 15px; 
