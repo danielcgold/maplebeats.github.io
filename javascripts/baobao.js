@@ -21,7 +21,7 @@ chenghai(document).ready(function(){
 		var docMouseMoveEvent = document.onmousemove;
 		var docMouseUpEvent = document.onmouseup;
 
-		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage">下雪</ul><ul class="wcc_mlist" id="lwlm">文章</ul><ul class="wcc_mlist" id="mxqh">动漫</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="lrxc">第三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
+		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage">下雪</ul><ul class="wcc_mlist" id="lwlm">文章</ul><ul class="wcc_mlist" id="mxqh">动漫</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="kgmb">左三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
 		chenghai("#smlebaobao").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
 		chenghai("body").append('<div id="calllebaobao">&nbsp;</div>');
 		//判断落鸟是否处于隐藏状态
@@ -178,15 +178,6 @@ chenghai(document).ready(function(){
 					window.location.href = '#';
 					}, 2000);
 				});
-		chenghai("#foods").click(function(){
-				closelebaobaoMenu();
-				closeNotice();
-				getdata("foods");
-				});
-/*		chenghai("#showlebaobaomenu").hover(function(){
-				},function(){
-				chenghai("#showlebaobaomenu").slideUp('slow').show();
-				});*/
 		document.onmousemove = function(){
 			stoptime();
 			tol = 0;
@@ -205,30 +196,6 @@ chenghai(document).ready(function(){
 
 function getEvent() {
 	return window.event || arguments.callee.caller.arguments[0];
-}
-
-var eattimes = 0;
-function eatfood(obj){
-	var gettimes = getCookie("eattimes");
-	if(parseInt(gettimes) > parseInt(9)){
-		lebaobaoSay("主人是个大混蛋！！");
-		setFace(3);
-		closelebaobao_evil();
-	}else if(parseInt(gettimes) > parseInt(7)){
-		lebaobaoSay(".....................肚子要炸了，死也不要再吃了～～！！！TAT");
-		setFace(3);
-	}else if(parseInt(gettimes) == parseInt(5)){
-		lebaobaoSay("我已经吃饱了，不要再吃啦......");
-		setFace(3);
-	}else if(parseInt(gettimes) == parseInt(3)){
-		lebaobaoSay("多谢款待，我吃饱啦～～～ ╰（￣▽￣）╭");
-		setFace(2);
-	}else{
-		var id = obj.replace("f",'');
-		getdata('eatsay', id);
-	}
-	eattimes++;
-	setCookie("eattimes", eattimes, 60*10*1000);
 }
 function lebaobaoMenu(){
 	//chenghai("#showlebaobaomenu").slideDown('fast').show();
@@ -316,66 +283,6 @@ function setFace(num){
 	obj = document.getElementById("hf"+num).src;
 	chenghai("#lebaobaoface").attr("style", "background:url("+obj+") no-repeat scroll 50% 0% transparent; width:"+imagewidth+"px;height:"+imageheight+"px;");
 }
-function getdata(el, id){
-	chenghai.ajax({
-		type:	'GET',
-		url:	path+'/?a=getdata',
-		cache:	'false',
-		dataType: 'html',
-		contentType: 'application/json; charset=utf8',
-		beforeSend: function(){
-			//chenghai("#dialog_chat").fadeOut("normal");
-			chenghai("#tempsaying").css('display', "none");
-			chenghai("#dialog_chat_loading").fadeIn("normal");
-		},
-		success: function(data){
-			chenghai("#dialog_chat_loading").css('display', "none");
-			//chenghai("#dialog_chat").fadeIn("normal");
-			chenghai("#tempsaying").css('display', "");
-			var dat = eval("("+data+")");
-			if(el == 'defaultccs'){
-				lebaobaoSay('欢迎来到枫叶饭团的博客哦</br> ');
-			}else if(el == 'getnotice'){
-				lebaobaoSay('欢迎来到枫叶饭团的博客哦 </br>');
-				setFace(1);
-			}else if(el == 'showlifetime'){
-				lebaobaoSay(dat.showlifetime);
-			}else if(el == 'talking'){
-				var talkcon = chenghai("#talk").val();
-				var i = in_array(talkcon, dat.ques);
-				var types = typeof(i);
-				if(types != 'boolean'){
-					lebaobaoSay(dat.ans[i]);
-					setFace(2);
-				}else{
-					lebaobaoSay('.......................嗯？');
-					setFace(3);
-				}
-				clearInput();
-			}else if(el == 'foods'){
-				var str='';
-				var arr = dat.foods;
-				for(var i in arr){
-					if(arr[i] != ''){
-						str +='<ul id="f'+i+'" class="eatfood" onclick="eatfood(this.id)">'+arr[i]+'</ul>';
-					}
-				}
-				lebaobaoSay(str);
-			}else if(el = "eatsay"){
-				var str = dat.eatsay[id];
-				lebaobaoSay(str);
-				setFace(2);
-			}else if(el = "talkself"){
-				var arr = dat.talkself;
-				return arr;
-			}
-		},
-		error: function(){
-			lebaobaoSay('好像出错了，是什么错误呢...我是码盲啦</br>');
-		}
-		});
-}
-
 function in_array(str, arr){
 	for(var i in arr){
 		if(arr[i] == str){

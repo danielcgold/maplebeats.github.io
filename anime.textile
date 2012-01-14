@@ -6,7 +6,7 @@ javascript:
 
 <h3><font color="red">非常喜欢的</font></h3>
 	<h5>
-	《×××HOLiC》（动画译名《次元魔女》，大陆翻译《四月一日灵异事件簿》)
+	《次元魔女》（XXXholic)
 	《寒蝉鸣泣之时》(ひぐらしのなく顷に)
 	《凉宫春日的忧郁》（凉宫ハルヒの忧郁/Suzumiya Haruhi no Yuuutsu ）
 	《Code Geass 反叛的鲁路修》(コードギアス 反逆のルルーシュ)
