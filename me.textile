@@ -1,6 +1,6 @@
 ---
 layout: default
-title: about me
+title: me
 javascript:
   - /javascripts/home.js
 ---
@@ -15,4 +15,5 @@ javascript:
 
 Gmail/gtalk:maplebeats@gmail.com
 IRC:#ubuntu-cn的maplebeats
-QQ:503979672(至今未有人找到正确答案并成功加我好友)
+QQ:503979672(如果你能答对问题的话)
+

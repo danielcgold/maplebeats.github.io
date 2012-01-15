@@ -89,7 +89,7 @@ chenghai(document).ready(function(){
                                 setFace(1);
 		});
 		chenghai("#closelebaobao").click(function(){
-				setFace(4);
+				setFace(3);
 				closelebaobao();
 				});
 		chenghai("#calllebaobao").click(function(){
@@ -129,8 +129,8 @@ chenghai(document).ready(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("快来看啊,主人写了这么多垃圾文章!");
-				setFace(3);
+				lebaobaoSay("快来看啊,饭团写了这么多垃圾文章!");
+				setFace(4);
 				setTimeout(function(){
 					window.location.href = '/category';
 					}, 2000);
@@ -139,7 +139,7 @@ chenghai(document).ready(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("主人喜欢很喜欢看动漫");
+				lebaobaoSay("饭团喜欢很喜欢看动漫");
 				setFace(2);
 				setTimeout(function(){
 					window.location.href = '/anime';
@@ -303,7 +303,7 @@ function setTime(){
 		closeNotice();
 		closeInput();
 		lebaobaoSay("主人跑到哪里去了呢....");
-		setFace(5);
+		setFace(3);
 		stoptime();
 	}
 }
@@ -319,6 +319,7 @@ var talkobj;
 var tsi = 0;
 var talkself_arr = [
 	["饭团又跑去玩了，总是不带上偶", "4"],
+	["饭团说用chrome访问这里有惊喜","1"]
         ["饭团要表白啦，好害羞哦，我也想找个人表白一下下了", "2"],
         ["想要表白的，可以找来给你传达哟", "2"],
         ["英语帝是神马东西？可以吃吗？呵呵~~", "2"],
