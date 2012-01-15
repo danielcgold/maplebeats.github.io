@@ -89,7 +89,7 @@ chenghai(document).ready(function(){
                                 setFace(1);
 		});
 		chenghai("#closelebaobao").click(function(){
-				setFace(3);
+				setFace(4);
 				closelebaobao();
 				});
 		chenghai("#calllebaobao").click(function(){
@@ -106,9 +106,6 @@ chenghai(document).ready(function(){
 				closeNotice();
 				setFace(2);
 				getdata('showlifetime');
-				});
-		chenghai("#chatTolebaobao").click(function(){
-				showInput();
 				});
 		chenghai("#inp_r").click(function(){
 				closeInput();
@@ -133,7 +130,7 @@ chenghai(document).ready(function(){
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
 				lebaobaoSay("快来看啊,主人写了这么多垃圾文章!");
-				setFace(2);
+				setFace(3);
 				setTimeout(function(){
 					window.location.href = '/category';
 					}, 2000);
@@ -275,8 +272,8 @@ function closeInput(){
 function clearInput(){
 	document.getElementById("talk").value = '';
 }
-function createFace(a, b, c){
-	chenghai("head").append('<div id="hiddenfaces"><img id="hf1" src="'+a+'" /><img id="hf2" src="'+b+'" /><img id="hf3" src="'+c+'" /></div>');
+function createFace(a, b, c, d){
+	chenghai("head").append('<div id="hiddenfaces"><img id="hf1" src="'+a+'" /><img id="hf2" src="'+b+'" /><img id="hf3" src="'+c+'" /><img id="hf4" src="'+d+'"/></div>');
 	setFace(1);
 }
 function setFace(num){
@@ -306,7 +303,7 @@ function setTime(){
 		closeNotice();
 		closeInput();
 		lebaobaoSay("主人跑到哪里去了呢....");
-		setFace(3);
+		setFace(5);
 		stoptime();
 	}
 }
@@ -321,7 +318,7 @@ var talkself = 30;
 var talkobj;
 var tsi = 0;
 var talkself_arr = [
-	["饭团又跑去玩了，总是不带上偶", "2"],
+	["饭团又跑去玩了，总是不带上偶", "4"],
         ["饭团要表白啦，好害羞哦，我也想找个人表白一下下了", "2"],
         ["想要表白的，可以找来给你传达哟", "2"],
         ["英语帝是神马东西？可以吃吗？呵呵~~", "2"],
@@ -351,10 +348,10 @@ var talkself_arr = [
 	["昨天我好像看见主人又在众人之前卖萌了哦～", "3"]
 	["再等一下就可以吃了哦，因为图案的肉有点不好煮的。哈~哈~哈~", "1"],
 	["没有西瓜的冬天是不完整滴！！人家要吃西瓜啦~~", "2"],
-	["看到你在吃蛋糕哦，不给我的话，我就去喝水，呜呜呜呜呜呜呜呜~", "3"],
-	["不要轻易的把我关闭哦，我会恨你一辈子的，晚上梦里小心哦，嘿嘿", "3"],
+	["看到你在吃蛋糕哦，不给我的话，我就去喝水，呜呜呜呜呜呜呜呜~", "4"],
+	["不要轻易的把我关闭哦，我会恨你一辈子的，晚上梦里小心哦，嘿嘿", "4"],
         ["都说我卡哇伊，我一点都不卡哇伊，人家只是可爱了，哈哈！", "2"],
-        ["鼠标可以把我拖拽到任何地方哦！我很厉害吧~~", "4"],
+        ["鼠标可以把我拖拽到任何地方哦！我很厉害吧~~", "1"],
         [">.<一定一定不要灌水哟，那可是要被惩罚的哦~", "3"],
         ];
 function talkSelf(talktime){

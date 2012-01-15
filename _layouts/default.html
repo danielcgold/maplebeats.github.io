@@ -25,6 +25,18 @@
 
   </head>
   <body onload="new Accordian('basic-accordian',5,'header_highlight');">
+
+	<div class="butterfly">
+		<div class="butter1">
+			<div class="butterfly1"><img src="/images/butterfly1.png" /></div>
+		</div>
+		<div class="butter2">
+			<div class="butterfly2"><img src="/images/butterfly2.png" /></div>
+		</div>
+		<div class="butter3">
+			<div class="butterfly3"><img src="/images/butterfly3.png" /></div>
+		</div>
+	</div>
   
     <a href="http://github.com/maplebeats"><img style="position: absolute; top: 0; left: 0; border: 0;" src="/images/xxxholic.png" alt="跟我走吧" id="MM"/></a>
 
@@ -89,6 +101,13 @@
 			</div> 
 		</div><!-- end--> 
 
+	<!--baobao-->
+	<script src="/javascripts/jquery-1.6.1.min.js" type="text/javascript" type="text/javascript"></script> 
+	<script>var path = "http://maplebeats.github.com/";var imagewidth = '110';var imageheight = '152';</script> 
+	<script src="/javascripts/baobao.js" type="text/javascript" charset="UTF-8"></script> 
+	<script>createFace("/images/1.png", "/images/2.png", "/images/3.png", "/images/4.png");</script>
+	<!--baobaoend-->
+
 	</div>
     
       <div id="content">
@@ -98,12 +117,6 @@
       <div class="clear"></div>
       
     </div>
-	<!--baobao-->
-	<script src="/javascripts/jquery-1.6.1.min.js" type="text/javascript" type="text/javascript"></script> 
-	<script>var path = "http://maplebeats.github.com/";var imagewidth = '110';var imageheight = '152';</script> 
-	<script src="/javascripts/baobao.js" type="text/javascript" charset="UTF-8"></script> 
-	<script>createFace("/images/1.png", "/images/2.png", "/images/3.png", "/images/4.png");</script>
-	<!--baobaoend-->
 
     {% for js in page.javascript %}
       <script type="text/javascript" src="{{ js }}"></script>
