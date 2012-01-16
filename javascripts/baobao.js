@@ -21,7 +21,7 @@ chenghai(document).ready(function(){
 		var docMouseMoveEvent = document.onmousemove;
 		var docMouseUpEvent = document.onmouseup;
 
-		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage">下雪</ul><ul class="wcc_mlist" id="lwlm">文章</ul><ul class="wcc_mlist" id="mxqh">动漫</ul><ul class="wcc_mlist" id="zkty">订阅</ul><ul class="wcc_mlist" id="lrxc">提示</ul><ul class="wcc_mlist" id="kgmb">爱抚</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
+		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage">下雪</ul><ul class="wcc_mlist" id="lwlm">文章</ul><ul class="wcc_mlist" id="mxqh">动漫</ul><ul class="wcc_mlist" id="zkty">聊天</ul><ul class="wcc_mlist" id="lrxc">提示</ul><ul class="wcc_mlist" id="kgmb">爱抚</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
 		chenghai("#smlebaobao").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
 		chenghai("body").append('<div id="calllebaobao">&nbsp;</div>');
 		//判断落鸟是否处于隐藏状态
@@ -149,10 +149,10 @@ chenghai(document).ready(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("订阅饭团的文章,你会后悔的...^-^");
+				lebaobaoSay("饭团的gtalk经常不在线......^-^");
 				setFace(3);
 				setTimeout(function(){
-					window.location.href = 'http://feed.feedsky.com/maplebeats';
+					window.location.href = "http://www.google.com/talk/service/badge/Start?tk=z01q6amlqoe7o5o6oqpcq7o4ujgvu870qhodk79vejvoakhmi4qcqj4ig500bj5nd9t6smcmrdeeipun5btvcqvkk7l69fmsvkqnl6rc8ad2c72j5f5cbce69gs93s2eg05j8d9f382vgk80jpj89a9et7po0g741kccs0qasv3m2u03ljkolbqfp1uutft210g";
 					}, 2000);
 				});
 		chenghai("#lrxc").click(function(){
