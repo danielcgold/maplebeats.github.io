@@ -21,7 +21,7 @@ chenghai(document).ready(function(){
 		var docMouseMoveEvent = document.onmousemove;
 		var docMouseUpEvent = document.onmouseup;
 
-		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage">下雪</ul><ul class="wcc_mlist" id="lwlm">文章</ul><ul class="wcc_mlist" id="mxqh">动漫</ul><ul class="wcc_mlist" id="zkty">第二行右</ul><ul class="wcc_mlist" id="kgmb">左三行左</ul><ul class="wcc_mlist" id="kgmb">第三行右</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
+		chenghai("body").append('<div id="smlebaobao" onfocus="this.blur();" style="color:#626262;z-index:999;"><div id="lebaobaoface"></div><div id="dialog_chat"><div id="chat_top"></div><div id="dialog_chat_contents"><div id="dialog_chat_loading"></div><div id="tempsaying"></div><div id="showlebaobaomenu"><ul class="wcc_mlist" id="npmanage">下雪</ul><ul class="wcc_mlist" id="lwlm">文章</ul><ul class="wcc_mlist" id="mxqh">动漫</ul><ul class="wcc_mlist" id="zkty">订阅</ul><ul class="wcc_mlist" id="lrxc">提示</ul><ul class="wcc_mlist" id="kgmb">爱抚</ul><div id="closelebaobao"><center>滚开</center></div></div><div><ul id="lebaobaosaying"></ul></div><div id="getmenu"></div></div><div id="chat_bottom"></div></div></div>');
 		chenghai("#smlebaobao").append('<div id="addinput"><div id="inp_l"><input id="talk" type="text" name="mastersay" value="" /> <input id="talkto" type="button" value=" " /></div><div id="inp_r"> X </div></div>');
 		chenghai("body").append('<div id="calllebaobao">&nbsp;</div>');
 		//判断落鸟是否处于隐藏状态
@@ -149,17 +149,17 @@ chenghai(document).ready(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("右二回复");
-				setFace(2);
+				lebaobaoSay("订阅饭团的文章,你会后悔的...^-^");
+				setFace(3);
 				setTimeout(function(){
-					window.location.href = '#';
+					window.location.href = 'http://feed.feedsky.com/maplebeats';
 					}, 2000);
 				});
 		chenghai("#lrxc").click(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("左三回复");
+				lebaobaoSay("用支持CSS3/html5的浏览器访问这里会有惊喜哟,饭团使用的是chromium,你呢!");
 				setFace(2);
 				setTimeout(function(){
 					window.location.href = '#';
@@ -169,8 +169,8 @@ chenghai(document).ready(function(){
 				closelebaobaoMenu();
 				closeNotice();
 				chenghai("#getmenu").css("display", "none");
-				lebaobaoSay("右三回复");
-				setFace(2);
+				lebaobaoSay("你的阴谋已经被我识破了!居然想把我拐走,饭团救命啊");
+				setFace(3);
 				setTimeout(function(){
 					window.location.href = '#';
 					}, 2000);
