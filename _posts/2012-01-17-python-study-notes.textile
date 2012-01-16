@@ -4,7 +4,7 @@ title: Python study notes(1)
 summary: 正式开始学python
 ---
 
-书是我在淘宝上买的正版<Beginning Python From Novice to Professional>,正版书就是好.我那本盗版<Beginning Linux Prongramming>实在是不能比.
+书是我在淘宝上买的正版《Beginning Python From Novice to Professional》,正版书就是好.我那本盗版《Beginning Linux Programming》实在是不能比.
 
 因为才看了一二两个章节,对语法稍微了解了些.感觉和matlab差不多...暂时就是些列表的函数或者类,没有什么难点.总体来说还是比较容易懂的,把书上的对列表的处理都试了一下,发现python对语法的要求比较严谨.
 
