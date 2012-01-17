@@ -118,7 +118,9 @@ h3 {
 .rss_only {
   display: none;
 }
-
+footer {
+	text-align: center
+}
 
 #basic-accordian{ 
 width:auto; 
