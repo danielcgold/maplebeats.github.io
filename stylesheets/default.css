@@ -124,7 +124,7 @@ footer {
     	overflow: hidden; 
 	text-align: center
 }
-
+/*导航部分*/
 #basic-accordian{ 
 width:auto; 
 z-index:2; 
@@ -242,4 +242,162 @@ top: 206px;
     70%        { right: 700px; bottom: 10px; opacity: 0.6; }
     100%    { right: 840px; bottom: 60px; opacity: 0; }
 }
+/*梅花部分*/
+.rama21 {
+border: 30px solid #2B0D0D;
+border-width: 0px 8px 2px 0px;
+-moz-border-radius: 0px 0px 200px 0px;
+-webkit-border-radius: 0px 0px 200px 0px;
+-o-border-radius: 0px 0px 200px 0px;
+border-radius: 0px 0px 200px 0px;
+right: 604px;
+top: 230px;
+width: 174px;
+height: 150px;
+position: absolute;
+-moz-transform: rotate(-12deg);
+-webkit-transform: rotate(20deg);
+-o-transform: rotate(-12deg);
+transform: rotate(-12deg);
+border-image: initial;
+}
+
+.r21f3 {
+width: 20px;
+height: 20px;
+right: 114px;
+top: 140px;
+-moz-transform: rotate(20deg);
+-webkit-transform: rotate(20deg);
+-o-border-transform: rotate(20deg);
+border-transform: rotate(20deg);
+}
+
+.r22f3 {
+width: 15px;
+height: 15px;
+right: 29px;
+top: 96px;
+-moz-transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+-o-border-transform: rotate(0deg);
+border-transform: rotate(0deg);
+}
+
+.r23f3 {
+width: 40px;
+height: 40px;
+right: 60px;
+top: 115px;
+-moz-transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+-o-border-transform: rotate(0deg);
+border-transform: rotate(0deg);
+}
+
+.r24f3 {
+width: 50px;
+height: 50px;
+right: -24px;
+top: 10px;
+-moz-transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+-o-border-transform: rotate(0deg);
+border-transform: rotate(0deg);
+}
+
+.r25f3 {
+width: 10px;
+height: 10px;
+right: 161px;
+top: 145px;
+-moz-transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+-o-border-transform: rotate(0deg);
+border-transform: rotate(0deg);
+}
+
+
+.flor {
+position: absolute;
+}
+
+.flor div {
+position: absolute;
+}
+
+.centro {
+background: -moz-radial-gradient(center, ellipse cover, #FFC 0%, #F5D1D3 30%, #FFC 80%);
+background: -webkit-radial-gradient(center, ellipse cover, #FFC 0%, #F5D1D3 30%, #FFC 80%);
+background: -o-linear-gradient(-45deg, #F5D1D3 40%, #FFC 90%);
+background: radial-gradient(center, ellipse cover, #FFC 0%, #F5D1D3 30%, #FFC 80%);
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+-o-border-radius: 100px;
+border-radius: 100px;
+top: 50%;
+left: 50%;
+z-index: 10;
+width: 26%;
+height: 26%;
+margin: -13% 0 0 -13%;
+}
+
+.hoja {
+width: 50%;
+height: 50%;
+}
+
+.h1 {
+background: -moz-linear-gradient(-45deg, #F0A6C7 40%, #B9334C 90%);
+background: -webkit-linear-gradient(-45deg, #F0A6C7 40%, #B9334C 90%);
+background: -o-linear-gradient(-45deg, #F0A6C7 40%, #B9334C 90%);
+background: linear-gradient(-45deg, #F0A6C7 40%, #B9334C 90%);
+-moz-border-radius: 20px 10px 0 10px;
+-webkit-border-radius: 20px 10px 0 10px;
+-o-border-radius: 20px 10px 0 10px;
+border-radius: 20px 10px 0 10px;
+top: 0;
+left: 0;
+}
+
+.h2 {
+background: -moz-linear-gradient(-135deg, #F0A6C7 40%, #B9334C 90%);
+background: -webkit-linear-gradient(-135deg, #F0A6C7 40%, #B9334C 90%);
+background: -o-linear-gradient(-135deg, #F0A6C7 40%, #B9334C 90%);
+background: linear-gradient(-135deg, #F0A6C7 40%, #B9334C 90%);
+-moz-border-radius: 10px 20px 10px 0px;
+-webkit-border-radius: 10px 20px 10px 0px;
+-o-border-radius: 10px 20px 10px 0px;
+border-radius: 10px 20px 10px 0px;
+top: 0;
+right: 0;
+}
+
+.h3 {
+background: -moz-linear-gradient(45deg, #F0A6C7 40%, #B9334C 90%);
+background: -webkit-linear-gradient(45deg, #F0A6C7 40%, #B9334C 90%);
+background: -o-linear-gradient(45deg, #F0A6C7 40%, #B9334C 90%);
+background: linear-gradient(45deg, #F0A6C7 40%, #B9334C 90%);
+-moz-border-radius: 10px 0px 10px 20px;
+-webkit-border-radius: 10px 0px 10px 20px;
+-o-border-radius: 10px 0px 10px 20px;
+border-radius: 10px 0px 10px 20px;
+bottom: 0px;
+left: 0px;
+}
+
+.h4 {
+background: -moz-linear-gradient(135deg, #F0A6C7 40%, #B9334C 90%);
+background: -webkit-linear-gradient(135deg, #F0A6C7 40%, #B9334C 90%);
+background: -o-linear-gradient(135deg, #F0A6C7 40%, #B9334C 90%);
+background: linear-gradient(135deg, #F0A6C7 40%, #B9334C 90%);
+-moz-border-radius: 0px 10px 20px 10px;
+-webkit-border-radius: 0px 10px 20px 10px;
+-o-border-radius: 0px 10px 20px 10px;
+border-radius: 0px 10px 20px 10px;
+bottom: 0px;
+right: 0px;
+}
+
 
