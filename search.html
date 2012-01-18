@@ -15,8 +15,6 @@
      <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" />
      <link rel="stylesheet" href="/stylesheets/baobao.css" type="text/css" />
 
-     
-
   </head>
   <body onload="new Accordian('basic-accordian',5,'header_highlight');">
 
@@ -44,71 +42,22 @@
       <div class="clear"></div>
       
       <div id="sidebar" class="vcard">
-	<div id="cse-search-form" style="width: 100%;">Loading</div>
-	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-	<script type="text/javascript"> 
- 	 google.load('search', '1', {language : 'zh-CN'});
- 	 google.setOnLoadCallback(function() {
-  	  var customSearchOptions = {};
-   	 var customSearchControl = new google.search.CustomSearchControl(
-   	   '001532138950901773806:s_pstc4bymy', customSearchOptions);
-   	 customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-   	 var options = new google.search.DrawOptions();
-   	 options.setSearchFormRoot('cse-search-form');
-   	 customSearchControl.draw('cse', options);
- 	 }, true);
-	</script>
+<div id="cse-search-form" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.GREENSKY});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};
+    var customSearchControl = new google.search.CustomSearchControl(
+      '001532138950901773806:s_pstc4bymy', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.setSearchFormRoot('cse-search-form');
+    customSearchControl.draw('cse', options);
+  }, true);
+</script>
 
  	<div class="clear"></div>
-
-<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
-        <div id="basic-accordian" ><!--begin--> 
-       		<div id="test-header" class="accordion_headings" >About</div>
-			<div id="test-content"> 
-				<div class="accordion_child"> 
-				<li><a href="/me">me</a></li>
-				<li><a href="/category">index</a></li>
-				<li><a href="/anime">anime</a></li>
-				</div> 
-			</div> 
-		<div id="test2-header" class="accordion_headings" >RSS</div>
-			<div id="test2-content"> 
-				<div class="accordion_child"> 
-					<li><a href="http://feed.feedsky.com/maplebeats">feedsky</a></li>
-					<li><a href="http://feeds.feedburner.com/maplebeats">feedburner</a></li>
-					<li><a href="/atom.xml">xml</a></li>
-				</div>
-			</div>
-		<div id="test3-header" class="accordion_headings" >Repositories</div>
-			<div id="test3-content"> 
-				<div class="accordion_child"> 
-					<li><a href="https://github.com/maplebeats/playV">playV</a></li>
-					<li><a href="https://github.com/maplebeats/shells">My Scripts</a></li>
-					<li><a href="https://github.com/kernelhcy/gtkqq">Gtkqq</a></li>
-				</div>
-			</div>
-		<div id="test4-header" class="accordion_headings" >Weibo</div>
-			<div id="test4-content"> 
-				<div class="accordion_child"> 
-					<li><a href="http://weibo.com/maplebeats">weibo</a></li>
-					<li><a href="http://twitter.com/maplebeats">twitter</a></li>
-				</div>
-			</div>
-		<div id="test5-header" class="accordion_headings" >Links</div>
-			<div id="test5-content"> 
-				<div class="accordion_child"> 
-					<li><a href="http://forum.ubuntu.org.cn">ubuntu</a></li>
-					<li><a href="http://www.flickr.com/photos/maplebeats/">flickr</a></li>
-					<li><a href="http://qzworld.net/">Don</a></li>
-       				<li><a href="http://www.5dimn.com/">Q.D.</a></li>
-					<li><a href="http://www.cherrot.com/">切萝卜</a></li>
-					<li><a href="http://www.buroniworks.com/">某工房</a></li>
-					<li><a href="http://liaochenyuan.sourceforge.net">了尘缘</a></li>
-					<li><a href="http://www.lainme.com">laime</a></li>
-					<li><a href="http://db.tt/um14O4n">Dropbox</a></li>
-				</div> 
-			</div> 
-		</div><!-- end--> 
 
 	<!--baobao-->
 	<script src="/javascripts/jquery-1.6.1.min.js" type="text/javascript" type="text/javascript"></script> 
