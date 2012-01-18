@@ -10,8 +10,7 @@ body {
   line-height: 130%;
   font-size: 100%;
   color: #222;
-  background: url(/images/background.gif);
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family:'Yanone Kaffeesatz', sans-serif;
 }
 
 a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
@@ -119,6 +118,10 @@ h3 {
   display: none;
 }
 footer {
+   	 font-size: 80%;
+   	 color: #666;
+    	margin-top: 2em;
+    	overflow: hidden; 
 	text-align: center
 }
 
