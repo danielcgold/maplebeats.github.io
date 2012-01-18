@@ -4,24 +4,18 @@
   <head>
      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
      <title>
-       {% if page.title %}
-         {{ page.title }} //
-       {% endif %}
-       Maplebeats
+       
+	搜索
      </title>
      <meta name="author" content="Maplebeats" />
-     {% if page.summary %}
-       <meta namne="description" content="{{ page.summary }}" />
-     {% endif %}
+     
      <link href="/atom.xml" rel="alternate" title="Maplebeats" type="application/atom+xml" />
 
      <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
      <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" />
      <link rel="stylesheet" href="/stylesheets/baobao.css" type="text/css" />
 
-     {% for css in page.css %}
-       <link rel="stylesheet" href="{{ css }}" type="text/css" />
-	   {% endfor %}
+     
 
   </head>
   <body onload="new Accordian('basic-accordian',5,'header_highlight');">
@@ -50,15 +44,31 @@
       <div class="clear"></div>
       
       <div id="sidebar" class="vcard">
+	<div id="cse-search-form" style="width: 100%;">Loading</div>
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script type="text/javascript"> 
+ 	 google.load('search', '1', {language : 'zh-CN'});
+ 	 google.setOnLoadCallback(function() {
+  	  var customSearchOptions = {};
+   	 var customSearchControl = new google.search.CustomSearchControl(
+   	   '001532138950901773806:s_pstc4bymy', customSearchOptions);
+   	 customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+   	 var options = new google.search.DrawOptions();
+   	 options.setSearchFormRoot('cse-search-form');
+   	 customSearchControl.draw('cse', options);
+ 	 }, true);
+	</script>
 
+ 	<div class="clear"></div>
+
+<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
         <div id="basic-accordian" ><!--begin--> 
        		<div id="test-header" class="accordion_headings" >About</div>
 			<div id="test-content"> 
 				<div class="accordion_child"> 
 				<li><a href="/me">me</a></li>
-				<li><a href="/anime">anime</a></li>
 				<li><a href="/category">index</a></li>
-				<li><a href="/search">search</a></li>				
+				<li><a href="/anime">anime</a></li>
 				</div> 
 			</div> 
 		<div id="test2-header" class="accordion_headings" >RSS</div>
@@ -109,9 +119,7 @@
 
 	</div>
 
-      <div id="content">
-        {{ content }}
-      </div>
+<div id="cse" style="width:100%;">
 
     </div>
 
@@ -121,9 +129,9 @@
 	Powered by <a href="https://github.com/mojombo/jekyll">jekyll</a>，Modified by <a href="/">Maplebeats</a>
  	</footer>
 
-    {% for js in page.javascript %}
-      <script type="text/javascript" src="{{ js }}"></script>
-    {% endfor %}
+    
+      <script type="text/javascript" src="/javascripts/home.js"></script>
+    
 
   </body>
 </html>
