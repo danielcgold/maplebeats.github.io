@@ -1,5 +1,7 @@
 ---
 layout: default
+javascript:
+  - /javascripts/home.js
 ---
 
 <embed src="http://player.youku.com/player.php/sid/XMzI4NTAxMDA0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" flashvars="isAutoPlay=true" ></embed>
