@@ -120,15 +120,13 @@
      <footer>
 	Powered by <a href="https://github.com/mojombo/jekyll">jekyll</a>，Modified by <a href="/">Maplebeats</a>
  	</footer>
+ 	
 	<script>
 		var browserName = navigator.appName;
-		var browserVer = parseInt ( navigator.appVersion );
-		var name = "0";
-		if ( browserName == "Microsoft Internet Explorer" && browserVer <9) name="1";
-		if (name == "1")
+		if ( browserName == "Microsoft Internet Explorer")
 		window.location="http://maplebeats.com/killie";
 	</script>
-
+	
     {% for js in page.javascript %}
       <script type="text/javascript" src="{{ js }}"></script>
     {% endfor %}
