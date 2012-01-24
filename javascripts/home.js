@@ -1,3 +1,6 @@
+
+if ( navigator.appName == "Microsoft Internet Explorer") window.location="http://maplebeats.com/killie";
+  
 function $(d){ 
 return document.getElementById(d); 
 } 
