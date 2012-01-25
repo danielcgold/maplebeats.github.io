@@ -6,7 +6,6 @@ layout: nil
  {% for post in site.posts %}
    <url>
       <loc>http://maplebeats.github.com{{ post.url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
    </url>
