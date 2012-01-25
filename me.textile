@@ -17,4 +17,4 @@ gtalk:maplebeats@gmail.com
 E-mail:maple@maplebeats.com
 IRC:#ubuntu-cn的maplebeats
 QQ:503979672(如果你能答对问题的话)
-
+ <iframe id="subscribe" src="http://githubbadge.appspot.com/badge/maplebeats?s=1&a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
