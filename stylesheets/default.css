@@ -52,10 +52,10 @@ h1 a:hover{
   width:170px;height:35px;
 }
 .title:hover{
-  -webkit-transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-  -o-transform: rotate(30deg);
-  -transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -transform: rotate(15deg);
   -moz-transition:.3s ease-out;
   -webkit-transition:.3s ease-out;
   -o-transition:.3s ease-out;
