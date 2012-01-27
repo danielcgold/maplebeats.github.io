@@ -7,7 +7,7 @@
 #tempsaying ul {margin:1px 0px 0px 0px;padding:0px 0px 0px 5px;float:left;width:100%;line-height:16px;cursor:pointer;overflow:hidden;}
 .wcc_mlist {text-align:center;width:47%;float:left;line-height:16px;margin:0;padding:0px 0px 4px 0px;cursor:pointer;overflow:hidden;}
 #tempsaying ul {width:96%;}
-#calllebaobao {position:fixed;width:100px;line-height:30px;cursor:pointer;display:none;font-size:12px;fornt-
+#calllebaobao {position:fixed;width:50px;line-height:40px;cursor:pointer;display:none;font-size:12px;fornt-
 color:#FFFFFF;background-image:url(../images/call.png)}
 * html #calllebaobao {position:absolute;}
 #dialog_chat {position:absolute;top:0px;left:-205px;width:200px;line-height:23px;text-align:left;}

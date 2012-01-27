@@ -190,11 +190,11 @@ font-size: 14px;
 line-height: 25px; 
 letter-spacing: 1px; 
 }/*菜单分类行*/ 
-.accordion_headings:hover{ 
+.accordion_headings:hover{
+padding-left: 25px; 
 } 
 .accordion_child{ 
-padding-left: auto; 
-padding-bottom: 8px; 
+padding-left: 25px; 
 } 
 .accordion_child ul{
 list-style-type:none;
