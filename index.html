@@ -6,12 +6,24 @@ javascript:
 
 <div id="home">
   <ul class="posts">
-    {% for post in site.posts limit:7 % %}
+    {% for post in paginator.posts %}
       <li>
 	<span>{{ post.date | date_to_string }}</span> &raquo;<a href="{{ post.url }}">{{ post.title }}</a>
         <p>{{ post.summary }}</p>
       </li>
     {% endfor %}
+
+    {% if paginator.total_pages > 1 %}
+	<div class="navigation">
+            {% for page in (1..paginator.total_pages) %}
+              {% if page == paginator.page %}
+               <span>{{ page }}</span>
+              {% else %}
+               <a  href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
+              {% endif %}
+            {% endfor %}
+       </div>
+    {% endif %}
   </ul>
 
 </div>
