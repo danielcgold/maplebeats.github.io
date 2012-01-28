@@ -1,1 +1,18 @@
-这是maplebeats.com源码,如果有你能用的就拿走吧...别把我的文章也copy走了就行了...
+这是maplebeats.com的源码文件
+
+	_layouts 　	--jeykll模版
+	_posts   　	--文章
+	images   	--模版中使用的图片
+	javascripts	--js
+	stylesheets	--CSS
+	404.textile     --404
+	CHAME		--域名
+	_config.yml	--jeykll配置文件
+	anime.textile	--动漫列表
+	atom.xml	--RSS
+	index.html	--首页
+	killie.html	--IE跳转页面
+	links.html	--友链页面
+	me.html		--about me
+	search.html	--搜索页面
+	sitemap.xml	--网页地图
