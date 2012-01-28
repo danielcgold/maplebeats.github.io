@@ -30,7 +30,7 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
 }
 
 h1{
-  font-size:28px;
+  font-size:35px;
   color:white;
   margin: 0;
   padding:100px 20px 20px 20px;
@@ -49,7 +49,7 @@ h1 a:hover{
   -webkit-transition:.3s ease-out;
   -o-transition:.3s ease-out;
   transition: .3s ease-out;
-  width:170px;height:35px;
+  width:200px;height:35px;
 }
 .title:hover{
   -webkit-transform: rotate(15deg);

@@ -8,8 +8,9 @@ javascript:
   <ul class="posts">
     {% for post in paginator.posts %}
       <li>
-	<span>{{ post.date | date_to_string }}</span> &raquo;<a href="{{ post.url }}">{{ post.title }}</a>
-        <p>{{ post.summary }}</p>
+	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+	<del>{{ post.date | date_to_string }}</del>
+        <p>{{ post.content }}</p>
       </li>
     {% endfor %}
 
