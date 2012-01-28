@@ -5,16 +5,15 @@ javascript:
   - /javascripts/home.js
 ---
 
-<h4>我?热爱 _计算机_ ,热爱 _WOW_ ,热爱 _动漫_ ,还~还~还喜欢...哦,_妹子_!
-我的中文呢称枫叶饭团(源自 -Maplestory- ),英文叫maplebeats(源自 -Angel Beats- )~
-学习的专业是 -电子信息工程- ,空闲的时候喜欢上 _ubuntu_ 论坛灌水~
-我还是一个忠实的WOW ^er^ ,虽然不像以前那样尽心尽力的玩了.但是新版本出来的时候,还是会把它升到满级玩两天.比如最近4.3我就把 -死亡之翼- 推了,虽然是随机团队模式下......
+<h4>_我_?热爱 _计算机_,热爱 _WOW_,热爱 _动漫_,还~还~还喜欢...哦, _妹子_!
+我的中文呢称枫叶饭团(源自 -Maplestory-),英文叫maplebeats(源自 -Angel Beats- )~
+学习的专业是 -电子信息工程-,空闲的时候喜欢上 _ubuntu_ 论坛灌水~
+我还是一个忠实的WOW ^er^,虽然不像以前那样尽心尽力的玩了.但是新版本出来的时候,还是会把它升到满级玩两天.比如最近4.3我就把 -死亡之翼- 推了,虽然是 -随机团队- 模式下......
 动漫是我的最爱...为此我建了一个动漫列表:"anime":http://maplebeats.com/anime
 </h4>
 
 * Gtalk:maplebeats@gmail.com
 * E-mail:maple@maplebeats.com
 * IRC:#ubuntu-cn的maplebeats
-* QQ: -503979672- (如果你能答对问题的话)
+* QQ: -503979672-(如果你能答对问题的话)
 
-<iframe src="http://githubbadge.appspot.com/badge/maplebeats?s=1&a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>

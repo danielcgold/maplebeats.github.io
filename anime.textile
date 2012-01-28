@@ -4,7 +4,7 @@ javascript:
   - /javascripts/home.js
 ---
 
-<h3><font color="red">非常喜欢的</font></h3>
+<h3 class=title><font color=blue>非常喜欢的</font></h3>
 	<h5>
 	《次元魔女》（XXXholic)
 	《寒蝉鸣泣之时》(ひぐらしのなく顷に)
@@ -45,9 +45,10 @@ javascript:
 	《棋魂》（ヒカルの碁)
 	《水果篮子》
 	《樱兰高校男公关部》(桜兰高校ホスト部)
+	《幸运星》(lucky star)
 	</h5>
  
-<h3><font color="read"> 已看过的</font></h3>
+<h3 class=title><font color=red>已看过的</font></h3>
 	<h5>
 	《心跳回忆》（ときめきメモリアル、Tokimeki Memorial）
 	《不可思议的教室》（Pani Poni Dash!）
@@ -86,7 +87,6 @@ javascript:
 	《蔷薇少女》（ローゼンメイデン）
 	《守护甜心》（しゅごキャラ!)
 	《增血鬼果林》(かりんKarin)
-	《幸运星》(lucky star)
 	</h5>
 
 <h3><font color="green">PS:以上这些动漫都是我看过的,列出来意味着有看的意义.因为我记忆力不是很好,很多好看的动漫也给忘了...鸣谢:我弟弟晨晨以及臻哥给我提供了一些动漫</font></h3>
