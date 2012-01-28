@@ -276,6 +276,7 @@ function createFace(a, b, c, d){
 	chenghai("head").append('<div id="hiddenfaces"><img id="hf1" src="'+a+'" /><img id="hf2" src="'+b+'" /><img id="hf3" src="'+c+'" /><img id="hf4" src="'+d+'"/></div>');
 	setFace(1);
 }
+var num=1;
 function setFace(num){
 	obj = document.getElementById("hf"+num).src;
 	chenghai("#lebaobaoface").attr("style", "background:url("+obj+") no-repeat scroll 50% 0% transparent; width:"+imagewidth+"px;height:"+imageheight+"px;");
