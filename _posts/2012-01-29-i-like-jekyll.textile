@@ -1,0 +1,15 @@
+---
+layout: post
+title: Jekyll Github blog
+---
+用了这么久的的jekyll,却没写一篇关于怎么建这个博客的'技术'文.Ｇithub建博客很 -cool- 很 -geek- 很 -自虐-
+
+jekyll原理很简单,就是把模版生成静态的html.每个页面都是静态的!再也不用纠结那些神马伪静态,MySQL,PHP云云.相对于wp这些庞然大物,jekyll实在是轻巧很多~而且jekyll也支持插件(虽然我一个也没用过).如果自己有个Vps或者php空间什么的,个人不推荐用jekyll...实在是太 -自虐-了.当然像我这种穷鬼连空间都买不起的(其实我是懒了),依赖Github建一个实用的博客还是非常不错的.
+
+建博的方法,Google一搜.虽然没有像wp那样一大把,但是都是精华.我就不再写一篇了.如果像建立这博客还要一些重要的基础:git的使用,会点基本的html/css,会用 %记事本%.最好在本地也装上jekyll和web服务器,本地调试比上传到Github上调试效率高很多.然后就是去fork一个模版了,如果懒的话,fork过来就能直接用了...还是改成自己喜欢的样子比较好,抓一只css高手来帮你做就方便很多了.我的就是Don同学指导的,CSS神马的压根我就不会@.@
+
+然后就是关于写blog了,文章的格式有很多种.我用的是textile,当然也可以用markdown等.其实textile我也没怎么用好,很多时候还是自己写的html标签.个人推荐还是写个Script来自动生成文章,因为每次都要命名,写好格式什么的还是挺烦的.我就写了个很丑的Bash脚本...另外,Github本身并不是用来做博客的,所以...上传文章必需安装git组件,以及配置密钥.所以如果自己没电脑,那还是放弃吧.比如元旦节的时候我想写篇跨年文,却苦于自己的电脑在家里.
+
+我的博客 "源码":https://github.com/maplebeats/maplebeats.github.com
+ps:其实这篇文章是来测试右下角的时间戳的
+<p class=date>Posted on Sun Jan 29 17:11:07 2012 by <a href=http://maplebeats.com/me>maplebeats</a></p>
