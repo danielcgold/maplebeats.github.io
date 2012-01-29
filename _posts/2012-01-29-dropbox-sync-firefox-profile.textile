@@ -1,0 +1,17 @@
+---
+layout: post
+title: 使用dropbox同步firefox
+---
+自从把chromium卸载之后同步配置就成了大问题.至今未搞明白firefox自带的sync是个什么玩意...还是Chrome同步做得好,登陆就搞定了.
+
+firefox的默认配置文件在home下的.mozilla里面.本来很简单,只要同步这个文件夹就能搞定...但是,点开属性一看, -800MB- !Oh,my god...最后发现firefox的Cache居然也在里面的ORZ.
+
+只能把cache搞到其它地方,然后同步了.在地址栏里输入about:cache可以看到默认的目录位置.再输入 *about:config*,确认进入...别乱点~把布尔值变了万一出问题了就蛋疼了.右键新建一个字符串 *browser.cache.disk.parent_directory* 值就是你要更改的目录,比如我的 */home/maplebeats/.tmp* 重启浏览器,再 *about:cache* 看看
+
+将默认的Cache删除后,只有80多MB了~效果达到啦.把它移动到dropbox同步目录下,然后做个软链接到家目录下~ *ln -s .mozilla ~/*搞定~!
+
+如果非常懒...那就把 -firefox- 关闭.终端输入firefox -p,新建一个配置文件把目录放在dropbox同步目录下~搞定~!
+
+其它的配置同理...跟着云走~~haha
+
+<p class=date>Posted on Sun Jan 29 21:44:40 2012 by <a href=http://maplebeats.com/me>maplebeats</a></p>
