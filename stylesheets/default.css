@@ -109,10 +109,16 @@ h3 {
 #post {
     margin-bottom: 30px;
 }
+.date {
+    font-size: 80%;
+    text-align: right
+}
 #disqus_thread {
+    font-size: 90%;
     margin-bottom: 130px;
 }
 #related {
+    font-size: 90%;
     margin-bottom: 30px;
 }
 .posts p {
