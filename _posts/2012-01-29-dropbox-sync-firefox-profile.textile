@@ -14,4 +14,4 @@ firefox的默认配置文件在home下的.mozilla里面.本来很简单,只要�
 
 其它的配置同理...跟着云走~~haha
 
-<p class=date>Posted on Sun Jan 29 21:44:40 2012 by <a href=http://maplebeats.com/me>maplebeats</a></p>
+<p class=date>Posted on Sun Jan 29 21:44:40 2012 by "maplebeats":http://maplebeats.com/me</p>

@@ -12,4 +12,4 @@ jekyll原理很简单,就是把模版生成静态的html.每个页面都是静�
 
 我的博客 "源码":https://github.com/maplebeats/maplebeats.github.com
 ps:其实这篇文章是来测试右下角的时间戳的
-<p class=date>Posted on Sun Jan 29 17:11:07 2012 by <a href=http://maplebeats.com/me>maplebeats</a></p>
+<p class=date>Posted on Sun Jan 29 17:11:07 2012 by "maplebeats":http://maplebeats.com/me</p>
