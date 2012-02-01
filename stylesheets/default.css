@@ -75,6 +75,56 @@ h1 a:hover {
 #sidebar .adr, #sidebar .tel {
     display: none;
 }
+#basic-accordian {
+    position: fixed;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: auto;
+    z-index: 2;
+}
+.accordion_headings {
+    color: #A65800;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding: 2px;
+}
+.accordion_headings:hover {
+    padding-left: 25px;
+}
+.accordion_child {
+    padding-left: 25px;
+}
+.accordion_child ul {
+    list-style-type: none;
+}
+.accordion_child ul li {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+}
+.accordion_child ul li a {
+    color: #666666;
+    text-decoration: none;
+}
+.accordion_child ul li a:hover {
+    color: #FFFFFF;
+}
+.header_highlight {
+    background-color: #FFCC99;
+    border-radius: 5px 5px 5px 5px;
+    color: #BF7C30;
+}
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: auto;
+}
 #content {
     -moz-transition: all 0.2s ease-out 0s;
     background: url("/images/background2.png") repeat scroll 0 0 #FFEAD2;
@@ -143,55 +193,6 @@ footer a:hover {
 .navigation {
     font-size: 14px;
     text-align: center;
-}
-#basic-accordian {
-    margin-bottom: 2%;
-    margin-top: 2%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    width: auto;
-    z-index: 2;
-}
-.accordion_headings {
-    color: #A65800;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 25px;
-    padding: 2px;
-}
-.accordion_headings:hover {
-    padding-left: 25px;
-}
-.accordion_child {
-    padding-left: 25px;
-}
-.accordion_child ul {
-    list-style-type: none;
-}
-.accordion_child ul li {
-    display: block;
-    font-size: 12px;
-    line-height: 20px;
-}
-.accordion_child ul li a {
-    color: #666666;
-    text-decoration: none;
-}
-.accordion_child ul li a:hover {
-    color: #FFFFFF;
-}
-.header_highlight {
-    background-color: #FFCC99;
-    border-radius: 5px 5px 5px 5px;
-    color: #BF7C30;
-}
-.main {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    width: auto;
 }
 a {
     -moz-transition: all 0.2s ease-out 0s;
