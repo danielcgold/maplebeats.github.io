@@ -369,7 +369,7 @@ function talkSelf(talktime){
 		closeInput();
 		tsi = Math.floor(Math.random() * talkself_arr.length + 1)-1;
 		lebaobaoSay(talkself_arr[tsi][0]);
-		setFace(talkself_arr[tsi][1]);
+		setFace(talkself_arr[tsi][0]);
 	}
 	talkobj = window.setTimeout("talkSelf("+talktime+")", 1000);
 }
