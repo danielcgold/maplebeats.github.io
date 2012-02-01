@@ -47,7 +47,6 @@ javascript:
 	《水果篮子》
 	《樱兰高校男公关部》(桜兰高校ホスト部)
 	《幸运星》(lucky star)
-	《便当》
 	</h5>
  
 <h3 class=title><font color=red>已看过的</font></h3>
@@ -89,6 +88,8 @@ javascript:
 	《蔷薇少女》（ローゼンメイデン）
 	《守护甜心》（しゅごキャラ!)
 	《增血鬼果林》(かりんKarin)
+	《便当》(ben-tou)
+	《钢之炼金术士》(Fullmetal Alchemist)
 	</h5>
 
 <h3><font color="green">PS:以上这些动漫都是我看过的,列出来意味着有看的意义.因为我记忆力不是很好,很多好看的动漫也给忘了...鸣谢:我弟弟晨晨以及臻哥给我提供了一些动漫</font></h3>
