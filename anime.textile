@@ -88,7 +88,7 @@ javascript:
 	《蔷薇少女》（ローゼンメイデン）
 	《守护甜心》（しゅごキャラ!)
 	《增血鬼果林》(かりんKarin)
-	《便当》(ben-tou)
+	《便当》(ben-to)
 	《钢之炼金术士》(Fullmetal Alchemist)
 	</h5>
 
