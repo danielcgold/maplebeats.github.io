@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 我的动漫列表
 javascript:
   - /javascripts/home.js
 ---
