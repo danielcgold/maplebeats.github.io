@@ -1,0 +1,43 @@
+---
+layout: post
+title: Python study notes(3)
+---
+自上一篇学习笔记已经有一段时间了,番外篇不算哈~因为这几天都在学车,所以一直没在家里,所以...不过还好,运气不错.抽到了第一组1号,发挥不错...顺利的拿到了驾照 ≧^◡^≦ 学车真的是恶心至极,总算是解放了（╯‵□′）╯︵┴─┴ 
+
+回来就继续完成我没有完成的Pyakefile(Shakefile的python实现),花了一个多小时终于搞定了~虽然代码写得奇丑,而且文件目录还是死写进去的.简单版算是完成了,接下来就是补全了,不过我很懒...
+
+{% highlight py %}
+#!/usr/bin/env python
+import os,time
+
+def creatfile():
+	time_format = "%Y-%m-%d-"
+	time_file = time.strftime(time_format, time.localtime())
+	title_file = raw_input("link title:")
+	file_name = time_file + title_file + '.textile'
+	print time_file + title_file
+	f = file("/home/maplebeats/works/maplebeats.github.com/_posts/%s" % file_name,'w')
+	return file_name
+
+def writefile(file_name):
+	post_title = raw_input("title:")
+	f = open("/home/maplebeats/works/maplebeats.github.com/_posts/%s" % file_name,'w')
+	f.write('---\nlayout: post\ntitle: ' + post_title + '\n---\n')
+	f.close()
+	os.system("gedit /home/maplebeats/works/maplebeats.github.com/_posts/%s" % file_name)
+	time_format = "%Y-%m-%d %X"
+	post_time = time.strftime(time_format, time.localtime())
+	f = open("/home/maplebeats/works/maplebeats.github.com/_posts/%s" % file_name,'a')
+	f.write('<p class=date>Posted on %s by \"maplebeats\":http://maplebeats.com/me</p>' % post_time)
+	f.close()
+	return file_name
+
+
+def pushfile(file_name):
+	os.system("cd ~/works/maplebeats.github.com/ && git add . && git commit -a -m 'new post' && git push")
+
+pushfile(writefile(creatfile()))
+{% endhighlight %}
+
+写这个小程序,对python算是进步很多了.这算是我写的第一个python程序吧,抄书那个肯定不算.只涉及了os,time两个标准库,本来打算实现和Shakefile完全一样的功能的,但是偷懒就不了了之了.还学会了参数的传递,书上肯定有,但是我没找到,所以google出来的~当然,这篇文章是用来测试这这程序工作是否正常的 (≧▽≦)y 
+<p class=date>Posted on 2012-02-10 14:35:44 by "maplebeats":http://maplebeats.com/me</p>

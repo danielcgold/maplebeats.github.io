@@ -1,6 +1,0 @@
----
-layout: post
-title: test
----
-test
-<p class=date>Posted on 2012-02-10 14:33:41 by "maplebeats":http://maplebeats.com/me</p>
