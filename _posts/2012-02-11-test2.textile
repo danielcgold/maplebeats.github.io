@@ -1,6 +1,0 @@
----
-layout: post
-title: test2
----
-gui基本算是完成了,中文支持好像也能行了吧...测试测试
-<p class=date>Posted on Sat Feb 11 19:38:53 2012 by "maplebeats":http://maplebeats.com/me</p>
