@@ -68,9 +68,9 @@
 					  <li><a href="http://http://bancage.qzworld.net/">banban姐</a></li>
 				  </ul>
 				  <span>Links</span> </li>
+						{% if paginator.total_pages > 1 %}
 				  <li class="trigger">
 				  <ul class="menu">
-						{% if paginator.total_pages > 1 %}
 							{% for page in (1..paginator.total_pages) %}
 								{% if page == paginator.page %}
 								<span>{{ page }}</span>
@@ -78,9 +78,9 @@
 									<a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
 								{% endif %}
 							{% endfor %}
-						{% endif %}
 				  </ul>
 				  <span>Pages</span> </li>
+						{% endif %}
 			  </ul>
 			  <div id="product-footer"></div>
 		  </div>
