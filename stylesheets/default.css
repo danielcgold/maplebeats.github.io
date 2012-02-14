@@ -49,81 +49,62 @@ h1 a:hover {
     margin: 15px;
 }
 #sidebar {
+    background: url("/images/background.png") repeat scroll 0 0 #FFA540;
+    color: #444444;
     float: right;
+    font: 100% Georgia,"Times New Roman";
+    margin: 0;
     padding: 10px 20px 20px;
     width: 160px;
 }
-#sidebar a, #sidebar a:link #sidebar a:visited {
-    color: #222222;
+#wrapper { position: fixed;margin: 0 auto; }
+a:hover {
+    color: #995534;
 }
-#sidebar dl, #sidebar ul {
-    margin: 0 0 30px;
+#product-header {
+    background: url("") no-repeat scroll center center transparent;
+    height: 28px;
+}
+#product-footer {
+    background: url("") no-repeat scroll center center transparent;
+    height: 28px;
+}
+ul#product {
+    background: url("") repeat-y scroll center center transparent;
+    list-style: none outside none;
+    margin: 0;
     padding: 0;
 }
-#sidebar dl#contact dt {
-    display: none;
+ul#product li span {
+    padding-left: 2em;
 }
-#sidebar dl#contact dd {
+ul#product li.trigger {
+    padding: 0.4em;
+}
+ul#product .trigger ul.menu {
+    margin-left: 5em;
+    margin-top: 1.2em;
+}
+.trigger ul.menu {
+    background: url("/images/background2.png") repeat-y scroll center center transparent;
+    border: 1px solid #CCCCCC;
+    display: none;
+    list-style: none outside none;
     margin: 0;
+    padding: 0.4em;
+    position: absolute;
 }
-#sidebar ul {
-    list-style-type: none;
+.trigger ul.menu li {
+    padding: 0.1em 0.5em;
 }
-#sidebar a {
-    text-decoration: none;
-}
-#sidebar .adr, #sidebar .tel {
-    display: none;
-}
-#basic-accordian {
-    position: fixed;
-    margin-bottom: 2%;
-    margin-top: 2%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    width: auto;
-    z-index: 2;
-}
-.accordion_headings {
-    color: #A65800;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 25px;
-    padding: 2px;
-}
-.accordion_headings:hover {
-    padding-left: 25px;
-}
-.accordion_child {
-    padding-left: 25px;
-}
-.accordion_child ul {
-    list-style-type: none;
-}
-.accordion_child ul li {
+.trigger ul.menu li a {
     display: block;
-    font-size: 12px;
-    line-height: 20px;
 }
-.accordion_child ul li a {
-    color: #666666;
-    text-decoration: none;
+.trigger:hover {
+    background: url("/images/1.png") no-repeat scroll center center transparent;
 }
-.accordion_child ul li a:hover {
-    color: #FFFFFF;
-}
-.header_highlight {
-    background-color: #FFCC99;
-    border-radius: 5px 5px 5px 5px;
-    color: #BF7C30;
-}
-.main {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    width: auto;
+.trigger:hover ul.menu {
+    display: block;
 }
 #content {
     -moz-transition: all 0.2s ease-out 0s;
@@ -158,9 +139,9 @@ h3 {
     margin-bottom: 30px;
 }
 .date {
-	color:red;
+    color: red;
     font-size: 80%;
-    text-align: right
+    text-align: right;
 }
 #disqus_thread {
     font-size: 90%;
@@ -195,6 +176,7 @@ footer a:hover {
 }
 a {
     -moz-transition: all 0.2s ease-out 0s;
+    color: #3D1C0B;
     text-decoration: none;
 }
 .to_top {
