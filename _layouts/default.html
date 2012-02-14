@@ -32,6 +32,7 @@
       <div class="clear"></div>  
       <div id="sidebar" class="vcard">
 		  <div id="wrapper">
+			  <div id="product-header"></div>
 			  <ul id="product">
 				  <li class="trigger">
 				  <ul class="menu">
@@ -67,7 +68,21 @@
 					  <li><a href="http://http://bancage.qzworld.net/">banban姐</a></li>
 				  </ul>
 				  <span>Links</span> </li>
+				  <li class="trigger">
+				  <ul class="menu">
+						{% if paginator.total_pages > 1 %}
+							{% for page in (1..paginator.total_pages) %}
+								{% if page == paginator.page %}
+								<span>{{ page }}</span>
+									{% else %}
+									<a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+				  </ul>
+				  <span>Pages</span> </li>
 			  </ul>
+			  <div id="product-footer"></div>
 		  </div>
 	  </div>
 
