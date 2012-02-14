@@ -20,7 +20,7 @@ javascript:
               {% if page == paginator.page %}
                <span>{{ page }}</span>
               {% else %}
-               <a  href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
+               <a class="num" href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
               {% endif %}
             {% endfor %}
        </div>
