@@ -57,7 +57,7 @@ h1 a:hover {
     padding: 10px 20px 20px;
     width: 160px;
 }
-#wrapper { position: fixed;margin: 0 auto; }
+#wrapper { position: fixed;margin: 0 auto;width: 200px; }
 a:hover {
     color: #995534;
 }
@@ -70,13 +70,15 @@ a:hover {
     height: 28px;
 }
 ul#product {
-    background: url("") repeat-y scroll center center transparent;
+    background: url("/images/background2.png") repeat-y scroll center center transparent;
     list-style: none outside none;
     margin: 0;
     padding: 0;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px #FFC686;
 }
 ul#product li span {
-    padding-left: 2em;
+    padding-left: 0em;
 }
 ul#product li.trigger {
     padding: 0.4em;
@@ -86,13 +88,15 @@ ul#product .trigger ul.menu {
     margin-top: 1.2em;
 }
 .trigger ul.menu {
-    background: url("/images/background2.png") repeat-y scroll center center transparent;
+    background: url("/images/background.png") repeat-y scroll center center transparent;
     border: 1px solid #CCCCCC;
     display: none;
     list-style: none outside none;
     margin: 0;
     padding: 0.4em;
     position: absolute;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px #FFC686;
 }
 .trigger ul.menu li {
     padding: 0.1em 0.5em;
