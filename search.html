@@ -1,149 +1,114 @@
-<div id="cse" style="width: 100%;">Loading</div>
+<!DOCTYPE html>
+
+<html>
+  <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+     <title>
+       
+	搜索!
+       
+     </title>
+     <meta name="author" content="Maplebeats" />
+     
+       <meta namne="description" content="为什么会在这里，为什么会产生这玩意" />
+     
+     <link href="/atom.xml" rel="alternate" title="Maplebeats" type="application/atom+xml" />
+
+     <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
+     <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" />
+     <link rel="stylesheet" href="/stylesheets/baobao.css" type="text/css" />
+
+  </head>
+  <body>
+
+	<div id="site">
+
+      <a id="subscribe" href="http://feed.feedsky.com/maplebeats"><img src="/images/rss.png" alt="Subscribe to RSS Feed" /></a>
+
+	  <h1>
+		<a href="/" class="title">Maplebeats</a>
+	  </h1>	
+
+      <div class="clear"></div>  
+      <div id="sidebar" class="vcard">
+
+
+<div id="cse-search-form" style="width: 150%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
-  google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.ESPRESSO});
+  google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.GREENSKY});
   google.setOnLoadCallback(function() {
-    var customSearchOptions = {};
-    var customSearchControl = new google.search.CustomSearchControl(
-      '012677489170099713205:lvvdws5kqjc', customSearchOptions);
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '001532138950901773806:s_pstc4bymy', customSearchOptions);
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    customSearchControl.draw('cse');
+    var options = new google.search.DrawOptions();
+    options.setSearchFormRoot('cse-search-form');
+    customSearchControl.draw('cse', options);
   }, true);
 </script>
- <style type="text/css">
-  .gsc-control-cse {
-    font-family: Georgia, serif;
-    border-color: #FFFFFF;
-    background-color: #FFFFFF;
-  }
-  input.gsc-input {
-    border-color: #BF7C30;
-  }
-  input.gsc-search-button {
-    border-color: #A65800;
-    background-color: #A65800;
-  }
-  .gsc-tabHeader.gsc-tabhInactive {
-    border-color: #BF7C30;
-    background-color: #BF7C30;
-  }
-  .gsc-tabHeader.gsc-tabhActive {
-    border-color: #A65800;
-    background-color: #A65800;
-  }
-  .gsc-tabsArea {
-    border-color: #A65800;
-  }
-  .gsc-webResult.gsc-result,
-  .gsc-results .gsc-imageResult {
-    border-color: #FFFFFF;
-    background-color: #FFFFFF;
-  }
-  .gsc-webResult.gsc-result:hover,
-  .gsc-webResult.gsc-result.gsc-promotion:hover,
-  .gsc-imageResult:hover {
-    border-color: #FFFFFF;
-    background-color: #FFFFFF;
-  }
-  .gs-webResult.gs-result a.gs-title:link,
-  .gs-webResult.gs-result a.gs-title:link b,
-  .gs-imageResult a.gs-title:link,
-  .gs-imageResult a.gs-title:link b {
-    color: #A65800;
-  }
-  .gs-webResult.gs-result a.gs-title:visited,
-  .gs-webResult.gs-result a.gs-title:visited b,
-  .gs-imageResult a.gs-title:visited,
-  .gs-imageResult a.gs-title:visited b {
-    color: #A65800;
-  }
-  .gs-webResult.gs-result a.gs-title:hover,
-  .gs-webResult.gs-result a.gs-title:hover b,
-  .gs-imageResult a.gs-title:hover,
-  .gs-imageResult a.gs-title:hover b {
-    color: #A65800;
-  }
-  .gs-webResult.gs-result a.gs-title:active,
-  .gs-webResult.gs-result a.gs-title:active b,
-  .gs-imageResult a.gs-title:active,
-  .gs-imageResult a.gs-title:active b {
-    color: #A65800;
-  }
-  .gsc-cursor-page {
-    color: #A65800;
-  }
-  a.gsc-trailing-more-results:link {
-    color: #A65800;
-  }
-  .gs-webResult .gs-snippet,
-  .gs-imageResult .gs-snippet,
-  .gs-fileFormatType {
-    color: #333333;
-  }
-  .gs-webResult div.gs-visibleUrl,
-  .gs-imageResult div.gs-visibleUrl {
-    color: #A25B08;
-  }
-  .gs-webResult div.gs-visibleUrl-short {
-    color: #A25B08;
-  }
-  .gs-webResult div.gs-visibleUrl-short {
-    display: none;
-  }
-  .gs-webResult div.gs-visibleUrl-long {
-    display: block;
-  }
-  .gs-promotion div.gs-visibleUrl-short {
-    display: none;
-  }
-  .gs-promotion div.gs-visibleUrl-long {
-    display: block;
-  }
-  .gsc-cursor-box {
-    border-color: #FFFFFF;
-  }
-  .gsc-results .gsc-cursor-box .gsc-cursor-page {
-    border-color: #BF7C30;
-    background-color: #FFFFFF;
-    color: #A65800;
-  }
-  .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
-    border-color: #A65800;
-    background-color: #A65800;
-    color: #A65800;
-  }
-  .gsc-webResult.gsc-result.gsc-promotion {
-    border-color: #FEFEDC;
-    background-color: #FFFFCC;
-  }
-  .gs-promotion a.gs-title:link,
-  .gs-promotion a.gs-title:link *,
-  .gs-promotion .gs-snippet a:link {
-    color: #A65800;
-  }
-  .gs-promotion a.gs-title:visited,
-  .gs-promotion a.gs-title:visited *,
-  .gs-promotion .gs-snippet a:visited {
-    color: #A65800;
-  }
-  .gs-promotion a.gs-title:hover,
-  .gs-promotion a.gs-title:hover *,
-  .gs-promotion .gs-snippet a:hover {
-    color: #A65800;
-  }
-  .gs-promotion a.gs-title:active,
-  .gs-promotion a.gs-title:active *,
-  .gs-promotion .gs-snippet a:active {
-    color: #A65800;
-  }
-  .gs-promotion .gs-snippet,
-  .gs-promotion .gs-title .gs-promotion-title-right,
-  .gs-promotion .gs-title .gs-promotion-title-right *  {
-    color: #333333;
-  }
-  .gs-promotion .gs-visibleUrl,
-  .gs-promotion .gs-visibleUrl-short {
-    color: #A25B08;
-  }
-</style>
-      
+		  <div id="wrapper">
+			  <div id="product-header"></div>
+			  <ul id="product">
+				  <li class="trigger">
+				  <ul class="menu">
+					  <li><a href="/me">me</a></li>
+					  <li><a href="/anime">anime</a></li>
+					  <li><a href="/search">search</a></li> 
+				  </ul>
+				  <span>About</span> </li>
+				  <li class="trigger">
+				  <ul class="menu">
+					  <li><a href="http://feed.feedsky.com/maplebeats">feedsky</a></li>
+					  <li><a href="http://feeds.feedburner.com/maplebeats">feedburner</a></li>
+					  <li><a href="/atom.xml">xml</a></li>
+				  </ul>
+				  <span>RSS</span> </li>
+				  <li class="trigger">
+				  <ul class="menu">
+					  <li><a href="https://github.com/maplebeats/configuration">Configurations</a></li>
+					  <li><a href="https://github.com/maplebeats/Scripts">My Scripts</a></li>
+					  <li><a href="https://github.com/kernelhcy/gtkqq">Gtkqq</a></li>
+				  </ul>
+				  <span>Repositories</span> </li>
+				  <li class="trigger">
+				  <ul class="menu">
+					  <li><a href="http://forum.ubuntu.org.cn">ubuntu</a></li>
+					  <li><a href="http://www.flickr.com/photos/maplebeats/">Flickr</a></li>
+					  <li><a href="http://qzworld.net/">Don</a></li>
+					  <li><a href="http://www.5dimn.com/">Q.D.</a></li>
+					  <li><a href="http://www.cherrot.com/">切萝卜</a></li>
+					  <li><a href="http://www.buroniworks.com/">某工房</a></li>
+					  <li><a href="http://liaochenyuan.sourceforge.net">了尘缘</a></li>
+					  <li><a href="http://www.lainme.com">laime</a></li>
+					  <li><a href="http://http://bancage.qzworld.net/">banban姐</a></li>
+				  </ul>
+				  <span>Links</span> </li>
+						
+			  </ul>
+			  <div id="product-footer"></div>
+		  </div>
+	  </div>
+
+      <div id="content">
+<div id="cse" style="width:100%;"></div> 
+
+ </ul>
+</div>
+
+
+
+      </div>
+
+    </div>
+
+	<a href="#" class="to_top" title="返回顶部"><img src="/images/gotop.gif" width="20" height="59" /></a>
+
+  <div class="clear"></div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script> 	
+    
+	<script type="text/javascript" src="/javascripts/home.js"></script>
+    
+
+  </body>
+</html>
