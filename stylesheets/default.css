@@ -13,7 +13,7 @@ body {
     text-decoration: none;
 }
 a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
-    color: #AFEEEE;
+    color: #4671D5;
 }
 #site {
 	padding: 20px 0;
@@ -55,6 +55,7 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
     text-decoration: none;
 }
 #sidebar {
+	color: #06266F;
     font: 100% Georgia,"Times New Roman";
     margin: 0;
 	float: left;
@@ -67,7 +68,7 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
 	width: 220px;
 }
 a:hover {
-    color: #995534;
+    color: #2A4480;
 }
 ul#product {
 	border-radius: 10px 10px 10px 10px;
@@ -88,7 +89,6 @@ ul#product .trigger ul.menu {
     margin-top: 1.2em;
 }
 .trigger ul.menu {
-    background: #BF80BF;
     border: 1px solid #CCCCCC;
     display: none;
     list-style: none outside none;
@@ -111,9 +111,10 @@ ul#product .trigger ul.menu {
     display: block;
 }
 #music {
-	display: block;
+	padding: 200px 5px;
 }
 #content {
+	background: #FFFFFF;
 	float: right;
     padding: 15px;
     width: 650px;
@@ -163,14 +164,14 @@ h3 {
     display: none;
 }
 footer {
-    color: #DCDCDC;
+    color: #6C8CD5;
     font-size: 80%;
     margin-top: 2em;
     overflow: hidden;
     text-align: center;
 }
 footer a, a:visited {
-    color: #FFF5EA;
+    color: #06266F;
 }
 footer a:hover {
     color: #FDD8B0;
