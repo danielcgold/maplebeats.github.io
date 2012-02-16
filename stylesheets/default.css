@@ -5,7 +5,7 @@ img {
     border: 0 none;
 }
 body {
-    background: url("/images/background.png") repeat scroll 0 0 #FFA540;
+    background: url(/images/bg1.jpg) no-repeat fixed center;
     color: #222222;
     font-family: Microsoft YaHei;
     font-size: 100%;
@@ -13,62 +13,69 @@ body {
     text-decoration: none;
 }
 a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
-    color: #BB4400;
+    color: #AFEEEE;
 }
 #site {
-    margin: auto;
-    width: 850px;
+	padding: 20px 0;
+	margin: 0 auto;
+    width: 950px;
+	overflow:auto;
+	border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px #FFC686
 }
 #subscribe {
-    float: right;
-    margin: 20px;
+    margin: 0 auto;
 }
-h1 {
+#title {
+	height: 90px;
+	padding: 0 50px;
+}
+#tag {
+	margin: 0;
+    padding: 0;
+	letter-spacing: -0.05em;
+	height: 30px;
+}
+#tag h1{
     color: white;
-    font-size: 35px;
-    margin: 0;
-    padding: 100px 20px 20px;
+    font-size: 200%;
 }
-h1 a, h1 a:link, h1 a:visited h1 {
+#tag h1 a, h1 a:link, h1 a:visited h1 {
     color: #FFF5EA;
 }
-h1 a:hover {
+#tag h1 a:hover {
     color: #FFEBD4;
 }
-.title:hover {
-	color: #FF8000;
-}
-#slogan {
-    margin: 15px;
+#tagline {
+	border-top: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    float: left;
+    font-size: 11px;
+    padding: 0 3px;
+    text-decoration: none;
 }
 #sidebar {
-    background: url("/images/background.png") repeat scroll 0 0 #FFA540;
-    color: #444444;
-    float: right;
     font: 100% Georgia,"Times New Roman";
     margin: 0;
+	float: left;
     padding: 10px 20px 20px;
-    width: 160px;
+    width: 220px;
 }
-#wrapper { position: fixed;margin: 0 auto;width: 200px; }
+#wrapper {
+	position: fixed;
+	margin: 0 auto;
+	width: 220px;
+}
 a:hover {
     color: #995534;
 }
-#product-header {
-    background: url("") no-repeat scroll center center transparent;
-    height: 28px;
-}
-#product-footer {
-    background: url("") no-repeat scroll center center transparent;
-    height: 28px;
-}
 ul#product {
-    background: url("/images/background2.png") repeat-y scroll center center transparent;
+	border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px #FFC686;
+    background: url("/images/sbg1.jpg");
     list-style: none outside none;
     margin: 0;
     padding: 0;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 0 10px #FFC686;
 }
 ul#product li span {
     padding-left: 0em;
@@ -104,11 +111,11 @@ ul#product .trigger ul.menu {
     display: block;
 }
 #content {
-    background: url("/images/background2.png") repeat scroll 0 0 #FFEAD2;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 0 10px #FFC686;
+	float: right;
     padding: 15px;
-    width: 600px;
+    width: 650px;
+	border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px #FFC686;
 }
 #content ul {
     list-style-type: none;
@@ -123,7 +130,7 @@ h3 {
     padding: 0;
 }
 .highlight pre {
-    padding: 10px;
+    padding: 5px;
 }
 .update {
     background: none repeat scroll 0 0 #FFEE88;
@@ -153,7 +160,7 @@ h3 {
     display: none;
 }
 footer {
-    color: #A65800;
+    color: #DCDCDC;
     font-size: 80%;
     margin-top: 2em;
     overflow: hidden;
@@ -182,7 +189,6 @@ a {
     bottom: 50px;
     height: 59px;
     position: fixed;
-    right: 40px;
     width: 20px;
 }
 

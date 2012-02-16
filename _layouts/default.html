@@ -23,16 +23,28 @@
 
 	<div id="site">
 
-      <a id="subscribe" href="http://feed.feedsky.com/maplebeats"><img src="/images/rss.png" alt="Subscribe to RSS Feed" /></a>
+		<div id="title">
+			<div id="tag">
+				<h1>
+					<a href="/">Maplebeats</a>
+				</h1>
+			</div>
+			<div id="tagline">
+				一个莫明奇妙的玩意,没有任何技术含量.
+			</div>
+		</div>	
 
-	  <h1>
-		<a href="/" class="title">Maplebeats</a>
-	  </h1>	
+	  <div id="sidebar">
 
-      <div class="clear"></div>  
-      <div id="sidebar" class="vcard">
 		  <div id="wrapper">
-			  <div id="product-header"></div>
+
+			  <div id="subscribe" align="center">
+		<a href="http://firefox.com.cn/download/"><img alt="Mozilla Firefox" title="Mozilla Firefox" src="http://maplebeats.com/images/firefox.png"></a>
+		<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html"><img alt="Google Chrome" title="Google Chrome" src="http://maplebeats.com/images/chrome.png"></a>
+		<a href="http://www.apple.com.cn/safari/"><img alt="Apple Safari" title="Apple Safari" src="http://maplebeats.com/images/safari.png"></a>
+		<a href="http://www.opera.com/"><img alt="Opera" title="Opera" src="http://maplebeats.com/images/opera.png"></a>
+
+			  </div>
 			  <ul id="product">
 				  <li class="trigger">
 				  <ul class="menu">
@@ -82,17 +94,16 @@
 				  <span>Pages</span> </li>
 						{% endif %}
 			  </ul>
-			  <div id="product-footer"></div>
 		  </div>
 	  </div>
 
-      <div id="content">
+	  <div id="content">
         {{ content }}
-      </div>
-
-    </div>
+	</div>
 
 	<a href="#" class="to_top" title="返回顶部"><img src="/images/gotop.gif" width="20" height="59" /></a>
+
+</div>
 
   <div class="clear"></div>
 
