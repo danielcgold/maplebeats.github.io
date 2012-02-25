@@ -108,7 +108,7 @@ ul#product .trigger ul.menu {
     background: url("/images/1.png") no-repeat scroll center center transparent;
 }
 .trigger:hover ul.menu {
-	background: #BFBF80
+	background: #BFBF80;
     display: block;
 }
 #music {
