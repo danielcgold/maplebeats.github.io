@@ -1,0 +1,102 @@
+---
+layout: default
+title: doc
+javascript:
+  - /javascripts/home.js
+---
+The Python GTK+ 3 Tutorial
+Release:	3.0
+Date:	February 12, 2012
+This tutorial gives an introduction to writing GTK+ 3 applications in Python.
+
+Prior to working through this tutorial, it is recommended that you have a reasonable grasp of the Python programming language. GUI programming introduces new problems compared to interacting with the standard output (console / terminal). It is necessary for you to know how to create and run Python files, understand basic interpreter errors, and work with strings, integers, floats and Boolean values. For the more advanced widgets in this tutorial, good knowledge of lists and tuples will be needed.
+
+Although this tutorial describes the most important classes and methods within GTK+ 3, it is not supposed to serve as an API reference. Please refer to the GTK+ 3 Reference Manual for a detailed description of the API.
+
+Contents:
+1. Installation
+1.1. Dependencies
+1.2. Prebuilt Packages
+1.3. Installing From Source
+2. Getting Started
+2.1. Simple Example
+2.2. Extended Example
+3. Basics
+3.1. Main loop and Signals
+3.2. Properties
+4. Layout Containers
+4.1. Boxes
+4.2. Table
+4.3. Grid
+5. Label
+5.1. Label Objects
+5.2. Example
+6. Entry
+6.1. Entry Objects
+6.2. Example
+7. Button Widgets
+7.1. Button
+7.2. ToggleButton
+7.3. CheckButton
+7.4. RadioButton
+7.5. LinkButton
+7.6. SpinButton
+8. ProgressBar
+8.1. ProgressBar Objects
+8.2. Example
+9. Tree and List Widgets
+9.1. The Model
+9.2. The View
+9.3. The Selection
+9.4. Sorting
+10. CellRenderers
+10.1. CellRendererText
+10.2. CellRendererToggle
+10.3. CellRendererPixbuf
+10.4. CellRendererCombo
+10.5. CellRendererProgress
+10.6. CellRendererSpin
+11. ComboBox
+11.1. ComboBox objects
+11.2. ComboBoxText objects
+11.3. Example
+12. IconView
+12.1. IconView objects
+12.2. Example
+13. Multiline Text Editor
+13.1. The View
+13.2. The Model
+13.3. Tags
+13.4. Example
+14. Menus
+14.1. Actions
+14.2. UI Manager
+14.3. Example
+15. Dialogs
+15.1. Custom Dialogs
+15.2. MessageDialog
+15.3. FileChooserDialog
+16. Clipboard
+16.1. Clipboard Objects
+16.2. Example
+17. Drag and Drop
+17.1. Target Entries
+17.2. Drag and Drop Methods and Objects
+17.3. Drag Source Signals
+17.4. Drag Destination Signals
+17.5. Example
+18. Glade and Gtk.Builder
+18.1. Creating and loading the .glade file
+18.2. Accessing widgets
+18.3. Connecting Signals
+18.4. Builder Objects
+18.5. Example
+19. Objects
+19.1. Inherit from GObject.GObject
+19.2. Signals
+19.3. Properties
+19.4. API
+20. Stock Items
+
+Indices and tables
+Search Page

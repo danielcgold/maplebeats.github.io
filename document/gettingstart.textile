@@ -1,0 +1,6 @@
+---
+layout: default
+title: getting start
+javascript:
+  - /javascripts/home.js
+---
