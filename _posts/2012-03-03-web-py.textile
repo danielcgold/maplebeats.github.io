@@ -1,0 +1,36 @@
+---
+layout: post
+title: web.py使用心得
+---
+开学过了一周，就被安排神马计算机技能培训。要的成果就是一个连接数据库的动态网站，仅此而已。什么也不讲，那老师只讲了一下，用asp或者php语言连接到数据库就行了。然后还说了句php是linux平台下的，我果断扔了句php是跨平台的。这水平还到老师。
+
+还好指导书上写的语言不限，于是果断用python。开始的时候想过自己用cgi，但是觉得不够方便。又看了下django，好庞大的玩意。最后的最后，发现web.py完全满足这次的要求，连apache都可以不要，自带基本的web服务器。
+
+web.py的文档有中文版，非常不错。虽然我也没有深入研究，但是我觉得有些细节还是得写一写。
+
+关于static目录，js,css,images神马文件之类的都放到这里面。我试过自己建文件夹，失败。在html里引用的时候，目录要使用static//file。解决办法就这样子，原理我也不想搞明白，也不想去搞明白，能用就行。好像是全局变量问题神马的。
+templates模版目录，定义一个base是不错的选择。。。当然也可以用拼凑。在html里引用的时候是$:name，一定要注意那个冒号，不加冒号就被处理成纯文本了。
+
+{% highlight py %}
+render = web.template.render('templates/',base='layout')
+{% endhighlight %}
+定义类就能生成页面，用urls的列表来关联类。类的return返回值就是生成的html，引用模版render.template(var)。。。当然返回值能有多个，要与模版的参数个数一致。
+
+GET和POST，如其字面意思。如果想从网页中得到输入的参数就用POST。web.input()可以从网页中得到输入的数据，以字典的形式返回，所以对返回值用get方法就能得到想要数据。
+
+{% highlight py %}
+class Login:
+'''完全是用来骗老师伪登陆，只是作为一个例子说明'''
+	def POST(self):
+		i = web.input()
+		account = i.get('account','no account')
+		passwd = i.get('password','no password')
+		if account == 'maple' and passwd == '123':
+			return render.main(account,None,None)
+		else:
+			return render.error('account or password wrong')
+{% endhighlight %}
+web.py连接mysql和postgresql比较简单，wiki上有详细说明。我要提的就是关于sqlite，因为这种小玩意用mysql等完全就是杀鸡用牛刀，于是用python本身就自带的sqlite。但是web.py的连接数据库好像并不支持sqlite，所以请用python-sqlite语句对sqlite进行操作。在code.py开头最好不要定义web.py的数据库为sqlite，虽然这样子能连接上数据库，但是这毫意义还会对后面的数据为操作产生干扰。
+
+我写的DKP管理系统的源码就不po出来了，虽然重写了一次，但是还是很丑。下周的目标就是用cgi重写一个，用现成的库虽然是挺不错，但是对于初学者来说并不是好事，对吧。
+<p class=date>Posted on Sat Mar  3 12:43:27 2012 by "maplebeats":http://maplebeats.com/me</p>
