@@ -16,13 +16,14 @@ data：[{"addtime":1330779351,"com_cookie":"","com_url":"","comp_size":94596887,
 {"ret":0,"msg":"ok","data":{"type":"XF","com_url":"http://xfwb.store.qq.com:443/?e2953f817ae10323279f9ed799ee15460534d3045949016d86b4d5c4035331df72c14ba6c6a267f46be77aff41d1dc75e1782960dad60d9e75d15695fc849dbe/IltrdHhwIg==","com_cookie":"0e5f0405","xf_url":"qqdl://aHR0cDovLzE5Mi4xNjguMS4yMzMvZnRuX2hhbmRsZXIvJTVCa3R4cD8mJnR4Zl9maWQ9MjA2OGM0ZjZhZTY1MGNkZjQzZjlkNzk3YmJmZTA2YjlhZjFkZjA3ZQ==","broswer":"other"}}
 {% endhighlight %}
 其中com_url非常是关键，http下载就靠它了。com_cookie就是后面中FTN5K的值。
-向以GET方法提交的连接：
+
+以GET方法提交连接：
 
 {% highlight html %}
 http://pinghot.qq.com/pingd?dm=lixian.qq.com.hot&url=/main.html&arg=-&hottag=ISD.QQXF.XUANFENG_OFFLINE.NORMAL_DOWNLOAD2PC&hotx=9999&hoty=9999&rand=83290
 {% endhighlight %}
-其中rand的值不固定（研究ing，要是随机数就好了）。在cookie里多了个项FTN5K。
+其中rand的值不固定（上天保存是个随机数）。在cookie里多了个项FTN5K。
 至此就可以通过com_url方法下载到内容。
-未解决问题：rand的值，通过aria2进行下载。
+未解决问题：rand的值，通过aria2进行下载，python解析json数据（str-->dict-->list-->数据）
 
 <p class=date>Posted on Fri Mar  9 20:18:18 2012 by "maplebeats":http://maplebeats.com/me</p>
