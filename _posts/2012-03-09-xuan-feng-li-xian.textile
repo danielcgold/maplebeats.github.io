@@ -22,7 +22,7 @@ data：[{"addtime":1330779351,"com_cookie":"","com_url":"","comp_size":94596887,
 {% highlight html %}
 http://pinghot.qq.com/pingd?dm=lixian.qq.com.hot&url=/main.html&arg=-&hottag=ISD.QQXF.XUANFENG_OFFLINE.NORMAL_DOWNLOAD2PC&hotx=9999&hoty=9999&rand=83290
 {% endhighlight %}
-其中rand的值不固定（上天保存是个随机数）。在cookie里多了个项FTN5K。
+其中rand的值不固定（上天保佑是个随机数）。在cookie里多了个项FTN5K。
 至此就可以通过com_url方法下载到内容。
 未解决问题：rand的值，通过aria2进行下载，python解析json数据（str-->dict-->list-->数据）
 
