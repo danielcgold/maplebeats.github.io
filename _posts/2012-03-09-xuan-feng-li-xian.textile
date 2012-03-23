@@ -35,5 +35,8 @@ http://pinghot.qq.com/pingd?dm=lixian.qq.com.hot&url=/main.html&arg=-&hottag=ISD
 -未解决问题：rand的值，通过aria2进行下载，python解析json数据（str-->dict-->list-->数据）-
 
 清空cookie重新下载抓包得知直接使用com_url并提交cookie，cookie里多一项FTN5K就能下载。使用aria2c下载成功！余下的就是写程序了！
+--------------------我是那个啥-----------------
+成品：https://github.com/maplebeats/Scripts/blob/master/xuanfeng.py
+依赖aria2和python3。。。本来有很多打算的，结果到最后成一个小脚本了～。～
 
 <p class=date>Posted on Fri Mar  9 20:18:18 2012 by "maplebeats":http://maplebeats.com/me</p>
