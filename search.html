@@ -10,29 +10,32 @@
      </title>
      <meta name="author" content="Maplebeats" />
      
-       <meta namne="description" content="为什么会在这里，为什么会产生这玩意" />
-     
      <link href="/atom.xml" rel="alternate" title="Maplebeats" type="application/atom+xml" />
 
      <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
      <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" />
-     <link rel="stylesheet" href="/stylesheets/baobao.css" type="text/css" />
+	 <link rel="stylesheet" href="/stylesheets/baobao.css" type="text/css" />
+	 <link rel="stylesheet" href="/stylesheets/circle.skin/circle.player.css">
 
   </head>
   <body>
 
 	<div id="site">
 
-      <a id="subscribe" href="http://feed.feedsky.com/maplebeats"><img src="/images/rss.png" alt="Subscribe to RSS Feed" /></a>
+		<div id="title">
+			<div id="tag">
+				<h1>
+					<a href="/">Maplebeats</a>
+				</h1>
+			</div>
+			<div id="tagline">
+				一个莫名奇妙静态博客,没有任何技术含量.
+			</div>
+		</div>	
 
-	  <h1>
-		<a href="/" class="title">Maplebeats</a>
-	  </h1>	
+	  <div id="sidebar">
 
-      <div class="clear"></div>  
-      <div id="sidebar" class="vcard">
-
-
+		  <div id="wrapper">
 <div id="cse-search-form" style="width: 150%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
@@ -46,8 +49,14 @@
     customSearchControl.draw('cse', options);
   }, true);
 </script>
-		  <div id="wrapper">
-			  <div id="product-header"></div>
+
+			  <div id="subscribe" align="center">
+		<a href="http://firefox.com.cn/download/"><img alt="Mozilla Firefox" title="Mozilla Firefox" src="http://maplebeats.com/images/firefox.png"></a>
+		<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html"><img alt="Google Chrome" title="Google Chrome" src="http://maplebeats.com/images/chrome.png"></a>
+		<a href="http://www.apple.com.cn/safari/"><img alt="Apple Safari" title="Apple Safari" src="http://maplebeats.com/images/safari.png"></a>
+		<a href="http://www.opera.com/"><img alt="Opera" title="Opera" src="http://maplebeats.com/images/opera.png"></a>
+				</div>
+
 			  <ul id="product">
 				  <li class="trigger">
 				  <ul class="menu">
@@ -80,35 +89,101 @@
 					  <li><a href="http://www.buroniworks.com/">某工房</a></li>
 					  <li><a href="http://liaochenyuan.sourceforge.net">了尘缘</a></li>
 					  <li><a href="http://www.lainme.com">laime</a></li>
-					  <li><a href="http://http://bancage.qzworld.net/">banban姐</a></li>
+					  <li><a href="http://bancage.qzworld.net/">banban姐</a></li>
 				  </ul>
 				  <span>Links</span> </li>
 						
+				  <li class="trigger">
+				  <ul class="menu">
+							
+								
+								<span>1</span>
+									
+							
+								
+									<a class="num" href="/page2/">2</a>
+								
+							
+								
+									<a class="num" href="/page3/">3</a>
+								
+							
+								
+									<a class="num" href="/page4/">4</a>
+								
+							
+								
+									<a class="num" href="/page5/">5</a>
+								
+							
+								
+									<a class="num" href="/page6/">6</a>
+								
+							
+								
+									<a class="num" href="/page7/">7</a>
+								
+							
+								
+									<a class="num" href="/page8/">8</a>
+								
+							
+				  </ul>
+				  <span>Pages</span> </li>
+						
 			  </ul>
-			  <div id="product-footer"></div>
 		  </div>
+
+		  <div id="music">
+			<!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+			<div id="jquery_jplayer_1" class="cp-jplayer"></div>
+			<!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+			<div id="cp_container_1" class="cp-container">
+				<div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+					<div class="cp-buffer-1"></div>
+					<div class="cp-buffer-2"></div>
+				</div>
+				<div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+					<div class="cp-progress-1"></div>
+					<div class="cp-progress-2"></div>
+				</div>
+				<div class="cp-circle-control"></div>
+				<ul class="cp-controls">
+					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+				</ul>
+			</div>
+
+		  </div>
+
 	  </div>
 
-      <div id="content">
-<div id="cse" style="width:100%;"></div> 
-
- </ul>
+	  <div id="content">
+  <div id="cse" style="width:100%;"></div> 
 </div>
 
-
-
-      </div>
-
-    </div>
+	</div>
 
 	<a href="#" class="to_top" title="返回顶部"><img src="/images/gotop.gif" width="20" height="59" /></a>
 
+</div>
+
   <div class="clear"></div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script> 	
+     <footer>
+	Copyright© 2012，Powered by <a href="https://github.com/mojombo/jekyll">jekyll</a>，Theme by <a href="/me">Maplebeats</a>
+ 	</footer>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/javascripts/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.transform.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.grab.js"></script>
+	<script type="text/javascript" src="/javascripts/mod.csstransforms.min.js"></script>
+	<script type="text/javascript" src="/javascripts/circle.player.js"></script>
+	<script type="text/javascript" src="/javascripts/musiclist.js"></script>
     
 	<script type="text/javascript" src="/javascripts/home.js"></script>
     
-
   </body>
 </html>
+
