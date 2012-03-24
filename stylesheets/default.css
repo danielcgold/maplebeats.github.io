@@ -16,25 +16,25 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
     color: #4671D5;
 }
 #site {
-	padding: 20px 0;
-	margin: 0 auto;
+    padding: 20px 0;
+    margin: 0 auto;
     width: 950px;
-	overflow:auto;
-	border-radius: 10px 10px 10px 10px;
+    overflow:auto;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0 10px #FFC686
 }
 #subscribe {
     margin: 0 auto;
 }
 #title {
-	height: 90px;
-	padding: 0 50px;
+    height: 90px;
+    padding: 0 50px;
 }
 #tag {
-	margin: 0;
+    margin: 0;
     padding: 0;
-	letter-spacing: -0.05em;
-	height: 30px;
+    letter-spacing: -0.05em;
+    height: 30px;
 }
 #tag h1{
     color: white;
@@ -71,6 +71,7 @@ a:hover {
     color: #2A4480;
 }
 ul#product {
+    opacity: 0.65;
 	border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0 10px #FFC686;
     background: url("/images/sbg1.jpg");
@@ -108,19 +109,20 @@ ul#product .trigger ul.menu {
     background: url("/images/1.png") no-repeat scroll center center transparent;
 }
 .trigger:hover ul.menu {
-	background: #BFBF80;
+    opacity: 0.5;
+    background: #BFBF80;
     display: block;
 }
 #music {
 	padding: 200px 5px;
 }
 #content {
-	opacity: 0.8;
-	background: #FFFFFF;
-	float: right;
+    opacity: 0.8;
+    background: #FFFFFF;
+    float: right;
     padding: 15px;
     width: 650px;
-	border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0 10px #FFC686;
 }
 #content ul {
@@ -179,13 +181,13 @@ footer a:hover {
     color: #FDD8B0;
 }
 .navigation {
-	display: block;
-	height: 10px;
+    display: block;
+    height: 10px;
     font-size: 14px;
     text-align: center;
 }
 .num:hover {
-	font-size:200%;	
+    font-size:200%;	
 }
 a {
     color: #3D1C0B;
