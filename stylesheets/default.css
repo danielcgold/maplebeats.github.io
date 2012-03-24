@@ -47,7 +47,7 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
     color: #FFEBD4;
 }
 #tagline {
-	border-top: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
     color: #FFFFFF;
     float: left;
     font-size: 11px;
@@ -58,10 +58,10 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
 	color: #06266F;
     font: 100% Georgia,"Times New Roman";
     margin: 0;
-	float: left;
+    float: left;
     padding: 10px 20px 20px;
     width: 220px;
-	position: fixed;
+    position: fixed;
 }
 #wrapper {
 	margin: 0 auto;
@@ -72,7 +72,7 @@ a:hover {
 }
 ul#product {
     opacity: 0.65;
-	border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0 10px #FFC686;
     background: url("/images/sbg1.jpg");
     list-style: none outside none;
@@ -109,12 +109,12 @@ ul#product .trigger ul.menu {
     background: url("/images/1.png") no-repeat scroll center center transparent;
 }
 .trigger:hover ul.menu {
-    opacity: 0.5;
+    opacity: 0.8;
     background: #BFBF80;
     display: block;
 }
 #music {
-	padding: 200px 5px;
+    padding: 200px 5px;
 }
 #content {
     opacity: 0.8;
