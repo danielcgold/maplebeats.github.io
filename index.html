@@ -9,13 +9,13 @@ javascript:
   <ul class="posts">
     {% for post in paginator.posts %}
       <li>
-	<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <p>{{ post.content }}</p>
       </li>
     {% endfor %}
 
     {% if paginator.total_pages > 1 %}
-	<div class="navigation">
+    <div class="navigation">
             {% for page in (1..paginator.total_pages) %}
               {% if page == paginator.page %}
                <span>{{ page }}</span>

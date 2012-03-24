@@ -55,7 +55,7 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
     text-decoration: none;
 }
 #sidebar {
-	color: #06266F;
+    color: #06266F;
     font: 100% Georgia,"Times New Roman";
     margin: 0;
     float: left;
@@ -64,8 +64,8 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
     position: fixed;
 }
 #wrapper {
-	margin: 0 auto;
-	width: 220px;
+    margin: 0 auto;
+    width: 220px;
 }
 a:hover {
     color: #2A4480;
@@ -187,7 +187,7 @@ footer a:hover {
     text-align: center;
 }
 .num:hover {
-    font-size:200%;	
+    font-size:200%;
 }
 a {
     color: #3D1C0B;
