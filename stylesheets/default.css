@@ -13,7 +13,7 @@ body {
     text-decoration: none;
 }
 a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
-    color: #4671D5;
+    color: #FFF5EA;
 }
 #site {
     padding: 20px 0;
@@ -134,9 +134,9 @@ h3 {
     margin: 0 0 10px;
     padding: 0;
 }
-.highlight pre {
+/*.highlight pre {
     padding: 5px;
-}
+}*/
 .update {
     background: none repeat scroll 0 0 #FFEE88;
     border: 1px solid #FFCC66;
@@ -165,14 +165,14 @@ h3 {
     display: none;
 }
 footer {
-    color: #6C8CD5;
+    color: #FFF5EA;
     font-size: 80%;
     margin-top: 2em;
     overflow: hidden;
     text-align: center;
 }
 footer a, a:visited {
-    color: #06266F;
+    color: white;
 }
 footer a:hover {
     color: #FDD8B0;
