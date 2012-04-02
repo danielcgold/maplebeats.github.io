@@ -55,7 +55,7 @@ a:hover, a:active, #sidebar a:active, #sidebar a:hover, #content a {
     text-decoration: none;
 }
 #sidebar {
-    color: #06266F;
+    color: wheat;
     font: 100% Georgia,"Times New Roman";
     margin: 0;
     float: left;
@@ -71,10 +71,9 @@ a:hover {
     color: #2A4480;
 }
 ul#product {
-    opacity: 0.65;
-    border-radius: 10px 10px 10px 10px;
+    /*border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0 10px #FFC686;
-    background: url("/images/sbg1.jpg");
+    background: url("/images/sbg1.jpg");*/
     list-style: none outside none;
     margin: 0;
     padding: 0;
@@ -109,16 +108,14 @@ ul#product .trigger ul.menu {
     background: url("/images/1.png") no-repeat scroll center center transparent;
 }
 .trigger:hover ul.menu {
-    opacity: 0.8;
-    background: #BFBF80;
+    background: rgba(255,200,180,0.7);
     display: block;
 }
 #music {
     padding: 200px 5px;
 }
 #content {
-    opacity: 0.8;
-    background: #FFFFFF;
+    background: rgba(255,255,255,0.6);
     float: right;
     padding: 15px;
     width: 650px;

@@ -31,20 +31,13 @@
                 </h1>
             </div>
             <div id="tagline">
-                一个莫名奇妙静态博客,没有任何技术含量.
+                很多时候，码的不是代码，玩的不是游戏，看的不是动漫，而是寂寞～。～
             </div>
         </div>
 
       <div id="sidebar">
 
           <div id="wrapper">
-
-              <div id="subscribe" align="center">
-        <a href="http://firefox.com.cn/download/"><img alt="Mozilla Firefox" title="Mozilla Firefox" src="http://maplebeats.com/images/firefox.png"></a>
-        <a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html"><img alt="Google Chrome" title="Google Chrome" src="http://maplebeats.com/images/chrome.png"></a>
-        <a href="http://www.apple.com.cn/safari/"><img alt="Apple Safari" title="Apple Safari" src="http://maplebeats.com/images/safari.png"></a>
-        <a href="http://www.opera.com/"><img alt="Opera" title="Opera" src="http://maplebeats.com/images/opera.png"></a>
-                </div>
 
               <ul id="product">
                   <li class="trigger">
@@ -65,7 +58,6 @@
                   <ul class="menu">
                       <li><a href="https://github.com/maplebeats/configuration">Configurations</a></li>
                       <li><a href="https://github.com/maplebeats/Scripts">My Scripts</a></li>
-                      <li><a href="https://github.com/kernelhcy/gtkqq">Gtkqq</a></li>
                   </ul>
                   <span>Repositories</span> </li>
                   <li class="trigger">
@@ -77,23 +69,11 @@
                       <li><a href="http://www.cherrot.com/">切萝卜</a></li>
                       <li><a href="http://www.buroniworks.com/">某工房</a></li>
                       <li><a href="http://liaochenyuan.sourceforge.net">了尘缘</a></li>
-                      <li><a href="http://www.lainme.com">laime</a></li>
+                      <li><a href="http://www.lainme.com">lainme</a></li>
                       <li><a href="http://bancage.qzworld.net/">banban姐</a></li>
+                      <li><a href="http://www.hsyyf.me/">南瓜</a></li>
                   </ul>
                   <span>Links</span> </li>
-                        {% if paginator.total_pages > 1 %}
-                  <li class="trigger">
-                  <ul class="menu">
-                            {% for page in (1..paginator.total_pages) %}
-                                {% if page == paginator.page %}
-                                <span>{{ page }}</span>
-                                    {% else %}
-                                    <a class="num" href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
-                                {% endif %}
-                            {% endfor %}
-                  </ul>
-                  <span>Pages</span> </li>
-                        {% endif %}
               </ul>
           </div>
 
@@ -123,7 +103,7 @@
 
       <div id="content">
         {{ content }}
-    </div>
+      </div>
 
     <a href="#" class="to_top" title="返回顶部"><img src="/images/gotop.gif" width="20" height="59" /></a>
 
