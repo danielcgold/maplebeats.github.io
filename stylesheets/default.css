@@ -6,7 +6,7 @@ img {
     text-align: center;
 }
 body {
-    background: url(/images/bg1.jpg) no-repeat fixed center;
+    background: url(/images/bg2.jpg) no-repeat fixed center;
     color: #222222;
     font-family: Microsoft YaHei;
     font-size: 100%;
@@ -116,7 +116,7 @@ ul#product .trigger ul.menu {
     padding: 200px 5px;
 }
 #content {
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.3);
     float: right;
     padding: 15px;
     width: 650px;
