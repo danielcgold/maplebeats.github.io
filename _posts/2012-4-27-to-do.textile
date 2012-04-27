@@ -21,4 +21,4 @@ h3. 学业
 
 这个我不想提了，一提起来就伤心。
 
-p(data). Posted on Fri Apr 27 23:14:52 2012 by "maplebeats":http://maplebeats.com/me
+p(date). Posted on Fri Apr 27 23:14:52 2012 by "maplebeats":http://maplebeats.com/me
