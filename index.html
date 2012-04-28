@@ -1,30 +1,6 @@
 ---
 layout: default
 title: maplebeats's blog
-javascript:
-  - /javascripts/home.js
 ---
-
-<div id="home">
-  <ul class="posts">
-    {% for post in paginator.posts %}
-      <li>
-    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {{ post.content }}
-      </li>
-    {% endfor %}
-
-    {% if paginator.total_pages > 1 %}
-    <div class="navigation">
-            {% for page in (1..paginator.total_pages) %}
-              {% if page == paginator.page %}
-               <span>{{ page }}</span>
-              {% else %}
-               <a class="num" href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
-              {% endif %}
-            {% endfor %}
-       </div>
-    {% endif %}
-  </ul>
-
-</div>
+{% include post.html %}
+{% include music.html %}

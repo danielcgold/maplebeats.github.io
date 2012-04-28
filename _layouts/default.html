@@ -1,67 +1,51 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-     <title>
-       {% if page.title %}
-         {{ page.title }}
-       {% endif %}
-     </title>
-     <meta name="author" content="Maplebeats" />
-     {% if page.summary %}
-       <meta namne="description" content="{{ page.summary }}" />
-     {% endif %}
-     <link href="/atom.xml" rel="alternate" title="Maplebeats" type="application/atom+xml" />
-
-     <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
-     <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" />
-     <link rel="stylesheet" href="/stylesheets/baobao.css" type="text/css" />
-     <link rel="stylesheet" href="/stylesheets/circle.skin/circle.player.css">
-
-  </head>
-  <body>
-
-    <div id="site">
-
-        <div id="title">
-            <div id="tag">
-                <h1>
-                    <a href="/">Maplebeats</a>
-                </h1>
-            </div>
-            <div id="tagline">
-                很多时候，码的不是代码，玩的不是游戏，看的不是动漫，而是寂寞～。～
-            </div>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            {% if page.title %}
+                {{ page.title}}
+            {% else %}
+                {{ site.title}}
+            {% endif %}
+        </title>
+        <meta name="author" content="Maplebeats"/>
+        {% if page.summary %}
+            <meta name="description" content="{{ page.summary}}"/>
+        {% endif %}
+        <link rel="alternate" href="/atom.xml" title="maplebeats" />
+        <link rel="stylesheet" href="/stylesheets/main.css" />
+        <link rel="stylesheet" href="/stylesheets/syntax.css" />
+        <link rel="stylesheet" href="/stylesheets/animate.css" />
+        <link rel="stylesheet" href="/stylesheets/circle.skin/circle.player.css" />
+    </head>
+    <body>
+        <!--[if IE]>
+        <div class="iexplorer">
+            <p>警告！网页不兼容你的浏览器</p>
         </div>
-
-      <div id="sidebar">
-
-          <div id="wrapper">
-
-              <ul id="product">
-                  <li class="trigger">
-                  <ul class="menu">
-                      <li><a href="/me">me</a></li>
-                      <li><a href="/anime">anime</a></li>
-                      <li><a href="/search">search</a></li>
-                  </ul>
-                  <span>About</span> </li>
-                  <li class="trigger">
-                  <ul class="menu">
-                      <li><a href="http://feed.feedsky.com/maplebeats">feedsky</a></li>
-                      <li><a href="http://feeds.feedburner.com/maplebeats">feedburner</a></li>
-                      <li><a href="/atom.xml">xml</a></li>
-                  </ul>
-                  <span>RSS</span> </li>
-                  <li class="trigger">
-                  <ul class="menu">
-                      <li><a href="https://github.com/maplebeats/configuration">Configurations</a></li>
-                      <li><a href="https://github.com/maplebeats/Scripts">My Scripts</a></li>
-                  </ul>
-                  <span>Repositories</span> </li>
-                  <li class="trigger">
-                  <ul class="menu">
+        <![endif]-->
+        <div class="iexplorer">
+            <p>正如你所见到的，现在的主题是不完善的</p>
+        </div>
+        <header class="head">
+            <hgroup class="head-title">
+            <h1><a rel="nofollow" href="/">AnimeBeats</a></h1>
+            <h2>ACG才是我们唯一的归宿！ Σ(っ°д°)っ</h2>
+            </hgroup>
+        </header><!--header-->
+        <div class="head-line"></div>
+        <section class="site">
+            {{ content }}
+        </section>
+        <footer>
+            <div class="footer">
+                <section class="power">
+                    <p>Theme by <a href="/me">Maplebeats</a> </p>
+                    <p>Powered by <a href="https://github.com/mojombo/jekyll">jekyll</a></p>
+                </section>
+                <section class="link">
+                    <ul>
                       <li><a href="http://forum.ubuntu.org.cn">ubuntu</a></li>
                       <li><a href="http://www.flickr.com/photos/maplebeats/">Flickr</a></li>
                       <li><a href="http://qzworld.net/">Don</a></li>
@@ -73,57 +57,9 @@
                       <li><a href="http://bancage.qzworld.net/">banban姐</a></li>
                       <li><a href="http://www.hsyyf.me/">南瓜</a></li>
                   </ul>
-                  <span>Links</span> </li>
-              </ul>
-          </div>
-
-          <div id="music">
-            <!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
-            <div id="jquery_jplayer_1" class="cp-jplayer"></div>
-            <!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
-            <div id="cp_container_1" class="cp-container">
-                <div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
-                    <div class="cp-buffer-1"></div>
-                    <div class="cp-buffer-2"></div>
-                </div>
-                <div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
-                    <div class="cp-progress-1"></div>
-                    <div class="cp-progress-2"></div>
-                </div>
-                <div class="cp-circle-control"></div>
-                <ul class="cp-controls">
-                    <li><a href="#" class="cp-play" tabindex="1">play</a></li>
-                    <li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
-                </ul>
+                </section>
+                <section class="copyleft"></section>
             </div>
-
-          </div>
-
-      </div>
-
-      <div id="content">
-        {{ content }}
-      </div>
-
-    <a href="#" class="to_top" title="返回顶部"><img src="/images/gotop.gif" width="20" height="59" /></a>
-
-</div>
-
-  <div class="clear"></div>
-
-     <footer>
-    Copyright© 2012，Powered by <a href="https://github.com/mojombo/jekyll">jekyll</a>，Theme by <a href="/me">Maplebeats</a>
-     </footer>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/javascripts/jquery.jplayer.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.transform.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.grab.js"></script>
-    <script type="text/javascript" src="/javascripts/mod.csstransforms.min.js"></script>
-    <script type="text/javascript" src="/javascripts/circle.player.js"></script>
-    <script type="text/javascript" src="/javascripts/musiclist.js"></script>
-    {% for js in page.javascript %}
-    <script type="text/javascript" src="{{ js }}"></script>
-    {% endfor %}
-  </body>
+        </footer>
+    </body>
 </html>
