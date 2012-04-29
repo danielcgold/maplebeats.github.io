@@ -1,0 +1,15 @@
+/*-----------html5 player--------*/
+.music {
+    float: right;
+}
+/*-----------content-----------*/
+.content {
+    background: rgba(255,255,255,0.6);
+    margin: 0 100px;
+    width: 300px;
+    padding: 20px;
+}
+.page {
+    margin: 0 auto;
+    text-align: center;
+}
