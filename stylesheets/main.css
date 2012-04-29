@@ -64,7 +64,7 @@ footer {
 }
 .power{
     float: left;
-    width: 250px;
+    width: 200px;
     padding: 50px 10px;
 }
 .link{
@@ -77,18 +77,18 @@ footer {
     padding: 2px;
 }
 .copyleft {
-    width: 100px;
+    float: left;
+    width: 200px;
+    padding: 50px;
 }
-/*-----------content-----------*/
-.content {
-    background: rgba(255,255,255,0.6);
-    margin: 0 100px;
-    width: 300px;
+.copyleft img {
+    border-width:0
 }
 /*-----------post------------*/
 .post {
     background: rgba(255,255,255,0.5);
     margin: 0 100px;
+    padding: 20px;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0 10px #FFFFFF;
 }

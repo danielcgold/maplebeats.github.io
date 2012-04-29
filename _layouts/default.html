@@ -17,7 +17,9 @@
         <link rel="stylesheet" href="/stylesheets/main.css" />
         <link rel="stylesheet" href="/stylesheets/syntax.css" />
         <link rel="stylesheet" href="/stylesheets/animate.css" />
-        <link rel="stylesheet" href="/stylesheets/circle.skin/circle.player.css" />
+        {% for css in page.stylesheet %}
+            <link rel="stylesheet" href="{{ css }}" />
+        {% endfor %}
     </head>
     <body>
         <!--[if IE]>
@@ -58,8 +60,13 @@
                       <li><a href="http://www.hsyyf.me/">南瓜</a></li>
                   </ul>
                 </section>
-                <section class="copyleft"></section>
+                <section class="copyleft"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/cn/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-nd/2.5/cn/88x31.png" /></a>
+                </section>
             </div>
         </footer>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        {% for js in page.javascript %}
+            <script src="{{ js }}"></script>
+        {% endfor %}
     </body>
 </html>
