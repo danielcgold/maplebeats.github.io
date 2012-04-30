@@ -64,9 +64,47 @@
                 </section>
             </div>
         </footer>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         {% for js in page.javascript %}
             <script src="{{ js }}"></script>
         {% endfor %}
+        {% if page.Isindex %}
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.getJSON("/post.json",function(data){
+                    var content = ''
+                    var i=0,down=5,up=10
+                    while(i<5)
+                    {
+                    content += "<li>" + "<h2 class=\"title\">" + "<a href=" + data[i].url + ">" + data[i].title + "</a></h2>" + "<p>" + data[i].summary + "</p>"
+                    i += 1
+                    }
+                    $(".posts").append(content);
+                    $("#down").click(function(){
+                        var post = ''
+                        for(down;down<up;down++)
+                        {
+                        post += "<li>" + "<h2 class=\"title\">" + "<a href=" + data[down].url + ">" + data[down].title + "</a></h2>" + "<p>" + data[down].summary + "</p>"
+                        }
+                        up = down + 5
+                        $(".posts").html(post);
+                        });
+                    $("#up").click(function(){
+                        if(down!=5){
+                        var post = ''
+                        up-=5
+                        down-=5
+                        for(down;down<=up-5;down++)
+                        {
+                        post +=  "<li>" + "<h2 class=\"title\">" + "<a href=" + data[down].url + ">" + data[down].title + "</a></h2>" + "<p>" + data[down].summary + "</p>"
+                        }
+                        down-=5
+                        $(".posts").html(post);
+                        }
+                        });
+                });
+            });
+            </script>
+    {% endif %}
     </body>
 </html>

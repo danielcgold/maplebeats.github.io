@@ -51,6 +51,9 @@ ins,a { text-decoration:none; }
     min-height: 500px;
     margin: 0 auto 20px auto;
 }
+site h1,h3 {
+    font-size: 130%;
+}
 /*-----------footer--------*/
 footer {
     background: rgba(128,128,128,0.3);

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: maplebeats's blog
+Isindex: true
 javascript:
     - /javascripts/jquery.jplayer.min.js
     - /javascripts/jquery.grab.js
@@ -12,5 +13,6 @@ stylesheet:
     - /stylesheets/circle.skin/circle.player.css
     - /stylesheets/index.css
 ---
-{% include post.html %}
+<noscript>{% include post.html %}</noscript>
 {% include music.html %}
+{% include json.html %}
