@@ -44,19 +44,19 @@
             <div class="footer">
                 <section class="power">
                     <p>Theme by <a href="/me">Maplebeats</a> </p>
-                    <p>Powered by <a href="https://github.com/mojombo/jekyll">jekyll</a></p>
+                    <p>Powered by <a rel="nofollow" href="https://github.com/mojombo/jekyll">jekyll</a></p>
                 </section>
                 <section class="link">
                     <ul>
-                      <li><a href="http://forum.ubuntu.org.cn">ubuntu</a></li>
-                      <li><a href="http://www.flickr.com/photos/maplebeats/">Flickr</a></li>
+                      <li><a rel="nofollow" href="http://forum.ubuntu.org.cn">ubuntu</a></li>
+                      <li><a rel="nofollow" href="http://www.flickr.com/photos/maplebeats/">Flickr</a></li>
                       <li><a href="http://qzworld.net/">Don</a></li>
                       <li><a href="http://www.5dimn.com/">Q.D.</a></li>
                       <li><a href="http://www.cherrot.com/">切萝卜</a></li>
                       <li><a href="http://www.buroniworks.com/">某工房</a></li>
-                      <li><a href="http://liaochenyuan.sourceforge.net">了尘缘</a></li>
+                      <li><a rel="nofollow" href="http://liaochenyuan.sourceforge.net">了尘缘</a></li>
                       <li><a href="http://www.lainme.com">lainme</a></li>
-                      <li><a href="http://bancage.qzworld.net/">banban姐</a></li>
+                      <li><a href="http://bancage.qzworld.net/">banban</a></li>
                       <li><a href="http://www.hsyyf.me/">南瓜</a></li>
                   </ul>
                 </section>
@@ -79,7 +79,7 @@
                     content += "<li>" + "<h2 class=\"title\">" + "<a href=" + data[i].url + ">" + data[i].title + "</a></h2>" + "<p>" + data[i].summary + "</p>"
                     i += 1
                     }
-                    $(".posts").append(content);
+                    $(".posts").html(content);
                     $("#down").click(function(){
                         var post = ''
                         for(down;down<up;down++)
@@ -90,17 +90,15 @@
                         $(".posts").html(post);
                         });
                     $("#up").click(function(){
-                        if(down!=5){
+                        up -= 5
+                        down -= 5
                         var post = ''
-                        up-=5
-                        down-=5
-                        for(down;down<=up-5;down++)
+                        for(down;down<up;down++)
                         {
                         post +=  "<li>" + "<h2 class=\"title\">" + "<a href=" + data[down].url + ">" + data[down].title + "</a></h2>" + "<p>" + data[down].summary + "</p>"
                         }
-                        down-=5
                         $(".posts").html(post);
-                        }
+                        down -=5
                         });
                 });
             });
