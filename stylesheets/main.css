@@ -21,6 +21,7 @@ q:before,q:after { content:''; }
 sup { vertical-align:text-top; }
 sub { vertical-align:text-bottom; }
 a:hover { text-decoration:underline; }
+a:link,a:visited{ text-decoration:none }
 ins,a { text-decoration:none; }
 .iexplorer { background: black;color: #FFFFFF;text-align: center;line-height: 18px;padding: 30px 0;font-size: 300%;}
 /*----------head---------*/
@@ -43,6 +44,19 @@ ins,a { text-decoration:none; }
 }
 .head-line {
     border-top: 2px solid #FFFFFF;
+}
+.nav {
+    background: rgba(123,145,111,0.6);
+    padding: 15px 4px;
+    float: right;
+    margin: 10px 150px;
+    font-size: 130%;
+    height: 25px;
+    width: 300px;
+    text-align: center;
+}
+.nav a:hover {
+    color: black;
 }
 /*----------site----------*/
 .site {
