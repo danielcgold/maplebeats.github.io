@@ -73,7 +73,6 @@
         {% if page.Isindex %}
         <script type="text/javascript">
             $(document).ready(function () {
-                    var button = 
                     $(".page").html("<input id=\"up\" type=\"button\"  value=\"上一页\" /> <input id=\"down\" type=\"button\"  value=\"下一页\" />")
                     $.getJSON("/post.json", function (data) {
                             var page = {
