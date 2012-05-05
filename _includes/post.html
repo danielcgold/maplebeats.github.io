@@ -6,9 +6,9 @@
                 {{ post.summary }}
             </li>
         {% endfor %}
-
-    {% if paginator.total_pages > 1 %}
+    </ul>
     <nav class="page">
+    {% if paginator.total_pages > 1 %}
         {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
                 {{ page }}
@@ -16,7 +16,5 @@
                 <a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
             {% endif %}
         {% endfor %}
-    </nav>
     {% endif %}
-</ul>
 </div>

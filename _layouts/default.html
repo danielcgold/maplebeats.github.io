@@ -35,7 +35,7 @@
             <h2>ACG才是我们唯一的归宿！ Σ(っ°д°)っ</h2>
             </hgroup>
             <nav class="nav">
-                <a href="/">home</a> <a href="/me">me</a> <a href="/anime">anime</a> <a href="https://github.com/maplebeats">respositoies</a>
+                <a href="/">home</a> <a href="/me">me</a> <a href="/anime">anime</a> <a href="https://github.com/maplebeats">respositoies</a> <a href="/atom.xml">RSS</a>
             </nav>
         </header><!--header-->
         <div class="head-line"></div>
@@ -72,39 +72,47 @@
         {% endfor %}
         {% if page.Isindex %}
         <script type="text/javascript">
-            $(document).ready(function() {
-                $.getJSON("/post.json",function(data){
-                    var content = ''
-                    var i=0,down=5,up=10
-                    while(i<5)
-                    {
-                    content += "<li>" + "<h2 class=\"title\">" + "<a href=" + data[i].url + ">" + data[i].title + "</a></h2>" + "<p>" + data[i].summary + "</p>"
-                    i += 1
-                    }
-                    $(".posts").html(content);
-                    $("#down").click(function(){
-                        var post = ''
-                        for(down;down<up;down++)
-                        {
-                        post += "<li>" + "<h2 class=\"title\">" + "<a href=" + data[down].url + ">" + data[down].title + "</a></h2>" + "<p>" + data[down].summary + "</p>"
-                        }
-                        up = down + 5
-                        $(".posts").html(post);
-                        });
-                    $("#up").click(function(){
-                        up -= 5
-                        down -= 5
-                        var post = ''
-                        for(down;down<up;down++)
-                        {
-                        post +=  "<li>" + "<h2 class=\"title\">" + "<a href=" + data[down].url + ">" + data[down].title + "</a></h2>" + "<p>" + data[down].summary + "</p>"
-                        }
-                        $(".posts").html(post);
-                        down -=5
-                        });
-                });
+            $(document).ready(function () {
+                    var button = 
+                    $(".page").html("<input id=\"up\" type=\"button\"  value=\"上一页\" /> <input id=\"down\" type=\"button\"  value=\"下一页\" />")
+                    $.getJSON("/post.json", function (data) {
+                            var page = {
+                                    Num : 5,
+                                    MAX : data.length,
+                                    index : 0,
+                                    count : 5,
+                                    next : function () {
+                                        this.index += 1 ;
+                                    },
+                                    prev : function () {
+                                        this.index -=1 ;
+                                    },
+                                    content : function () {
+                                        if(this.index == (this.MAX/this.Num|0)){
+                                            this.count = this.MAX % this.Num;
+                                        }
+                                        else{
+                                            this.count = 5;
+                                        }
+                                        var builder = '';
+                                        for (var i = this.index*this.Num ; i < this.index*this.Num + this.count; i++) {
+                                                builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
+                                                builder += ("<p>" + data[i].summary + "</p>");
+                                        }
+                                        return builder;
+                                }
+                            };
+                            $("#down").click(function () {
+                                            page.next();
+                                            $(".posts").html(page.content());
+                                    });
+                            $("#up").click(function () {
+                                            page.prev();
+                                            $(".posts").html(page.content());
+                                    });
+                    });
             });
-            </script>
+        </script>
     {% endif %}
     </body>
 </html>
