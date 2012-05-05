@@ -5,8 +5,8 @@
 /*-----------content-----------*/
 .content {
     background: rgba(255,255,255,0.6);
-    margin: 0 100px;
-    width: 300px;
+    margin: 20px 100px;
+    width: 450px;
     padding: 20px;
 }
 .page {
