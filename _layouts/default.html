@@ -26,16 +26,13 @@
             <p>警告！网页不兼容你的浏览器</p>
         </div>
         <![endif]-->
-        <div class="iexplorer">
-            <p>正如你所见到的，现在的主题是不完善的</p>
-        </div>
         <header class="head">
             <hgroup class="head-title">
             <h1><a rel="nofollow" href="/">AnimeBeats</a></h1>
             <h2>ACG才是我们唯一的归宿！ Σ(っ°д°)っ</h2>
             </hgroup>
             <nav class="nav">
-                <a href="/">home</a> <a href="/me">me</a> <a href="/anime">anime</a> <a href="https://github.com/maplebeats">respositoies</a> <a href="/atom.xml">RSS</a>
+                <a href="/">Home</a> <a href="/me">Me</a> <a href="/anime">Anime</a> <a href="https://github.com/maplebeats">Res</a> <a href="/atom.xml">Rss</a>
             </nav>
         </header><!--header-->
         <div class="head-line"></div>
@@ -84,11 +81,16 @@
                                         this.index += 1 ;
                                     },
                                     prev : function () {
-                                        this.index -=1 ;
+                                        this.index -= 1 ;
                                     },
                                     content : function () {
-                                        if(this.index == (this.MAX/this.Num|0)){
+                                        if(this.index < 0)
+                                        {
+                                            this.index = 0;
+                                        }
+                                        else if(this.index >= (this.MAX/this.Num|0)){
                                             this.count = this.MAX % this.Num;
+                                            this.index = (this.MAX/this.Num|0)
                                         }
                                         else{
                                             this.count = 5;
