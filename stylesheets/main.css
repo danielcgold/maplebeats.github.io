@@ -27,10 +27,22 @@ ins,a { text-decoration:none; }
 /*----------head---------*/
 .head {
     width: 100%;
+}
+.header {
+    width: 950px;
     height: 110px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.logo {
+    width: 150px;
+}
+.logo img {
+    float: left;
+    width: 150px;
 }
 .head-title {
-    margin: 50px 0 0 150px;
+    float: left;
 }
 .head-title h1 {
     color: white;
@@ -47,9 +59,9 @@ ins,a { text-decoration:none; }
 }
 .nav {
     background: rgba(0,46,184,0.1);
+    margin-top: 40px;
     padding: 15px 4px;
     float: right;
-    margin: 10px 150px;
     font-size: 140%;
     height: 25px;
     width: 300px;
@@ -82,7 +94,7 @@ footer {
 .power{
     float: left;
     width: 200px;
-    padding: 50px 10px;
+    margin: 45px 30px;
 }
 .link{
     float: left;
