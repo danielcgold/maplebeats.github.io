@@ -82,6 +82,7 @@ site h1,h3 {
 }
 /*-----------footer--------*/
 footer {
+    clear: both;
     background: rgba(128,128,128,0.3);
     color: #FFF5EA;
     width: 100%;

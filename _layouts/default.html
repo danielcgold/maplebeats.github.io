@@ -76,7 +76,7 @@
             <script src="{{ js }}"></script>
         {% endfor %}
         {% if page.Isindex %}
-        <script type="text/javascript">
+        <script>
             $(document).ready(function () {
                     $(".page").html("<input id=\"up\" type=\"button\"  value=\"上一页\" /> <input id=\"down\" type=\"button\"  value=\"下一页\" />")
                     $.getJSON("/post.json", function (data) {
