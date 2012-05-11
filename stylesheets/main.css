@@ -1,8 +1,5 @@
-/*----------初始化----------*/
-html {
-    background: url(/images/bg2.jpg);
-    color: #222222;
-}
+/*----------init----------*/
+html,body { background: url(/images/bg2.jpg); color: #222222; height: 100%; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { margin:0;padding:0; }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
 body,button,input,select,textarea{ font: 13px/1.5 verdana, \5b8b\4f53, \9ED1\4F53, sans-serif;/* 英文字体 verdana，中文宋体和黑体。*/ }
@@ -74,10 +71,10 @@ ins,a { text-decoration:none; }
 .site {
     width: 80%;
     box-shadow: 0 0 10px #FFC686;
-    min-height: 500px;
+    min-height: 100%;
     margin: 20px auto 20px auto;
 }
-site h1,h3 {
+.site h1,h3 {
     font-size: 130%;
 }
 /*-----------footer--------*/
