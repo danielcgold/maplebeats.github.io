@@ -70,7 +70,6 @@ ins,a { text-decoration:none; }
 /*----------site----------*/
 .site {
     width: 80%;
-    box-shadow: 0 0 10px #FFC686;
     min-height: 100%;
     margin: 20px auto 20px auto;
 }
@@ -119,6 +118,7 @@ footer {
 }
 /*-----------post------------*/
 .post {
+    float: left;
     background: rgba(255,255,255,0.5);
     margin: 20px 100px;
     padding: 20px;

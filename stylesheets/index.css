@@ -1,18 +1,17 @@
-aside {
+.aside {
     float: right;
     text-align: center;
 }
 /*-----------html5 player--------*/
 .music {
-    clear: both;
 }
 /*-----------me----------------*/
 .me {
     width: 300px;
-    margin-right: 120px;
 }
 /*-----------content-----------*/
 .content {
+    float: left;
     background: rgba(255,255,255,0.6);
     margin: 20px 100px;
     width: 450px;
