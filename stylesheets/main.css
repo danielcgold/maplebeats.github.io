@@ -119,6 +119,7 @@ footer {
 /*-----------post------------*/
 .post {
     float: left;
+    width: 500px;
     background: rgba(255,255,255,0.5);
     margin: 20px 100px;
     padding: 20px;
@@ -132,4 +133,8 @@ footer {
 .date {
     font-size: 80%;
     text-align: right;
+}
+.aside {
+    width: 250px;
+    float: right;
 }

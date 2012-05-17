@@ -1,3 +1,34 @@
 <div class="me">
-    <p>just for test</p>
+   <script>
+   var tags =[
+        "动漫",
+        "伪技术",
+        "御宅族",
+        "非主流",
+        "90后",
+        "开源",
+        "二次元",
+        "电子信息工程",
+        "战地2"
+        ]
+   function randomColor() {  
+       var rand = "#"+Math.floor(Math.random()*Math.pow(2,24)).toString(16);  
+       if(rand.length == 7){  
+           return rand;  
+       }else{  
+           return randomColor();  
+       }
+   }
+   function randomsize() {
+      var size = Math.floor(Math.random()*11);
+      return size;
+   }
+   for(tag in tags)
+   {
+       if(tag!=tags.length-1)
+       {
+           document.write("<font size="+randomsize()+" color="+randomColor()+">"+tags[tag]+"</font>")
+       }
+   }
+   </script>
 </div>
