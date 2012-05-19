@@ -1,5 +1,5 @@
 /*----------init----------*/
-html,body { background: url(/images/bg2.jpg); color: #222222; height: 100%; }
+html,body { background: url(/images/bg2.jpg) no-repeat fixed center; color: #222222; height: 100%; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { margin:0;padding:0; }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
 body,button,input,select,textarea{ font: 13px/1.5 verdana, \5b8b\4f53, \9ED1\4F53, sans-serif;/* 英文字体 verdana，中文宋体和黑体。*/ }
@@ -136,5 +136,5 @@ footer {
 }
 .aside {
     width: 250px;
-    float: right;
+    float: left;
 }
