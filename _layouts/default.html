@@ -66,60 +66,38 @@
                   </ul>
                 </section>
                 <section class="copyleft">
-                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/cn/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-nd/2.5/cn/88x31.png" /></a>
                 </section>
                 <section class="html5-logo"><img src="/images/html5.png" alt="html5" /></section>
             </div>
         </footer>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="javascripts/dojo.js"
+				data-dojo-config="isDebug: true, async: true">
+	    </script>
         {% for js in page.javascript %}
             <script src="{{ js }}"></script>
         {% endfor %}
         {% if page.Isindex %}
         <script>
-            $(document).ready(function () {
-                    $(".page").html("<input id=\"up\" type=\"button\"  value=\"上一页\" /> <input id=\"down\" type=\"button\"  value=\"下一页\" />")
-                    $.getJSON("/post.json", function (data) {
-                            var page = {
-                                    Num : 5,
-                                    MAX : data.length,
-                                    index : 0,
-                                    count : 5,
-                                    next : function () {
-                                        this.index += 1 ;
-                                    },
-                                    prev : function () {
-                                        this.index -= 1 ;
-                                    },
-                                    content : function () {
-                                        if(this.index < 0)
-                                        {
-                                            this.index = 0;
-                                        }
-                                        else if(this.index >= (this.MAX/this.Num|0)){
-                                            this.count = this.MAX % this.Num;
-                                            this.index = (this.MAX/this.Num|0)
-                                        }
-                                        else{
-                                            this.count = 5;
-                                        }
-                                        var builder = '';
-                                        for (var i = this.index*this.Num ; i < this.index*this.Num + this.count; i++) {
-                                                builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
-                                                builder += ("<p>" + data[i].summary + "</p>");
-                                        }
-                                        return builder;
+            require(["dojo/_base/xhr", "dojo/dom", "dojo/on", "dojo/json", "dojo/domReady!"],
+                function(xhr, dom, on, json) {
+                    function morePost() {
+                        xhr.get({
+                            url: "/post.json",
+                            handleAs: "json",
+                            load: function (data) {
+                                builder = '';
+                                for (var i = 0 ; i < data.length-1; i++) {
+                                    builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
+                                    builder += ("<p>" + data[i].summary + "</p>");
                                 }
-                            };
-                            $("#down").click(function () {
-                                            page.next();
-                                            $(".posts").html(page.content());
-                                    });
-                            $("#up").click(function () {
-                                            page.prev();
-                                            $(".posts").html(page.content());
-                                    });
-                    });
+                                dom.byId("posts").innerHTML = builder;
+                            },
+                            error: function() {
+                                alert("something wrong")
+                            }
+                        });
+                     }
+                on(dom.byId("more"), "click", morePost);
             });
         </script>
     {% endif %}
