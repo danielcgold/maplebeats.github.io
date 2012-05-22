@@ -86,7 +86,7 @@
                             handleAs: "json",
                             load: function (data) {
                                 builder = '';
-                                for (var i = 0 ; i < data.length-1; i++) {
+                                for (var i = 0 ; i < data.length-5; i++) {
                                     builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
                                     builder += ("<p>" + data[i].summary + "</p>");
                                 }
