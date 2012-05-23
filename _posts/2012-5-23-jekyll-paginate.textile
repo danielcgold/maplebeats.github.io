@@ -1,0 +1,105 @@
+---
+layout: post
+title: jekyll显示分页
+summary: 博客文章很多，然后又想分页显示。但是jekyll设置分页显示非常的简单，但是在显示的时候有点小麻烦。因为静态分页，所以每一页都要整页面刷新，github的速度虽然比较不错，但是有时候还是感觉很不爽。于是可以利用ajax＋json实现一个简单的分页，这样子比较快速方便。
+---
+博客文章很多，然后又想分页显示。但是jekyll设置分页显示非常的简单，但是在显示的时候有点小麻烦。因为静态分页，所以每一页都要整页面刷新，github的速度虽然比较不错，但是有时候还是感觉很不爽。于是可以利用ajax＋json实现一个简单的分页，这样子比较快速方便。
+
+h3. 静态分页
+
+首先在_config.yml里增加配置paginate: 5，数字为分页显示文章的条数。这样子jekyll就会生成pageN的index了。然后就是显示分页的目录号，添加到想要的位置。
+
+{% highlight html %}
+＠
+    {% if paginator.total_pages > 1 %}
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                {{ page }}
+            {% else %}
+                <a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+＠
+{% endhighlight %}
+
+h3.　jquery分页
+
+ajax分页的好处就是点击分页不用刷新整页面，但是我写的这个并不是很好，因为是在进入网站的时候就载入了json，并不是请求的。分页之前，先要生成文章的json数据
+
+{% highlight json %}
+＠
+---
+layout: nil
+---
+
+[{% for post in site.posts %}
+    {
+        "title":"{{post.title}}",
+        "summary":"{{post.summary}}",
+        "url":"{{site.url}}{{post.url}}",
+        "date":"{{post.date|date_to_string}}"
+    }{% if forloop.last == false %},{% endif %}
+{% endfor %}
+]
+＠
+{% endhighlight %}
+
+这是我生成json的文件的语句，你可以更改成你自己的样式。比如把整个post都写入post值中。
+
+准备好json数据之后，就是js了。
+
+{% highlight js %}
+            $(document).ready(function () {
+                    $(".page").html("<input id=\"up\" type=\"button\"  value=\"上一页\" /> <input id=\"down\" type=\"button\"  value=\"下一页\" />")
+                    $.getJSON("/post.json", function (data) {
+                            var page = {
+                                    Num : 5,//分页文章数
+                                    MAX : data.length,
+                                    index : 0,
+                                    count : 5,//...
+                                    next : function () {
+                                        this.index += 1 ;
+                                    },
+                                    prev : function () {
+                                        this.index -= 1 ;
+                                    },
+                                    content : function () {
+                                        if(this.index < 0)
+                                        {
+                                            this.index = 0;
+                                        }
+                                        else if(this.index >= (this.MAX/this.Num|0)){
+                                            this.count = this.MAX % this.Num;
+                                            this.index = (this.MAX/this.Num|0)
+                                        }
+                                        else{
+                                            this.count = 5;//...
+                                        }
+                                        var builder = '';
+                                        for (var i = this.index*this.Num ; i < this.index*this.Num + this.count; i++) {
+                                                builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
+                                                builder += ("<p>" + data[i].summary + "</p>");
+                                        }
+                                        return builder;
+                                }
+                            };
+                            $("#down").click(function () {
+                                            page.next();
+                                            $(".posts").html(page.content());
+                                    });
+                            $("#up").click(function () {
+                                            page.prev();
+                                            $(".posts").html(page.content());
+                                    });
+                    });
+            });
+{% endhighlight %}
+
+效果就是分把class为page的div换成上下页，js中page类中几个参数控制分页显示数。必须确保前面包含了jquery，虽然只有了它的极小的一部分。
+
+h3. PS
+
+之所以写这个，是因为我放弃了jquery转向dojo。所以我打算把jquery从我的博客里去除，所以以前那个html5音乐没有了。加上分页依赖jquery,而我打算用dojo重写它，虽然进展并不顺利QAQ。就把这个留给有用的人吧，不过用jekyll建博客的我想不会写不出这玩意～。～
+
+p(date). Posted on Wed May 23 10:40:35 2012 by "maplebeats":http://maplebeats.com/me
