@@ -7,15 +7,17 @@ summary: 博客文章很多，然后又想分页显示。但是jekyll设置分�
 
 h3. 静态分页
 
+h4. tips:请把代码里的\全删除，该死的转义，用code标签都不行。
+
 首先在_config.yml里增加配置paginate: 5，数字为分页显示文章的条数。这样子jekyll就会生成pageN的index了。然后就是显示分页的目录号，添加到想要的位置。
 
 {% highlight js %}
     {\% if paginator.total_pages > 1 \%}
         {\% for page in (1..paginator.total_pages) \%}
             {\% if page == paginator.page \%}
-                {{ page }}
+                \{{ page \}}
             {\% else \%}
-                <a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
+                <a href="/{\%if page > 1 \%}page\{{ page \}}/{\% endif \%}">\{{ page \}}</a>
             {\% endif \%}
         {\% endfor \%}
     {\% endif \%}
