@@ -32,10 +32,10 @@ ajax分页的好处就是点击分页不用刷新整页面，但是我写的这�
 
 [{\% for post in site.posts \%}
     {
-        "title":"{{post.title}}",
-        "summary":"{{post.summary}}",
-        "url":"{{site.url}}{{post.url}}",
-        "date":"{{post.date|date_to_string}}"
+        "title":"\{{post.title\}}",
+        "summary":"\{{post.summary\}}",
+        "url":"\{{site.url}}{{post.url\}}",
+        "date":"\{{post.date|date_to_string\}}"
     }{\% if forloop.last == false \%},{\% endif \%}
 {\% endfor \%}
 ]
