@@ -9,18 +9,16 @@ h3. 静态分页
 
 首先在_config.yml里增加配置paginate: 5，数字为分页显示文章的条数。这样子jekyll就会生成pageN的index了。然后就是显示分页的目录号，添加到想要的位置。
 
-{% highlight html %}
-＠
-    {% if paginator.total_pages > 1 %}
-        {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
+{\% highlight html \%}
+    {\% if paginator.total_pages > 1 \%}
+        {\% for page in (1..paginator.total_pages) \%}
+            {\% if page == paginator.page \%}
                 {{ page }}
-            {% else %}
+            {\% else \%}
                 <a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-＠
+            {\% endif \%}
+        {\% endfor \%}
+    {\% endif \%}
 {% endhighlight %}
 
 h3.　jquery分页
@@ -28,21 +26,19 @@ h3.　jquery分页
 ajax分页的好处就是点击分页不用刷新整页面，但是我写的这个并不是很好，因为是在进入网站的时候就载入了json，并不是请求的。分页之前，先要生成文章的json数据
 
 {% highlight json %}
-＠
----
-layout: nil
----
+\---
+\layout: nil
+\---
 
-[{% for post in site.posts %}
+[{\% for post in site.posts \%}
     {
         "title":"{{post.title}}",
         "summary":"{{post.summary}}",
         "url":"{{site.url}}{{post.url}}",
         "date":"{{post.date|date_to_string}}"
-    }{% if forloop.last == false %},{% endif %}
-{% endfor %}
+    }{\% if forloop.last == false \%},{\% endif \%}
+{\% endfor \%}
 ]
-＠
 {% endhighlight %}
 
 这是我生成json的文件的语句，你可以更改成你自己的样式。比如把整个post都写入post值中。
