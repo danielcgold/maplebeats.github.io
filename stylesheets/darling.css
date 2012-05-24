@@ -1,0 +1,21 @@
+.darling {
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+}
+#darling-say {
+    background: rgba(225,225,225,0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 2px #FFFFFF;
+    float: left;
+    margin-top: 10px;
+    width: 135px;
+    padding: 5px;
+    color: red;
+}
+#darling-img {
+    float: left;
+}
+#darling-img img {
+    width: 120px;
+}
