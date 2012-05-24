@@ -7,8 +7,8 @@
             </li>
         {% endfor %}
     </ul>
-    <nav class="page">
     <noscript>
+    <nav class="page">
     {% if paginator.total_pages > 1 %}
         {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
@@ -18,7 +18,8 @@
             {% endif %}
         {% endfor %}
     {% endif %}
-    </noscript>
-    <button id="more">more posts</button>
     </nav>
+    </noscript>
+    <input id="prev" type="image" src="images/top.png"/>
+    <input id="next" type="image" src="images/down.png"/>
 </div>

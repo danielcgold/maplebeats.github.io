@@ -80,24 +80,51 @@
         <script>
             require(["dojo/_base/xhr", "dojo/dom", "dojo/on", "dojo/json", "dojo/domReady!"],
                 function(xhr, dom, on, json) {
-                    function morePost() {
-                        xhr.get({
-                            url: "/post.json",
-                            handleAs: "json",
-                            load: function (data) {
-                                builder = '';
-                                for (var i = 0 ; i < data.length-5; i++) {
-                                    builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
-                                    builder += ("<p>" + data[i].summary + "</p>");
+                    var page = {
+                        index: 0,
+                        Num : 5,
+                        MAX : 0,
+                        count : 5,
+                        next : function () {
+                            page.index += 1 ;
+                            page.content();
+                        },
+                        prev : function () {
+                            page.index -= 1 ;
+                            page.content();
+                        },
+                        content : function () {
+                            window.location="/#"
+                            xhr.get({
+                                url: "/post.json",
+                                handleAs: "json",
+                                load: function (data) {
+                                    page.MAX = data.length;
+                                    if(page.index < 0){
+                                        page.index = 0;
+                                    }
+                                    else if(page.index >= (page.MAX/page.Num|0)){
+                                        page.count = page.MAX % page.Num;
+                                        page.index = (page.MAX/page.Num|0);
+                                    }
+                                    else{
+                                        page.count = 5;
+                                    }
+                                    var builder = '';
+                                    for (var i = page.index*page.Num ; i < page.index*page.Num + page.count; i++) {
+                                            builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
+                                            builder += ("<p>" + data[i].summary + "</p>");
+                                    }
+                                    dom.byId("posts").innerHTML = builder;
+                                },
+                                error: function() {
+                                    alert("something wrong")
                                 }
-                                dom.byId("posts").innerHTML = builder;
-                            },
-                            error: function() {
-                                alert("something wrong")
-                            }
-                        });
-                     }
-                on(dom.byId("more"), "click", morePost);
+                            });
+                         },
+                    }
+                on(dom.byId("next"), "click", page.next);
+                on(dom.byId("prev"), "click", page.prev);
             });
         </script>
     {% endif %}

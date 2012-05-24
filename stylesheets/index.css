@@ -13,14 +13,28 @@
 .content {
     float: left;
     background: rgba(255,255,255,0.6);
-    margin: 20px 100px;
-    width: 450px;
+    width: 500px;
     padding: 20px;
 }
 .page {
     margin: 0 auto;
     text-align: center;
 }
+.posts {
+    margin: 0 auto;
+}
 .posts h2 {
     font-size: 120%;
+}
+#prev {
+    width: 60px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+}
+#next {
+    width: 60px;
+    position: fixed;
+    top: 50%;
+    right: 0;
 }
