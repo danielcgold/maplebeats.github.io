@@ -16,6 +16,7 @@
         <link rel="alternate" href="/atom.xml" title="maplebeats" />
         <link rel="stylesheet" href="/stylesheets/main.css" />
         <link rel="stylesheet" href="/stylesheets/syntax.css" />
+        <link rel="stylesheet" href="/stylesheets/darling.css" />
         {% for css in page.stylesheet %}
             <link rel="stylesheet" href="{{ css }}" />
         {% endfor %}
@@ -70,6 +71,7 @@
                 <section class="html5-logo"><img src="/images/html5.png" alt="html5" /></section>
             </div>
         </footer>
+        {% include darling.html %}
         <script src="javascripts/dojo.js"
 				data-dojo-config="isDebug: true, async: true">
 	    </script>
@@ -94,7 +96,6 @@
                             page.content();
                         },
                         content : function () {
-                            window.location="/#"
                             xhr.get({
                                 url: "/post.json",
                                 handleAs: "json",
@@ -113,7 +114,7 @@
                                     var builder = '';
                                     for (var i = page.index*page.Num ; i < page.index*page.Num + page.count; i++) {
                                             builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
-                                            builder += ("<p>" + data[i].summary + "</p>");
+                                            builder += ("<summary>" + data[i].summary + "</summary>");
                                     }
                                     dom.byId("posts").innerHTML = builder;
                                 },

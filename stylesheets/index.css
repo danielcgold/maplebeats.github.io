@@ -5,15 +5,10 @@
 /*-----------html5 player--------*/
 .music {
 }
-/*-----------me----------------*/
-.me {
-    width: 300px;
-}
 /*-----------content-----------*/
 .content {
     float: left;
-    background: rgba(255,255,255,0.6);
-    width: 500px;
+    width: 600px;
     padding: 20px;
 }
 .page {
@@ -21,20 +16,29 @@
     text-align: center;
 }
 .posts {
+    background: rgba(255,255,255,0.5);
+    border:5px solid white;
+    float: left;
+    width: 500px;
     margin: 0 auto;
+    padding: 10px;
+    min-height: 500px;
 }
 .posts h2 {
     font-size: 120%;
 }
 #prev {
-    width: 60px;
-    position: fixed;
-    top: 50%;
-    left: 0;
+    background: rgba(0,0,0,0);
 }
 #next {
+    margin: 40px 0;
+    background: rgba(0,0,0,0);
+}
+.updown {
+    margin-top: 200px;
+    float: left;
+    width: 70px;
+}
+.updown img{
     width: 60px;
-    position: fixed;
-    top: 50%;
-    right: 0;
 }

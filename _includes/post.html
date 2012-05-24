@@ -1,4 +1,8 @@
 <div class="content">
+    <nav class="updown">
+        <button id="prev"><img src="images/top.png"/></button>
+        <button id="next"><img src="images/down.png"/></button>
+    </nav>
     <ul id="posts" class="posts">
         {% for post in paginator.posts %}
             <li>
@@ -20,6 +24,4 @@
     {% endif %}
     </nav>
     </noscript>
-    <input id="prev" type="image" src="images/top.png"/>
-    <input id="next" type="image" src="images/down.png"/>
 </div>
