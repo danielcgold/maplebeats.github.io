@@ -1,21 +1,22 @@
 .darling {
+    height: 210px;
+    width: 100px;
+    background: url("/images/darling1.png")  no-repeat ;
+    background-size: 100px;
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     right: 0;
+}
+.darling-head {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    right: 150px;
 }
 #darling-say {
     background: rgba(225,225,225,0.8);
     border-radius: 10px;
     box-shadow: 0 0 2px #FFFFFF;
-    float: left;
-    margin-top: 10px;
     width: 135px;
     padding: 5px;
-    color: red;
-}
-#darling-img {
-    float: left;
-}
-#darling-img img {
-    width: 120px;
 }
