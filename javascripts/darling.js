@@ -1,10 +1,25 @@
-var words = [
-    "恩恩，偶终于又复活了QAQ",
-    "主人好讨厌哦。。。",
-    "偶居然只会说几句话",
-    "偶好喜欢你哦",
-    "骗你的啦。。。。"
-]
+$(document).ready(function (){ 
+    function getSay(){
+        var url="http://api.hitokoto.us/rand?encode=jsc&fun=getWord";
+        $.getScript(
+        url,
+        function(){
+        });
+    }
+    $("#darling").click(function(){
+        getSay();
+    });
+    function timeSay() {
+        getSay();
+        darling();
+        setTimeout(timeSay,3000);//伤不起啊
+    }
+    timeSay();   
+});
+function getWord(data){
+    darlingSay(data["hitokoto"])
+}
+/*------------main------------*/
 var states = [
     "/images/darling1.png",
     "/images/darling2.png",
@@ -13,21 +28,16 @@ var states = [
 function darlingSay(say){
     document.getElementById("darling-say").innerHTML=say;
 }
-function randomNum(length){
-    var Num = Math.floor(Math.random()*length)
-    return Num
+function randomNum(ary){
+    var len = ary.length;
+    var Num = Math.floor(Math.random()*len);
+    return ary[Num]
 }
-function darlingState() {
-    var state = states[randomNum(states.length)];
-    document.getElementById("darling").style.backgroundImage="url("+state+")  "
+function darlingState(state) {
+    document.getElementById("darling").style.backgroundImage="url("+state+")";
 }
 function darling() {
-    var word = words[randomNum(words.length)]
-    darlingSay(word);
-    darlingState();
+    darlingState(randomNum(states));
 }
-function timeSay() {
-    darling();
-    go =  setTimeout("timeSay()",3000)
-}
-timeSay();
+//////////////////////
+
