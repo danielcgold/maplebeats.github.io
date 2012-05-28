@@ -11,10 +11,10 @@ $(document).ready(function (){
     });
     function timeSay() {
         getSay();
-        darlingState(randomNum(23));
-        setTimeout(timeSay,6000);//伤不起啊
+        preload(randomNum(23));
     }
-    timeSay();   
+    timeSay();
+    setInterval(timeSay,6000);
 });
 function getWord(data){
     darlingSay(data["hitokoto"])
@@ -29,5 +29,13 @@ function randomNum(len){
 }
 function darlingState(state) {
     document.getElementById("darling").style.backgroundImage="url(/images/darling"+state+".png)";
+}
+function preload(num) {
+    new Image().src = '/images/darling'+num+'.png';
+    setTimeout(
+        function(){
+            darlingState(num);
+        },
+        6000);
 }
 
