@@ -2,8 +2,8 @@ $(document).ready(function (){
     function getSay(){
         var url="http://api.hitokoto.us/rand?encode=jsc&fun=getWord";
         $.getScript(
-        url,
-        function(){
+            url,
+            function(){
         });
     }
     $("#darling").click(function(){
@@ -11,8 +11,8 @@ $(document).ready(function (){
     });
     function timeSay() {
         getSay();
-        darling();
-        setTimeout(timeSay,3000);//伤不起啊
+        darlingState(randomNum(23));
+        setTimeout(timeSay,6000);//伤不起啊
     }
     timeSay();   
 });
@@ -20,24 +20,14 @@ function getWord(data){
     darlingSay(data["hitokoto"])
 }
 /*------------main------------*/
-var states = [
-    "/images/darling1.png",
-    "/images/darling2.png",
-    "/images/darling3.png"
-]
 function darlingSay(say){
     document.getElementById("darling-say").innerHTML=say;
 }
-function randomNum(ary){
-    var len = ary.length;
+function randomNum(len){
     var Num = Math.floor(Math.random()*len);
-    return ary[Num]
+    return Num;
 }
 function darlingState(state) {
-    document.getElementById("darling").style.backgroundImage="url("+state+")";
+    document.getElementById("darling").style.backgroundImage="url(/images/darling"+state+".png)";
 }
-function darling() {
-    darlingState(randomNum(states));
-}
-//////////////////////
 
