@@ -1,13 +1,13 @@
 #darling {
-    font-size: 70%;
+    font-size: 85%;
     height: 200px;
     width: 150px;
     background-image: url("/images/darling1.png");
     background-repeat:no-repeat;
     background-size: 165px 200px;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 50%;
+    right: 50%;
 }
 .darling-head {
     width: 250px;
@@ -16,7 +16,8 @@
     right: 100px;
 }
 #darling-say {
-    background: rgba(225,225,225,0.8);
+    color: #FF69B4;
+    background: rgba(225,225,225,0.9);
     border-radius: 10px;
     box-shadow: 0 0 2px #FFFFFF;
     width: 135px;

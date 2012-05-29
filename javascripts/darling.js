@@ -7,14 +7,18 @@ $(document).ready(function (){
         });
     }
     $("#darling").click(function(){
-        getSay();
+        darlingSay("非礼啊QAQ...再点我我就要叫了(つдC)");
     });
     function timeSay() {
         getSay();
         preload(randomNum(23));
     }
-    timeSay();
-    setInterval(timeSay,6000);
+    function main() {
+        timeSay();
+        init();
+        setInterval(timeSay,6000);
+    }
+    main();
 });
 function getWord(data){
     darlingSay(data["hitokoto"])
@@ -36,6 +40,9 @@ function preload(num) {
         function(){
             darlingState(num);
         },
-        6000);
+        6000
+    );
 }
-
+function init() {
+    $("#darling").animate({bottom:"0",right:"0"});
+}

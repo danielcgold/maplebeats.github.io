@@ -24,9 +24,6 @@
     padding: 10px;
     min-height: 500px;
 }
-.posts h2 {
-    font-size: 120%;
-}
 #prev {
     background: rgba(0,0,0,0);
 }

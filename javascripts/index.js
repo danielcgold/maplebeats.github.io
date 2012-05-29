@@ -26,7 +26,7 @@ $(document).ready(function () {
                 var builder = '';
                 for (var i = this.index*this.Num ; i < this.index*this.Num + this.count; i++) {
                         builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
-                        builder += ("<p>" + data[i].summary + "</p>");
+                        builder += ( data[i].summary + "</li>");
                 }
                 return builder;
             }
