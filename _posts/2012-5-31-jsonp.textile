@@ -1,0 +1,49 @@
+---
+layout: post
+title: ajax之跨域请求:jsonp
+summary: 一开始写春菜的时候采用的是数组来保存"语言"，然后进行随机选取。这样子虽然写起来方便直接观，但是缺点也是显而易见的。要自己收集语言，保存成长长的数组，只要一访问就会全部加载进去。要是把数据量非常大那就太搞了。于是在"＠灵曦":http://lolis.info的提醒下，采用了某网站的api。
+---
+一开始写春菜的时候采用的是数组来保存"语言"，然后进行随机选取。这样子虽然写起来方便直接观，但是缺点也是显而易见的。要自己收集语言，保存成长长的数组，只要一访问就会全部加载进去。要是把数据量非常大那就太搞了。于是在 "＠灵曦":http://lolis.info 的提醒下，采用了某网站的api。
+
+h3. 错误
+
+一开始以为只是简单的请求json，然后就简单请求json数据。当然这肯定报错了"invalid label"，无论用什么办法都是这个报错。google了一下，跨域请求并不像想像的那样简单。原理上就有根本的不同。这应该是js为了安全的考虑吧。
+
+h3. 原理
+
+jsonp的原理，就是 @<script></script>@ 标签。意味着，请求来的数据就直接运行了。所以报错invalid label的原因就是直接运行json数据，这当然是行不通的。所以请求的数据格式是有限制的。如果数据是自己控制的话，在生成的时候就生成 @var data=json@ ，请求来的数据就能直接使用了。当然我不能这么做，因为是用别人的api。别一种那就是callback函数，格式:function(json)。请求下来之后马上运行function函数，其中的形参json就是们我请求的数据。
+
+{% highlight js %}
+$(document).ready(function (){ 
+    function getSay(){
+        var url="http://api.hitokoto.us/rand?encode=jsc&fun=getWord";
+        $.getScript(
+            url,
+            function(){
+        });
+    }
+});
+function getWord(data){
+    darlingSay(data["hitokoto"])
+}
+{% endhighlight %}
+
+以上就是我用jquery的.getScript方法请求的jsonp数据以及处理办法，相比.ajax简单明了。
+
+h3. tips
+
+如何向setTimeout以及setInterval传递参数，只要建立一个匿名函数就行了。
+
+{% highlight js %}
+function preload(num) {
+    new Image().src = '/images/darling'+num+'.png';
+    setTimeout(
+        function(){
+            darlingState(num);
+        },
+        6000
+    );
+}
+{% endhighlight %}
+
+p(date). Posted on Thu May 31 14:27:53 2012 by "maplebeats":http://maplebeats.com/me
