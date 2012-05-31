@@ -11,7 +11,7 @@ h3. 错误
 
 h3. 原理
 
-jsonp的原理，就是 @<script></script>@ 标签。意味着，请求来的数据就直接运行了。所以报错invalid label的原因就是直接运行json数据，这当然是行不通的。所以请求的数据格式是有限制的。如果数据是自己控制的话，在生成的时候就生成 @var data=json@ ，请求来的数据就能直接使用了。当然我不能这么做，因为是用别人的api。别一种那就是callback函数，格式:function(json)。请求下来之后马上运行function函数，其中的形参json就是们我请求的数据。
+jsonp的原理，就是 @<script></script>@ 标签。意味着，请求来的数据就直接运行了。所以报错invalid label的原因就是直接运行json数据，这当然是行不通的。所以请求的数据格式是有限制的。如果数据是自己控制的话，在生成的时候就生成 @var data=json@ ，请求来的数据就能直接使用了。当然我不能这么做，因为是用别人的api。另一种那就是callback函数，格式:function(json)。请求下来之后马上运行function函数，其中的形参json就是们我请求的数据。
 
 {% highlight js %}
 $(document).ready(function (){ 
