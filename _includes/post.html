@@ -1,8 +1,10 @@
 <div class="content">
+    <noscript>
     <nav class="updown">
         <button id="prev"><img src="images/top.png" alt=""/></button>
         <button id="next"><img src="images/down.png" alt=""/></button>
     </nav>
+    </noscript>
     <ul id="posts" class="posts">
         {% for post in paginator.posts %}
             <li>
@@ -10,8 +12,6 @@
                 {{ post.summary }}
             </li>
         {% endfor %}
-    </ul>
-    <noscript>
     <nav class="page">
     {% if paginator.total_pages > 1 %}
         {% for page in (1..paginator.total_pages) %}
@@ -23,5 +23,5 @@
         {% endfor %}
     {% endif %}
     </nav>
-    </noscript>
+    </ul>
 </div>
