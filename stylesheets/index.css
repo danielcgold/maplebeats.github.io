@@ -4,17 +4,18 @@
 }
 /*-----------content-----------*/
 .content {
+    margin-left: 50px;
     float: left;
     width: 600px;
     padding: 20px;
 }
 .page {
-    margin: 0 auto;
     text-align: center;
 }
 .posts {
     background: rgba(255,255,255,0.5);
     border:5px solid white;
+    border-radius: 20px;
     float: left;
     width: 500px;
     margin: 0 auto;

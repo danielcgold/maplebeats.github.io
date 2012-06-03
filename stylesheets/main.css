@@ -1,5 +1,5 @@
 /*----------init----------*/
-html,body { background: url(/images/bg2.jpg) no-repeat fixed center; color: #222222; height: 100%;font-size: 95%; }
+html,body { background: url(/images/bg1.jpg) no-repeat fixed center; color: #222222; height: 100%;font-size: 95%; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { margin:0;padding:0; }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
 input,select,textarea{ font-size:100%; }
@@ -83,8 +83,8 @@ ins,a { text-decoration:none; }
 .me {
     border:5px solid white;
     width: 300px;
-    padding: 20px;
-    margin: 20px;
+    border-radius: 300px;
+    padding: ddpx;
 }
 /*-----------footer--------*/
 footer {
