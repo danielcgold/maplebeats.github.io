@@ -34,10 +34,12 @@ $(document).ready(function () {
         $("#next").click(function () {
             page.next();
             $(".posts").html(page.content());
+            darlingSay("下一页");
         });
         $("#prev").click(function () {
             page.prev();
             $(".posts").html(page.content());
+            darlingSay("上一页");
         });
     });
 });

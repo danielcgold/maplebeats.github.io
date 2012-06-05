@@ -9,6 +9,9 @@ $(document).ready(function (){
     $("#darling").click(function(){
         darlingSay("非礼啊QAQ...再点我我就要叫了(つдC)");
     });
+    $(".title").mouseenter(function(){
+        darlingSay("点击可以得到更多内容哦");
+    });
     function timeSay() {
         getSay();
         preload(randomNum(23));
