@@ -1,16 +1,26 @@
 $(document).ready(function (){ 
     function getSay(){
-        var url="http://api.hitokoto.us/rand?encode=jsc&fun=getWord";
-        $.getScript(
+        var url="http://api.hitokoto.us/rand?encode=jsc&fun=?";
+        $.getJSON(
             url,
-            function(){
+            function(data){
+            darlingSay(data["hitokoto"]);
         });
     }
     $("#darling").click(function(){
         darlingSay("非礼啊QAQ...再点我我就要叫了(つдC)");
+        count += 1;
+        if(count==3)
+        {
+        darlingSay("去死吧");
+        count = 0;
+        };
+   });
+    $("[href]").mouseenter(function(){
+        darlingSay("点击访问-->"+$(this).text());
     });
-    $(".title").mouseenter(function(){
-        darlingSay("点击可以得到更多内容哦");
+    $("#disqus_thread").mouseenter(function(){
+        darlingSay("吐槽一下主人吧");
     });
     function timeSay() {
         getSay();
@@ -23,10 +33,7 @@ $(document).ready(function (){
     }
     main();
 });
-function getWord(data){
-    darlingSay(data["hitokoto"])
-}
-/*------------main------------*/
+var count  = 0;
 function darlingSay(say){
     document.getElementById("darling-say").innerHTML=say;
 }
