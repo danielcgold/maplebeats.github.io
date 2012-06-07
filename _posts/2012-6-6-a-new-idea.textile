@@ -14,5 +14,12 @@ h3. Tips
 
 以上是我个人的yy，暂时只是个想法。只是目测能实现，仅此而已。现在还得准备考试，娱乐休闲用。提醒自己有空把它做出来。以及顺手测试下脚本。
 
+h3. 后续
+
+初版已经出来了，"地址":http://maplebeats.com/gaebeats ，暂时只能读和写两个基本功能。
+
+h3. 吐槽
+
+该死的python2.x，编码问题真是让人崩溃。json也是个脑残的格式，虽然非常的简单。。。
 
 p(date). Posted on Wed Jun  6 13:17:46 2012 by "maplebeats":http://maplebeats.com/me
