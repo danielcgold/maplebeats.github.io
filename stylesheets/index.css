@@ -3,6 +3,12 @@
     text-align: center;
 }
 /*-----------content-----------*/
+.title {
+    width: 300px;
+}
+.title a:hover {
+    color: blue;
+}
 .content {
     margin-left: 50px;
     float: left;

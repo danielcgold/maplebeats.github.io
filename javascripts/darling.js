@@ -10,14 +10,13 @@ $(document).ready(function (){
     $("#darling").click(function(){
         darlingSay("非礼啊QAQ...再点我我就要叫了(つдC)");
         count += 1;
-        if(count==3)
-        {
-        darlingSay("去死吧");
-        count = 0;
+        if(count==3){
+            darlingSay("去死吧");
+            count = 2;
         };
    });
-    $("[href]").mouseenter(function(){
-        darlingSay("点击访问-->"+$(this).text());
+    $(".title").mouseenter(function(){
+        darlingSay("点击访问--> "+$(this).html());
     });
     $("#disqus_thread").mouseenter(function(){
         darlingSay("吐槽一下主人吧");
