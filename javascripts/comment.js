@@ -8,7 +8,7 @@ $(document).ready(function(){
                 commlen = getJsonLength(data); //order
                 var text = [];
                 for(var i=0;i<commlen;i++){
-                    for(j in data[i]){
+                    for(var j=0;j<data[i].length;j++){
                             text += '<div class="eachcomm">';
                             text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a>';
                             text += '<p>'+data[i][j].content+'</p>';
@@ -26,6 +26,7 @@ $(document).ready(function(){
         var push = $("#comminput").serialize();
         $.ajax({
             type:'GET',
+            async:false,
             url:url+"comm?postid="+location.pathname+"&order="+commlen,
             data:push,
             beforeSend:function(){
