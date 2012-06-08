@@ -4,29 +4,41 @@ $(document).ready(function(){
         $.getJSON(url+"jsonp?callback=?",
             {postid:location.pathname},
             function(data){
+                commlen = getJsonLength(data)+1;
                 var text = [];
                 for(i in data){
                     for(j in data[i]){
                         for(k in data[i][j]){
-                            text+=data[i][j][k]
+                            $(".comm").append('<p>'+i+':'+k+':'+data[i][j][k]+'</p>');
                         }
+                        $(".comm").append('<p>--------------------</p>');
                     }
                 }
-                $(".comm").html(text);
             }
         )
     }
     function pushComm(){
-        var push = $("form").serialize();
+        var push = $("#comminput").serialize();
         $.ajax({
             type:'GET',
-            url:url+"comm?postid="+location.pathname,
+            url:url+"comm?postid="+location.pathname+"&order="+commlen,
             data:push,
+            beforeSend:function(){
+            }
         });
-        getComm()
+        getComm();
     };
-    $(".submit").click(function(){
-        pushComm()
+    $(".pushcomm").click(function(){
+        pushComm();
     });
-    getComm()
+    getComm();
 });
+var commlen = 0;
+
+function getJsonLength(json){
+	var len=0;
+	if(Boolean(json)){
+		for(i in json)len++;
+	}
+	return len;
+}
