@@ -18,7 +18,7 @@ $(document).ready(function (){
     $(".title").mouseenter(function(){
         darlingSay("点击访问--> "+$(this).html());
     });
-    $("#disqus_thread").mouseenter(function(){
+    $("#comminput").mouseenter(function(){
         darlingSay("吐槽一下主人吧");
     });
     function timeSay() {
