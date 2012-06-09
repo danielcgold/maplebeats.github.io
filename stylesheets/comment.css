@@ -1,7 +1,7 @@
 [name=content] {
 }
 .eachcomm {
-    border: 3px solid black;
+    border: 3px solid white;
     margin-top: 5px;
     padding: 5px;
 }
@@ -9,11 +9,20 @@
     color: black;
 }
 .echcomm a:hover {
-    text-decoration:underline;
 }
 .eachcomm img{
     height: 60px;
     width: 60px;
     float: left;
-    margin-right: 10px;
+    margin: 5px;
+}
+#comminput {
+    padding-top: 10px;
+    font-size: 100%;
+}
+#commcon,#email,#link,#author{
+    border: 2px solid white;
+    background: rgba(255,255,255,0.5);
+}
+.pushcomm {
 }

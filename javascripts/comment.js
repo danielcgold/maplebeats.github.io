@@ -12,7 +12,7 @@ $(document).ready(function(){
                 for(var i=0;i<commlen;i++){
                     text += '<div class="eachcomm"><div id="eachcomm'+i+'">';
                     for(var j=0;j<data[i].length;j++){
-                        text += '<p><img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'" style="margin-top: 5px;"/>';
+                        text += '<p><img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
                         text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
                         text += '<p>'+data[i][j].date+'<a href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>---回复</a></p>';
                         text += '<h4>吐槽: '+data[i][j].content+'</h4>';
