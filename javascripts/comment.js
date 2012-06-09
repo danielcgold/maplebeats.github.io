@@ -8,15 +8,16 @@ $(document).ready(function(){
                 commlen = getJsonLength(data); //order
                 var text = [];
                 for(var i=0;i<commlen;i++){
+                    text += '<p>--------------------------------------'+i+'----------------------------------</p>';
                     for(var j=0;j<data[i].length;j++){
                             text += '<div class="eachcomm">';
+                            text += '<img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
                             text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a>';
-                            text += '<p>'+data[i][j].content+'</p>';
-                            text += '<p>'+data[i][j].date+'</p>';
-                            text += '<a href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>回复</a>';
+                            text += '<h4>吐槽: '+data[i][j].content+'</h4>';
+                            text += '<p><a href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>回复</a></p>';
+                            text += '<p class="date">'+data[i][j].date+'</p>';
                             text += '</div>';
                     }
-                    text += '<p>--------------------</p>';
                 }
                 $(".comm").html(text);
             }
@@ -37,11 +38,15 @@ $(document).ready(function(){
     $(".pushcomm").click(function(){
         pushComm();
     });
-    getComm();
+    function init(){
+        document.getElementById("link").value="http://";
+        getComm();
+    }
+    init();
 });
 var commlen = 0;
 function reply(name,order){
-    document.getElementById("commcon").value='@'+name;
+    document.getElementById("commcon").value='@'+name+' ';
     commlen = order;
 }
 

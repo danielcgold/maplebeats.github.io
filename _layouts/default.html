@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="/stylesheets/main.css" />
         <link rel="stylesheet" href="/stylesheets/syntax.css" />
         <link rel="stylesheet" href="/stylesheets/darling.css" />
+        <link rel="stylesheet" href="/stylesheets/comment.css" />
         {% for css in page.stylesheet %}
             <link rel="stylesheet" href="{{ css }}" />
         {% endfor %}
@@ -73,8 +74,18 @@
         {% include darling.html %}
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="/javascripts/darling.js"></script>
+        <script src="/javascripts/comment.js"></script>
         {% for js in page.javascript %}
             <script src="{{ js }}"></script>
         {% endfor %}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#disqus_container .comment').on('click',function(){
+                    $(this).html('加载中...')
+                    var that = this;
+                    $.getScript('http://disqus.com/forums/maplebeats/embed.js',function(){$(that).remove()});
+                });
+            });
+        </script>
     </body>
 </html>

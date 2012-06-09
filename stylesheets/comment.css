@@ -1,8 +1,10 @@
 [name=content] {
 }
 .eachcomm {
-    border:1px solid #FFFFFF;
 }
-botton {
-    width:50px;
+.eachcomm a:visited {
+    color: black;
+}
+.echcomm a:hover {
+    color: white;
 }
