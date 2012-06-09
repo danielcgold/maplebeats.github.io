@@ -9,9 +9,9 @@ $(document).ready(function(){
             function(data){
                 commlen = getJsonLength(data); //order
                 var text = [];
-                for(var i=0;i<commlen;i++){
+                for(i in data){
                     text += '<div class="eachcomm"><div id="eachcomm'+i+'">';
-                    for(var j=0;j<data[i].length;j++){
+                    for(j in data[i]){
                         text += '<p><img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
                         text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
                         text += '<p>'+data[i][j].date+'<a href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>---回复</a></p>';
