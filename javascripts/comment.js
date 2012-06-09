@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    //var url="http://localhost:8080/"
-    var url="http://gae.maplebeats.com/"
+    var url="http://localhost:8080/"
+    //var url="http://gae.maplebeats.com/"
     function getComm(){
         $.getJSON(url+"jsonp?callback=?",
             {postid:location.pathname},
@@ -8,16 +8,14 @@ $(document).ready(function(){
                 commlen = getJsonLength(data); //order
                 var text = [];
                 for(var i=0;i<commlen;i++){
-                    text += '<p>--------------------------------------'+i+'----------------------------------</p>';
+                    text += '<div class="eachcomm"><div id="eachcomm'+i+'">';
                     for(var j=0;j<data[i].length;j++){
-                            text += '<div class="eachcomm">';
-                            text += '<img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
-                            text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a>';
-                            text += '<h4>吐槽: '+data[i][j].content+'</h4>';
-                            text += '<p><a href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>回复</a></p>';
-                            text += '<p class="date">'+data[i][j].date+'</p>';
-                            text += '</div>';
+                        text += '<p><img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'" style="margin-top: 5px;"/>';
+                        text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
+                        text += '<p>'+data[i][j].date+'<a href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>---回复</a></p>';
+                        text += '<h4>吐槽: '+data[i][j].content+'</h4>';
                     }
+                    text += '</div></div>';
                 }
                 $(".comm").html(text);
             }
@@ -39,7 +37,6 @@ $(document).ready(function(){
         pushComm();
     });
     function init(){
-        document.getElementById("link").value="http://";
         getComm();
     }
     init();
