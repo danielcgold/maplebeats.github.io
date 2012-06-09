@@ -1,7 +1,7 @@
 $(document).ready(function(){
     if(location.hostname=='maplebeats.com')
         var url="http://gae.maplebeats.com/";
-    else:
+    else
         var url="http://localhost:8080/";
     function getComm(){
         $.getJSON(url+"jsonp?callback=?",
