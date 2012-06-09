@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    var url="http://localhost:8080/"
-    //var url="http://gae.maplebeats.com/"
+    if(location.hostname=='maplebeats.com')
+        var url="http://gae.maplebeats.com/";
+    else:
+        var url="http://localhost:8080/";
     function getComm(){
         $.getJSON(url+"jsonp?callback=?",
             {postid:location.pathname},
