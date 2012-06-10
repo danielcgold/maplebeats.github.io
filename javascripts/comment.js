@@ -27,13 +27,14 @@ $(document).ready(function(){
         var push = $("#comminput").serialize();
         $.ajax({
             type:'GET',
-            async:false,
+            async:'true',
             url:url+"comm?postid="+location.pathname+"&order="+commlen,
             data:push,
-            beforeSend:function(){
+            complete:function(XHR, TS){
+                getComm();
+                XHR = null;
             }
         });
-        getComm();
     };
     $(".pushcomm").click(function(){
         pushComm();
