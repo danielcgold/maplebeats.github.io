@@ -11,6 +11,9 @@ $(document).ready(function(){
                 var text = [];
                 for(i in data){
                     text += '<div class="eachcomm"><div id="eachcomm'+i+'">';
+                    data[i].sort(function(a,b){
+                        return a.date > b.date ? 1: -1;
+                    });//对数据按时间排序
                     for(j in data[i]){
                         text += '<p><img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
                         text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
