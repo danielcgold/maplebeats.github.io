@@ -7,7 +7,7 @@ $(document).ready(function(){
         $.getJSON(url+"jsonp?callback=?",
             {postid:location.pathname},
             function(data){
-                commlen = getJsonLength(data); //order
+                commorder = getJsonOrder(data)+1; //order
                 var text = [];
                 for(i in data){
                     text += '<div class="eachcomm"><div id="eachcomm'+i+'">';
@@ -31,7 +31,7 @@ $(document).ready(function(){
         $.ajax({
             type:'GET',
             async:'true',
-            url:url+"comm?postid="+location.pathname+"&order="+commlen,
+            url:url+"comm?postid="+location.pathname+"&order="+commorder,
             data:push,
             complete:function(XHR, TS){
                 getComm();
@@ -47,12 +47,20 @@ $(document).ready(function(){
     }
     init();
 });
-var commlen = 0;
+var commorder = 0;
 function reply(name,order){
     document.getElementById("commcon").value='@'+name+' ';
-    commlen = order;
+    commorder = order;
 }
-
+function getJsonOrder(json){
+    var order = '';
+    if(Boolean(json)){
+	for(i in json){
+	  order = i;
+	}
+    }
+    return parseInt(order);
+}
 function getJsonLength(json){
     var len=0;
     if(Boolean(json)){
