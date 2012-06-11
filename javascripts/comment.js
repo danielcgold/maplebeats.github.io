@@ -41,6 +41,8 @@ $(document).ready(function(){
     };
     $(".pushcomm").click(function(){
         pushComm();
+        document.getElementById("commcon").value='';
+        document.getElementById("pushcomm").value='评论已经提交';
     });
     function init(){
         getComm();
