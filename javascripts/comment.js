@@ -35,6 +35,7 @@ $(document).ready(function(){
             data:push,
             complete:function(XHR, TS){
                 getComm();
+                document.getElementById("pushcomm").value='评论提交完成';
                 XHR = null;
             }
         });
@@ -57,9 +58,9 @@ function reply(name,order){
 function getJsonOrder(json){
     var order = '';
     if(Boolean(json)){
-	for(i in json){
-	  order = i;
-	}
+        for(i in json){
+          order = i;
+        }
     }
     return parseInt(order);
 }
