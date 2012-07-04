@@ -7,8 +7,8 @@
     background-repeat:no-repeat;
     background-size: 165px 200px;
     position: fixed;
-    bottom: 50%;
-    right: 50%;
+    bottom: 0;
+    right: 0;
 }
 .darling-head {
     width: 250px;

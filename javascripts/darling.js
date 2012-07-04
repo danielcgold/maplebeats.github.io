@@ -1,39 +1,23 @@
-$(document).ready(function (){ 
-    function getSay(){
-        var url="http://api.hitokoto.us/rand?encode=jsc&fun=?";
-        $.getJSON(
-            url,
-            function(data){
-            darlingSay(data["hitokoto"]);
-        });
-    }
-    $("#darling").click(function(){
-        darlingSay("非礼啊QAQ...再点我我就要叫了(つдC)");
-        count += 1;
-        if(count==3){
-            darlingSay("去死吧");
-            count = 2;
-        };
-   });
-    $(".title").mouseenter(function(){
-        darlingSay("点击访问--> "+$(this).html());
-    });
-    $("#comminput").mouseenter(function(){
-        darlingSay("吐槽一下主人吧");
-    });
-    function timeSay() {
-        getSay();
-        preload(randomNum(23));
-    }
-    function main() {
-        timeSay();
-        init();
-        setInterval(timeSay,6000);
-    }
-    main();
-});
+function getSay(){
+    var url="http://api.hitokoto.us/rand?encode=jsc&fun=darlingSay";
+    load_script(url);
+}
+document.getElementById("darling").onclick = clickdarling;
+function clickdarling(){
+    darlingSay("非礼啊QAQ...再点我我就要叫了(つдC)");
+    count += 1;
+    if(count==3){
+        darlingSay("去死吧");
+        count = 2;
+    };
+};
+function timeSay() {
+    getSay();
+    preload(randomNum(23));
+}
 var count  = 0;
-function darlingSay(say){
+function darlingSay(data){
+    say = data["hitokoto"];
     document.getElementById("darling-say").innerHTML=say;
 }
 function randomNum(len){
@@ -52,6 +36,8 @@ function preload(num) {
         6000
     );
 }
-function init() {
-    $("#darling").animate({bottom:"0",right:"0"});
+function main() {
+    timeSay();
+    setInterval(timeSay,6000);
 }
+main();
