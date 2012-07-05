@@ -4,7 +4,6 @@ else
     var url="http://localhost:8080/";
 var commorder = 0;
 function getComm(){
-
     load_script(url+"jsonp?callback=commentCall&"+"postid="+location.pathname);
 }
 function commentCall(data){
@@ -28,17 +27,12 @@ function commentCall(data){
 function pushComm(){
     var push = serialize(document.comminput);
     var data = url+"comm?postid="+location.pathname+"&order="+commorder + "&"+push;
-    load_script(data)
+    load_script(data);
+    document.getElementById("pushcomm").value='提交评论中...';
     getComm();
+    document.getElementById("pushcomm").value='提交评论';
+    document.getElementById("commcon").value='';
 }
-
-document.getElementById("pushcomm").onclick = pushComm;
-
-function init(){
-    getComm();
-}
-init();
-
 function reply(name,order){
     document.getElementById("commcon").value='@'+name+' ';
     commorder = order;
@@ -58,3 +52,8 @@ function getJsonOrder(json){
     }
     return 0;
 }
+function main(){
+    document.getElementById("pushcomm").onclick = pushComm;
+    getComm();
+}
+main();

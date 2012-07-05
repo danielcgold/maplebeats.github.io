@@ -1,8 +1,12 @@
+var count  = 0;
 function getSay(){
-    var url="http://api.hitokoto.us/rand?encode=jsc&fun=darlingSay";
+    var url="http://api.hitokoto.us/rand?encode=jsc&fun=darlingCall";
     load_script(url);
 }
-document.getElementById("darling").onclick = clickdarling;
+function darlingCall(data) {
+    say = data["hitokoto"];
+    darlingSay(say);
+}
 function clickdarling(){
     darlingSay("非礼啊QAQ...再点我我就要叫了(つдC)");
     count += 1;
@@ -15,9 +19,7 @@ function timeSay() {
     getSay();
     preload(randomNum(23));
 }
-var count  = 0;
-function darlingSay(data){
-    say = data["hitokoto"];
+function darlingSay(say){
     document.getElementById("darling-say").innerHTML=say;
 }
 function randomNum(len){
@@ -37,6 +39,7 @@ function preload(num) {
     );
 }
 function main() {
+    document.getElementById("darling").onclick = clickdarling;
     timeSay();
     setInterval(timeSay,6000);
 }
