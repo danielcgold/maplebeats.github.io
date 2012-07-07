@@ -23,15 +23,15 @@ function commentCall(data){
         text += '</div></div>';
     }
     document.getElementById("comm").innerHTML = text;
+    document.getElementById("pushcomm").value='提交评论';
 }
 function pushComm(){
     var push = serialize(document.comminput);
     var data = url+"comm?postid="+location.pathname+"&order="+commorder + "&"+push;
     load_script(data);
     document.getElementById("pushcomm").value='提交评论中...';
-    getComm();
-    document.getElementById("pushcomm").value='提交评论';
     document.getElementById("commcon").value='';
+    getComm();
 }
 function reply(name,order){
     document.getElementById("commcon").value='@'+name+' ';
