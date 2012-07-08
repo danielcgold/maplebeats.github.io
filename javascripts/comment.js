@@ -1,7 +1,7 @@
-if(location.hostname=='maplebeats.com')
+//if(location.hostname=='maplebeats.com')
     var url="http://gae.maplebeats.com/";
-else
-    var url="http://localhost:8080/";
+//else
+//    var url="http://localhost:8080/";
 var commorder = 0;
 function getComm(){
     load_script(url+"jsonp?callback=commentCall&"+"postid="+location.pathname);
@@ -23,14 +23,18 @@ function commentCall(data){
         text += '</div></div>';
     }
     document.getElementById("comm").innerHTML = text;
-    document.getElementById("pushcomm").value='提交评论';
+    document.getElementById("pushcomm").disabled=false;
 }
 function pushComm(){
-    var push = serialize(document.comminput);
-    var data = url+"comm?postid="+location.pathname+"&order="+commorder + "&"+push;
-    load_script(data);
-    document.getElementById("pushcomm").value='提交评论中...';
     document.getElementById("commcon").value='';
+    document.getElementById("pushcomm").value='提交评论中...';
+    document.getElementById("pushcomm").disabled=true;
+    var push = serialize(document.comminput);
+    var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
+    load_script(data);
+}
+function pushCallback(data){
+    document.getElementById("pushcomm").value='提交评论';
     getComm();
 }
 function reply(name,order){
