@@ -26,10 +26,10 @@ function commentCall(data){
     document.getElementById("pushcomm").disabled=false;
 }
 function pushComm(){
-    document.getElementById("commcon").value='';
+    var push = serialize(document.comminput);
     document.getElementById("pushcomm").value='提交评论中...';
     document.getElementById("pushcomm").disabled=true;
-    var push = serialize(document.comminput);
+    document.getElementById("commcon").value='';
     var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
     load_script(data);
 }
