@@ -22,4 +22,8 @@ h3. 吐槽
 
 似乎好像也许有一年没怎么追过新番了，堕落了。
 
+h3. 再吐槽
+
+就在刚，起床开电脑。syslinux阵亡了！我什么都没干，它自己就阵亡了，在重启N次无果之后。我找出U盘打开台式机，把grub装到U盘上，希望能从U盘里引导我的系统。我把U盘插上开机，syslinux又TM自己回来了！我还没有启动U盘上的grub！我操＝＝，又成了个未解之谜，再出现直接卸载之不解释。
+
 p(date). Posted on Tue Jul 10 01:09:35 2012 by "maplebeats":http://maplebeats.com/me
