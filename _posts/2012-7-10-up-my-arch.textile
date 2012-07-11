@@ -26,4 +26,8 @@ h3. 再吐槽
 
 就在刚，起床开电脑。syslinux阵亡了！我什么都没干，它自己就阵亡了，在重启N次无果之后。我找出U盘打开台式机，把grub装到U盘上，希望能从U盘里引导我的系统。我把U盘插上开机，syslinux又TM自己回来了！我还没有启动U盘上的grub！我操＝＝，又成了个未解之谜，再出现直接卸载之不解释。
 
+h3. 修复
+
+又又出问题了edd load error。不过这次我有些明白了，好像是我的配置文件没写对。无所谓了，不过这次用上了我的U盘了。如果只是引导坏掉没有必要做livecd什么的，拿出U盘到 *另*一台装有grub的电脑上，运行 @grub-install --root-directory=/media/xxxx /dev/sdb@。插上要修复的电脑，从u盘启动就能进去grub的命令行了。首先选择硬盘 @root (hd1,0)@，当然这个是我的配置，意思是第二块硬盘的第一个分区，可以自动补全来看到底是哪个。再运行 @kernel /vmlinux-linux root=/dev/sda3 ro@，依然只是我的配置而已。最后 @initrd /initramfs-linux.img@回车，输入boot...该干嘛干嘛吧^.^
+
 p(date). Posted on Tue Jul 10 01:09:35 2012 by "maplebeats":http://maplebeats.com/me
