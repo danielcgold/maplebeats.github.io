@@ -1,0 +1,39 @@
+---
+layout: post
+title: startx与systemd搞基攻略
+summary: 最近一直是用的startx启动图形界面，每次都要自己登陆一次然后startx。用处了感觉重复劳动了，于是打算开机启动awesome算了。但是我用的systemd，于是service还是得自己写。
+---
+
+h3. 自启动
+
+在 @/usr/lib/systemd/systemd@里新建一个xinit.service文件。内容嘛
+
+{% highlight sh %}
+[Unit]
+Description=Direct login to X
+After=systemd-user-sessions.service
+
+[Service]
+ExecStart=/bin/su maplebeats -l -c "/bin/zsh --login -c xinit"
+
+[Install]
+WantedBy=graphical.target
+{% endhighlight %}
+
+用户名maplebeats,Shell是zsh。自用自己改掉相应的地方就行了。关掉X，在控制台里 @sudo systemtcl start xinit.service@测试一下。如果没问题就可以 @sudo systemtcl enable xinit.service@了。
+
+h3. 未解决的问题
+
+本来以为这样子就完成了，但是权限问题又出现了。我的电源管理是用的xfce4-power-manager，很方便，但是如果直接启动会发现它没有挂起休眠的权限。于是以前我都是用 @dbus-launch --exit-with-session xfce4-power-manager@来启动电源管理，使用很正常很方便。但是用systemd之后它却失去了权限，感觉像是dbus-launch没起作用了。不过还好，影响不大。。。真正要用的时候sudo就行了。如果要解决掉它，看来得看看dbus的文档了。
+
+h3. awesome
+
+上次qy叫我发awesome攻略，我推荐的攻略就是。。。就是。。。抄仙子的配置文件TvT "地址":https://github.com/lilydjwg/myawesomerc
+
+h3. 吐槽
+
+最近在看《Supernatural》中文《邪恶力量》。在学校和寝友把第五季看了，于是回来补前面以及后面几季了。既然网速提升了，我就打算全下载高清，于是恶梦开始了。1到4季种子少，有的种子更是直接全打包100+G。可惜loli.lu已经关闭了，所以就找兄弟把vip6的旋风拿来了，也只有50G。前几季的种子实在难找，第一季好安全度过了。第二季，我下载了，hdtv的，没找到一个可用的字幕！全是错位的！而且错位时间超级给力，每过一段时间增加0.5秒左右的错位。用smplayer直接无法忍受了，于是我用台式XP开始继续看(不得不说win的软件就是安逸，够傻瓜够方便)，每过一会就要调节一下字幕。
+
+昨晚，应该说是今早。看了一部动漫，好像叫《sl》？就是讲一种只能女性驾驭的机械，结果有个男人也能够控制了。于是后宫就开始了，全是他的各种青梅竹马。看了几集，觉得太扯了，于是睡着了。
+
+p(date). Posted on Sun Aug  5 20:36:57 2012 by "maplebeats":http://maplebeats.com/me
