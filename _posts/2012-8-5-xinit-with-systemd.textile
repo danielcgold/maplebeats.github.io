@@ -22,9 +22,15 @@ WantedBy=graphical.target
 
 用户名maplebeats,Shell是zsh。自用自己改掉相应的地方就行了。关掉X，在控制台里 @sudo systemtcl start xinit.service@测试一下。如果没问题就可以 @sudo systemtcl enable xinit.service@了。
 
-h3. 未解决的问题
+h3. 问题
 
 本来以为这样子就完成了，但是权限问题又出现了。我的电源管理是用的xfce4-power-manager，很方便，但是如果直接启动会发现它没有挂起休眠的权限。于是以前我都是用 @dbus-launch --exit-with-session xfce4-power-manager@来启动电源管理，使用很正常很方便。但是用systemd之后它却失去了权限，感觉像是dbus-launch没起作用了。不过还好，影响不大。。。真正要用的时候sudo就行了。如果要解决掉它，看来得看看dbus的文档了。
+
+h3. 原因
+
+今天终于搞明白为什么会没权限了，因为如果使用这个办法直接使用systemd启动xinit是不能创建PAM会话的。于是ConsoleKit就不能正常工作了。。。再于是，非root dbus就成浮云了。wiki上的办法是创建一个autologin.service，然后startx。。。可恶。继续寻找解决办法。。。
+
+其实为什么我一定要非root了控制这个呢，我sudo是没密码的，把所有要权限的启动命令全换成sudo xxx就行了的。强迫症伤不起啊TvT
 
 h3. awesome
 
