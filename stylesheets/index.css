@@ -20,7 +20,7 @@
 }
 .posts {
     background: rgba(255,255,255,0.5);
-    border:5px solid white;
+    border:5px solid #FFF000;
     border-radius: 20px;
     float: left;
     width: 500px;

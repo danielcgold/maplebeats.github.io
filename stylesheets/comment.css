@@ -1,9 +1,12 @@
+.comment {
+    padding-top: 10px;
+}
 #commcon {
     width: 100%;
     height: 80px;
 } 
 .eachcomm {
-    border: 3px solid white;
+    border: 3px solid #FFF000;
     margin-top: 5px;
     padding: 5px;
 }
@@ -23,6 +26,6 @@
     font-size: 100%;
 }
 #commcon,#email,#link,#author{
-    border: 2px solid white;
+    border: 2px solid #FFF000;
     background: rgba(255,255,255,0.5);
 }

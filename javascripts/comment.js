@@ -29,9 +29,9 @@ function pushComm(){
     var push = serialize(document.comminput);
     document.getElementById("pushcomm").value='提交评论中...';
     document.getElementById("pushcomm").disabled=true;
-    document.getElementById("commcon").value='';
     var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
     load_script(data);
+    document.getElementById("commcon").value='';
 }
 function pushCallback(data){
     document.getElementById("pushcomm").value='提交评论';

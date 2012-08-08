@@ -1,5 +1,5 @@
 /*----------init----------*/
-html,body { background: url(/images/bg1.jpg) no-repeat fixed center; color: #222222; height: 100%;font-size: 95%; }
+html,body { background: url(/images/bg1.jpg) repeat-y fixed center; color: #222222; height: 100%; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { margin:0;padding:0; }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
 input,select,textarea{ font-size:100%; }
@@ -16,10 +16,10 @@ q:before,q:after { content:''; }
 sup { vertical-align:text-top; }
 sub { vertical-align:text-bottom; }
 a:hover { text-decoration:underline; }
-a:link,a:visited{ text-decoration:none;color:#FFFFFF; }
+a:link,a:visited{ text-decoration:none;color:#33CC99; }
 ins,a { text-decoration:none; }
 .iexplorer { background: black;color: #FFFFFF;text-align: center;line-height: 18px;padding: 30px 0;font-size: 300%;}
-code { border:1px;padding: 2px;color: #BFBFBF;}
+code { border:1px;padding: 2px;color: #336699;}
 /*----------head---------*/
 .head {
     width: 100%;
@@ -42,19 +42,19 @@ code { border:1px;padding: 2px;color: #BFBFBF;}
 }
 .head-title h1 {
     margin: 15px 0 0 0;
-    color: white;
+    color: #33CC99;
     font-size: 200%;
 }
 .head-title h2 {
     margin: 0;
-    border-top: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFF00;
     padding-top: 2px;
     float: left;
-    color: #FFFFFF;
+    color: #33CC99;
     font-size: 100%;
 }
 .head-line {
-    border-top: 2px solid #FFFFFF;
+    border-top: 2px solid #FFFF00;
 }
 .nav {
     margin-top: 40px;
@@ -66,7 +66,7 @@ code { border:1px;padding: 2px;color: #BFBFBF;}
     text-align: center;
 }
 .header a:hover {
-    color: red;
+    color: #336699;
 }
 /*----------site----------*/
 .site {
@@ -82,7 +82,7 @@ code { border:1px;padding: 2px;color: #BFBFBF;}
 }
 /*-----------me----------------*/
 .me {
-    border:5px solid white;
+    border:5px solid #FFF000; 
     width: 300px;
     border-radius: 300px;
     padding: 20px;
@@ -91,7 +91,7 @@ code { border:1px;padding: 2px;color: #BFBFBF;}
 footer {
     clear: both;
     background: rgba(128,128,128,0.3);
-    color: #FFF5EA;
+    color: #33CC99;
     width: 100%;
     height: 130px;
 }
@@ -140,12 +140,12 @@ footer a:hover {
     background: rgba(255,255,255,0.8);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px #FFF000;
     margin: 0 10px 0 100px;
 }
 .post h1 {
     font-size: 150%;
-    color: #FFFFFF;
+    color: #33CC99;
 }
 .date {
     font-size: 80%;
