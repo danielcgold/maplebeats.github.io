@@ -15,7 +15,7 @@ function commentCall(data){
             return a.date > b.date ? 1: -1;
         });//对数据按时间排序
         for(j in data[i]){
-            text += '<p><img src="http://www.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
+            text += '<p><img src="https://secure.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
             text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
             text += '<p>'+data[i][j].date+'<a href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>---回复</a></p>';
             text += '<h4>吐槽: '+data[i][j].content+'</h4>';
