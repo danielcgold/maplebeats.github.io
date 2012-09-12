@@ -6,7 +6,7 @@
     height: 80px;
 } 
 .eachcomm {
-    border: 3px solid #FFF000;
+    border: 3px solid #FFFFFF;
     margin-top: 5px;
     padding: 5px;
 }
@@ -26,6 +26,6 @@
     font-size: 100%;
 }
 #commcon,#email,#link,#author{
-    border: 2px solid #FFF000;
+    border: 2px solid #FFFFFF;
     background: rgba(255,255,255,0.5);
 }

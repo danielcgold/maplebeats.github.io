@@ -20,26 +20,26 @@
 }
 .posts {
     background: rgba(255,255,255,0.5);
-    border:5px solid #FFF000;
+    box-shadow: 0 0 10px #000000;
     border-radius: 20px;
     float: left;
     width: 500px;
     margin: 0 auto;
     padding: 10px;
-    min-height: 500px;
 }
 #prev {
     background: rgba(0,0,0,0);
+    box-shadow: 0 0 10px #000000;
+    border-radius: 300px;
 }
 #next {
-    margin: 40px 0;
+    margin: 20px 0;
+    border-radius: 300px;
     background: rgba(0,0,0,0);
+    box-shadow: 0 0 10px #000000;
 }
 .updown {
     margin-top: 200px;
     float: left;
     width: 70px;
-}
-.updown img{
-    width: 60px;
 }
