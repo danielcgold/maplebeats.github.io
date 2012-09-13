@@ -7,10 +7,10 @@ Ajax("/post.json", function (data) {
         count : 5,
         next : function () {
             if(this.index < 0){
-                this.index = 0
+                this.index = 1;
             }
             else{
-                this.index += 1 ;
+                this.index += 1;
             }
         },
         prev : function () {
@@ -18,7 +18,7 @@ Ajax("/post.json", function (data) {
                 this.index = (this.MAX/this.Num|0)-2;
             }
             else{
-                this.index -= 1 ;
+                this.index -= 1;
             }
         },
         content : function () {
