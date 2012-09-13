@@ -1,3 +1,5 @@
+//我自己都忍不住吐槽了，这写什么玩意
+
 //if(location.hostname=='maplebeats.com')
     var url="http://gae.maplebeats.com/";
 //else

@@ -7,7 +7,7 @@
     width: 300px;
 }
 .title a:hover {
-    color: blue;
+    color: rgb(192,192,192);
 }
 .content {
     margin-left: 50px;

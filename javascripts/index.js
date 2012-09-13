@@ -6,18 +6,25 @@ Ajax("/post.json", function (data) {
         index : 0,
         count : 5,
         next : function () {
-            this.index += 1 ;
+            if(this.index < 0){
+                this.index = 0
+            }
+            else{
+                this.index += 1 ;
+            }
         },
         prev : function () {
-            this.index -= 1 ;
+            if(this.index >= (this.MAX/this.Num|0)){
+                this.index = (this.MAX/this.Num|0)-2;
+            }
+            else{
+                this.index -= 1 ;
+            }
         },
         content : function () {
-            if(this.index < 0){
-                this.index = 0;
-            }
-            else if(this.index >= (this.MAX/this.Num|0)){
+            if(this.index >= (this.MAX/this.Num|0) && this.MAX%this.Num != 0){
                 this.count = this.MAX % this.Num;
-                this.index = (this.MAX/this.Num|0)
+                this.index = this.MAX/this.Num|0;
             }
             else{
                 this.count = 5;
