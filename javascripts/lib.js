@@ -46,18 +46,6 @@ function serialize(form) {
             }
             break;
         case undefined:
-            //字段集
-        case "file":
-            //文件输入
-        case "submit":
-            //提交按钮
-        case "reset":
-            //重置按钮
-        case "button":
-            //自定义按钮
-            break;
-        case "radio":
-            //单选按钮
         case "checkbox":
             if (!field.checked) {
                 break;
