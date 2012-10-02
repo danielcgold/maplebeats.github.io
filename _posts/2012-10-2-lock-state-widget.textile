@@ -12,15 +12,14 @@ function capslock(widget)
     local s = io.popen("xset -q")
     local ss = ''
     local sn = ''
-    local sss = ''
     for line in s:lines() do
         ss = line:match('Caps Lock:%s*%l*%s*')
         sn = line:match('Num Lock:%s*%l*%s*')
     if ss and sn then break end
     end
-    sss = string.gsub(ss,"Caps Lock:%s*(%l*)%s*","%1")
-    sns = string.gsub(sn,"Num Lock:%s*(%l*)%s*","%1")
-    widget.text = "C(<span color='red'>" .. sss:upper() .."</span>)" .. "N(<span color='red'>" .. sns:upper() .. "</span>)"
+    local sss = string.gsub(ss,"Caps Lock:%s*(%l*)%s*","%1")
+    local sns = string.gsub(sn,"Num Lock:%s*(%l*)%s*","%1")
+    widget.text = "(<span color='red'>" .. sss:upper() .."</span>)" .. "(<span color='#FFFF00'>" .. sns:upper() .. "</span>)"
 end
 {% endhighlight %}
 
@@ -29,9 +28,11 @@ end
 再将这个函数绑定到按键上
 
 {% highlight lua %}
-awful.key({ }, 'Caps_Lock', function ()  capslock(caps_lock) end)
+awful.key({ }, 'Caps_Lock', function ()  capslock(caps_lock) end),
 awful.key({ }, 'Num_Lock', function ()  capslock(caps_lock) end)
 {% endhighlight %}
+
+完整的配置文件在:https://github.com/maplebeats/configuration/blob/master/awesome/rc.lua
 
 h3. 结语
 
