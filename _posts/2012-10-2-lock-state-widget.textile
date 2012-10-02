@@ -1,0 +1,41 @@
+---
+layout: post
+title: awesome大小写锁定widget
+summary: 经常用本本的键盘，没有大小写锁定的指示灯很是蛋疼。一直没找到现成的widget，所以就自己写了一个。顺带把Numlock也显示了，现在状态栏的widget好长的一排啊。。。
+---
+
+h3. 代码
+
+{% highlight lua %}
+function capslock(widget)
+    os.execute("sleep .2")
+    local s = io.popen("xset -q")
+    local ss = ''
+    local sn = ''
+    local sss = ''
+    for line in s:lines() do
+        ss = line:match('Caps Lock:%s*%l*%s*')
+        sn = line:match('Num Lock:%s*%l*%s*')
+    if ss and sn then break end
+    end
+    sss = string.gsub(ss,"Caps Lock:%s*(%l*)%s*","%1")
+    sns = string.gsub(sn,"Num Lock:%s*(%l*)%s*","%1")
+    widget.text = "C(<span color='red'>" .. sss:upper() .."</span>)" .. "N(<span color='red'>" .. sns:upper() .. "</span>)"
+end
+{% endhighlight %}
+
+这函数写得写烂，调用的是xset，而且反复按的话会有bug（当然没有谁无聊一直反复切换嘛）。不得不说，我讨厌lua的正则，好讨厌。
+
+再将这个函数绑定到按键上
+
+{% highlight lua %}
+awful.key({ }, 'Caps_Lock', function ()  capslock(caps_lock) end)
+awful.key({ }, 'Num_Lock', function ()  capslock(caps_lock) end)
+{% endhighlight %}
+
+h3. 结语
+
+国庆快乐(≧▽≦)y
+最近发生的事太多了，好几次都想下“笔”写博客，但是都收回来了。一切的一切等我找到实习了，也许就会好些吧。
+
+p(date). Posted on Tue Oct  2 14:12:56 2012 by "maplebeats":http://maplebeats.com/me
