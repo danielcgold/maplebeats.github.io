@@ -1,0 +1,123 @@
+---
+layout: post
+title: Chinanet拔号连接
+summary: 昨天在网上买的Chinanet又被封了，然后找客服换号的时候，调戏了下客服:(...不过调戏了半天才知道，原来Chinanet也能用pppoe拔号。于是找了下Networkmanager的设置。。。果然没有设置拔号网卡的选项，配置文件里也没有。果断换到比较熟悉的rp-pppoe(为什么比较熟悉呢。。。因为。。。该死的学校电信)
+---
+
+h3. 攻略
+首先运行ifconfig得到网卡。另外提一下。。。ifconfig在net-tools包里
+
+{% highlight sh %}
+ef>ifconfig
+eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether dc:0e:a1:9e:ed:6a  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 16  
+
+eth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 125.87.197.90  netmask 255.255.252.0  broadcast 125.87.199.255
+        inet6 fe80::c218:85ff:fe6f:a3a0  prefixlen 64  scopeid 0x20<link>
+        ether c0:18:85:6f:a3:a0  txqueuelen 1000  (Ethernet)
+        RX packets 340  bytes 43363 (42.3 KiB)
+        RX errors 0  dropped 1  overruns 0  frame 7282
+        TX packets 29  bytes 2848 (2.7 KiB)
+        TX errors 2  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 17  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 16436
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+{% endhighlight %}
+
+可以看到很明显eth1就是无线端口。不过为什么叫eth1呢，以前明明叫wlan0的说。。。可能是我没插网线的原因吧。
+
+接下来搞定rp-pppoe配置问题，关于DNS，保持DHCP自动获取的配置。其中账号要说一下。。。是username@cw.地区名称首字母缩写.chntel.com(比如我的就是xxxxx@cw.ah.chntel.com)。关于这个缩写，可以查网页的js得到。
+
+{% highlight sh %}
+ef>sudo pppoe-setup 
+Welcome to the Roaring Penguin PPPoE client setup.  First, I will run
+some checks on your system to make sure the PPPoE client is installed
+properly...
+
+Looks good!  Now, please enter some information:
+
+USER NAME
+
+>>> Enter your PPPoE user name (default xxxxx@cw.ah.chntel.com): 
+
+INTERFACE
+
+>>> Enter the Ethernet interface connected to the DSL modem
+For Solaris, this is likely to be something like /dev/hme0.
+For Linux, it will be ethn, where 'n' is a number.
+(default eth1): 
+
+Do you want the link to come up on demand, or stay up continuously?
+If you want it to come up on demand, enter the idle time in seconds
+after which the link should be dropped.  If you want the link to
+stay up permanently, enter 'no' (two letters, lower-case.)
+NOTE: Demand-activated links do not interact well with dynamic IP
+addresses.  You may have some problems with demand-activated links.
+>>> Enter the demand value (default no): 
+
+DNS
+
+Please enter the IP address of your ISP's primary DNS server.
+If your ISP claims that 'the server will provide DNS addresses',
+enter 'server' (all lower-case) here.
+If you just press enter, I will assume you know what you are
+doing and not modify your DNS setup.
+>>> Enter the DNS information here: 
+
+PASSWORD
+
+>>> Please enter your PPPoE password:    
+>>> Please re-enter your PPPoE password: 
+
+FIREWALLING
+
+Please choose the firewall rules to use.  Note that these rules are
+very basic.  You are strongly encouraged to use a more sophisticated
+firewall setup; however, these will provide basic security.  If you
+are running any servers on your machine, you must choose 'NONE' and
+set up firewalling yourself.  Otherwise, the firewall rules will deny
+access to all standard servers like Web, e-mail, ftp, etc.  If you
+are using SSH, the rules will block outgoing SSH connections which
+allocate a privileged source port.
+
+The firewall choices are:
+0 - NONE: This script will not set any firewall rules.  You are responsible
+          for ensuring the security of your machine.  You are STRONGLY
+          recommended to use some kind of firewall rules.
+1 - STANDALONE: Appropriate for a basic stand-alone web-surfing workstation
+2 - MASQUERADE: Appropriate for a machine acting as an Internet gateway
+                for a LAN
+>>> Choose a type of firewall (0-2): 0
+{% endhighlight %}
+
+下一步就是喜闻乐见的了，connected!
+
+{% highlight sh %}
+ef>sudo pppoe-start 
+........ Connected!
+{% endhighlight %}
+
+h3. 如果一切正常，你现在你应该上不了网才对。
+
+最后的最后，还差一步。。。这个时候运行 *ifconfig* 就会多一个ppp0
+
+{% highlight sh %}
+ef>sudo route add default ppp0
+{% endhighlight %}
+
+h3. 唉
+
+p(date). Posted on Thu Oct 11 12:14:11 2012 by "maplebeats":http://maplebeats.com/me
