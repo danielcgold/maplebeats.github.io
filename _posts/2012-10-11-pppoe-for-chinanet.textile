@@ -5,6 +5,7 @@ summary: 昨天在网上买的Chinanet又被封了，然后找客服换号的时
 ---
 
 h3. 攻略
+
 首先运行ifconfig得到网卡。另外提一下。。。ifconfig在net-tools包里
 
 {% highlight sh %}
@@ -37,69 +38,24 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 16436
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 {% endhighlight %}
 
-可以看到很明显eth1就是无线端口。不过为什么叫eth1呢，以前明明叫wlan0的说。。。可能是我没插网线的原因吧。
+可以看到很明显eth1就是无线。不过为什么叫eth1呢，以前明明叫wlan0的说。。。可能是我没插网线的原因吧。
 
 接下来搞定rp-pppoe配置问题，关于DNS，保持DHCP自动获取的配置。其中账号要说一下。。。是username@cw.地区名称首字母缩写.chntel.com(比如我的就是xxxxx@cw.ah.chntel.com)。关于这个缩写，可以查网页的js得到。
 
 {% highlight sh %}
 ef>sudo pppoe-setup 
-Welcome to the Roaring Penguin PPPoE client setup.  First, I will run
-some checks on your system to make sure the PPPoE client is installed
-properly...
-
-Looks good!  Now, please enter some information:
-
-USER NAME
-
 >>> Enter your PPPoE user name (default xxxxx@cw.ah.chntel.com): 
 
-INTERFACE
-
 >>> Enter the Ethernet interface connected to the DSL modem
-For Solaris, this is likely to be something like /dev/hme0.
-For Linux, it will be ethn, where 'n' is a number.
 (default eth1): 
 
-Do you want the link to come up on demand, or stay up continuously?
-If you want it to come up on demand, enter the idle time in seconds
-after which the link should be dropped.  If you want the link to
-stay up permanently, enter 'no' (two letters, lower-case.)
-NOTE: Demand-activated links do not interact well with dynamic IP
-addresses.  You may have some problems with demand-activated links.
 >>> Enter the demand value (default no): 
 
-DNS
-
-Please enter the IP address of your ISP's primary DNS server.
-If your ISP claims that 'the server will provide DNS addresses',
-enter 'server' (all lower-case) here.
-If you just press enter, I will assume you know what you are
-doing and not modify your DNS setup.
 >>> Enter the DNS information here: 
-
-PASSWORD
 
 >>> Please enter your PPPoE password:    
 >>> Please re-enter your PPPoE password: 
 
-FIREWALLING
-
-Please choose the firewall rules to use.  Note that these rules are
-very basic.  You are strongly encouraged to use a more sophisticated
-firewall setup; however, these will provide basic security.  If you
-are running any servers on your machine, you must choose 'NONE' and
-set up firewalling yourself.  Otherwise, the firewall rules will deny
-access to all standard servers like Web, e-mail, ftp, etc.  If you
-are using SSH, the rules will block outgoing SSH connections which
-allocate a privileged source port.
-
-The firewall choices are:
-0 - NONE: This script will not set any firewall rules.  You are responsible
-          for ensuring the security of your machine.  You are STRONGLY
-          recommended to use some kind of firewall rules.
-1 - STANDALONE: Appropriate for a basic stand-alone web-surfing workstation
-2 - MASQUERADE: Appropriate for a machine acting as an Internet gateway
-                for a LAN
 >>> Choose a type of firewall (0-2): 0
 {% endhighlight %}
 
@@ -112,12 +68,28 @@ ef>sudo pppoe-start
 
 h3. 如果一切正常，你现在你应该上不了网才对。
 
-最后的最后，还差一步。。。这个时候运行 *ifconfig* 就会多一个ppp0
+最后的最后，还差一步。。。这个时候运行 @ifconfig@ 就会多一个ppp0
 
 {% highlight sh %}
 ef>sudo route add default ppp0
 {% endhighlight %}
 
-h3. 唉
+h3. 如果一切一切真的正常了，那么不用看下面的了
+
+非常悲剧的出现了问题了，无限的掉线。准确的说不是掉线，而是路由表每过一段时间就会更新，并把手动添加的路由表直接删除，可是人家明明是静态路由表。至于原因至今未搞明白，下午上网的时候并没有出现这个问题，所以我怀疑是网络的稳定性有关。
+
+所以暂时的解决办法只能写个Daemon脚本一直添加路由表
+
+{% highlight sh %}
+#!/bin/bash
+while :
+do
+route add default ppp0
+sleep 1
+done
+{% endhighlight %}
+然后用root权限运行脚本后台运行。。。
+
+然后继续查找原因。:(
 
 p(date). Posted on Thu Oct 11 12:14:11 2012 by "maplebeats":http://maplebeats.com/me
