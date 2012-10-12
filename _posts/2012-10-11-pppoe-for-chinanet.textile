@@ -40,7 +40,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 16436
 
 可以看到很明显eth1就是无线。不过为什么叫eth1呢，以前明明叫wlan0的说。。。可能是我没插网线的原因吧。
 
-接下来搞定rp-pppoe配置问题，关于DNS，保持DHCP自动获取的配置。其中账号要说一下。。。是username@cw.地区名称首字母缩写.chntel.com(比如我的就是xxxxx@cw.ah.chntel.com)。关于这个缩写，可以查网页的js得到。
+接下来搞定rp-pppoe配置问题，关于DNS，-保持DHCP自动获取的配置- (Networkmanager的DHCP一定要关掉，被整惨了)。其中账号要说一下。。。是username@cw.地区名称首字母缩写.chntel.com(比如我的就是xxxxx@cw.ah.chntel.com)。关于这个缩写，可以查网页的js得到。
 
 {% highlight sh %}
 ef>sudo pppoe-setup 
@@ -66,13 +66,11 @@ ef>sudo pppoe-start
 ........ Connected!
 {% endhighlight %}
 
-h3. 如果一切正常，你现在你应该上不了网才对。
+h3. 如果一切正常
 
-最后的最后，还差一步。。。这个时候运行 @ifconfig@ 就会多一个ppp0
-
-{% highlight sh %}
-ef>sudo route add default ppp0
-{% endhighlight %}
+最后的最后，还差一步。。。这个时候运行 @ifconfig@ 查看是否有ppp{0,1}。
+如果不能上网，首先route查看路由，正常情况应该是只有两个ppp dev，如果里面ethx/wlan0。。。那应该是nm的dhcp没有关掉产生的。
+没有了dhcp，所以手动设置/etc/resolv.conf,我喜欢8.8.8.8。。。。
 
 h3. 如果一切一切真的正常了，那么不用看下面的了
 
