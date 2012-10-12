@@ -1,7 +1,7 @@
-if(location.hostname=='maplebeats.com')
+//if(location.hostname=='maplebeats.com')
     var url="http://gae.maplebeats.com/";
-else
-    var url="http://localhost:8080/";
+//else
+//   var url="http://localhost:8080/";
 var commorder = 0;
 function getComm(){
     load_script(url+"jsonp?callback=commentCall&"+"postid="+location.pathname);
@@ -20,7 +20,7 @@ function commentCall(data){
             text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
             text += '<p>'+data[i][j].date+'<a class="comm-reply" href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>回复</a></p>';
             text += '<h4>吐槽: '+data[i][j].content+'</h4>';
-            if(j>0) text += '<div>';
+            if(j>0) text += '</div>';
         }
         text += '</div></div>';
     }
