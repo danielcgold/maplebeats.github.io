@@ -1,14 +1,16 @@
 <div class="comment"> 
     <div class="comm" id="comm"></div>
     <form action="javascript:void(0);" id="comminput" name="comminput">
-        <label for="author">昵称：</label>
-        <p><input type="text" name="author" id="author"/></p>
-        <label for="email">email：</label>
-        <p><input type="text" name="email" id="email"/></p>
-         <label for="link">你的网站：</label>
-        <p><input type="text" name="link" id="link"/></p>
-        <label for="commcon">content：</label>
-        <p><textarea name="commcon" id="commcon"/></textarea></p>
+        <div class="userinfo">
+            <p><label for="author">昵称*</label>
+            <input type="text" name="author" id="author"/></p>
+            <p><label for="link">网站*</label>
+            <input type="text" name="link" id="link"/></p>
+            <p><label for="email">邮箱*</label>
+            <input type="text" name="email" id="email"/></p>
+        </div>
+        <p><label for="commcon">评论：</label>
+        <textarea name="commcon" id="commcon"/></textarea></p>
         <p><input type="submit" id="pushcomm" class="pushcomm" value="提交评论"/></p>
     </form>
 </div>

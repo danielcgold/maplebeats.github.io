@@ -16,10 +16,19 @@
 .echcomm a:hover {
 }
 .eachcomm img{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     float: left;
-    margin: 5px;
+    margin-top: 5px;
+}
+.comm-reply{
+    float: right;
+}
+.comm-reply a:hover{
+    color: gray;
+}
+.children{
+    margin-left: 40px;
 }
 #comminput {
     padding-top: 10px;
