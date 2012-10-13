@@ -8,21 +8,24 @@ function getComm(){
 }
 function commentCall(data){
     commorder = getJsonOrder(data)+1; //order
-    var text = [];
+    var text = '';
     for(i in data){
-        text += '<div class="eachcomm"><div id="eachcomm'+i+'">';
         data[i].sort(function(a,b){
             return a.date > b.date ? 1: -1;
         });
+        text += '<div class="eachcomm">';
+        var childrens = '';
         for(j in data[i]){
-            if(j>0) text += '<div class="children">';
+            if(j>0){
+                text += '<div class="children">';
+                childrens += '</div>';
+            }
             text += '<p><img src="https://secure.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
             text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
             text += '<p>'+data[i][j].date+'<a class="comm-reply" href="#comminput" onclick=reply('+'"'+data[i][j].author+'"'+','+i+')>回复</a></p>';
-            text += '<h4>吐槽: '+data[i][j].content+'</h4>';
-            if(j>0) text += '</div>';
+            text += '<p>'+data[i][j].content+'</p>';
         }
-        text += '</div></div>';
+        text += childrens + '</div>';
     }
     document.getElementById("comm").innerHTML = text;
     document.getElementById("pushcomm").disabled=false;

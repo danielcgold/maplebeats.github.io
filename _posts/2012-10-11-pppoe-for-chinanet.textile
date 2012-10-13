@@ -11,36 +11,13 @@ h3. 攻略
 {% highlight sh %}
 ef>ifconfig
 eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-        ether dc:0e:a1:9e:ed:6a  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-        device interrupt 16  
-
 eth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 125.87.197.90  netmask 255.255.252.0  broadcast 125.87.199.255
-        inet6 fe80::c218:85ff:fe6f:a3a0  prefixlen 64  scopeid 0x20<link>
-        ether c0:18:85:6f:a3:a0  txqueuelen 1000  (Ethernet)
-        RX packets 340  bytes 43363 (42.3 KiB)
-        RX errors 0  dropped 1  overruns 0  frame 7282
-        TX packets 29  bytes 2848 (2.7 KiB)
-        TX errors 2  dropped 0 overruns 0  carrier 0  collisions 0
-        device interrupt 17  
-
 lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 16436
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 0  (Local Loopback)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 {% endhighlight %}
 
-可以看到很明显eth1就是无线。不过为什么叫eth1呢，以前明明叫wlan0的说。。。可能是我没插网线的原因吧。
+可以看到很明显eth1就是无线。如果是这种命名，很有可能会出现eth0和eth1交换的情况,因为udev异步加载导致的。所以可以自己写一个udev规则，将网卡名固定。
 
-接下来搞定rp-pppoe配置问题，关于DNS，-保持DHCP自动获取的配置- (Networkmanager的DHCP一定要关掉，被整惨了)。其中账号要说一下。。。是username@cw.地区名称首字母缩写.chntel.com(比如我的就是xxxxx@cw.ah.chntel.com)。关于这个缩写，可以查网页的js得到。
+接下来搞定rp-pppoe配置问题(Networkmanager的DHCP一定要关掉，被整惨了)。其中账号要说一下。。。是username@cw.(地区名称首字母缩写).chntel.com(比如我的就是xxxxx@cw.ah.chntel.com)。关于这个缩写，可以查网页的js得到。
 
 {% highlight sh %}
 ef>sudo pppoe-setup 
@@ -59,24 +36,19 @@ ef>sudo pppoe-setup
 >>> Choose a type of firewall (0-2): 0
 {% endhighlight %}
 
-下一步就是喜闻乐见的了，connected!
-
-{% highlight sh %}
-ef>sudo pppoe-start 
-........ Connected!
-{% endhighlight %}
+然后开始拔号 @pppoe-start@
 
 h3. 如果一切正常
 
-最后的最后，还差一步。。。这个时候运行 @ifconfig@ 查看是否有ppp{0,1}。
+这个时候运行 @ifconfig@ 查看是否有ppp{0,1}。
 如果不能上网，首先route查看路由，正常情况应该是只有两个ppp dev，如果里面ethx/wlan0。。。那应该是nm的dhcp没有关掉产生的。
-没有了dhcp，所以手动设置/etc/resolv.conf,我喜欢8.8.8.8。。。。
+没有了dhcp，所以手动设置/etc/resolv.conf,我喜欢8.8.8.8。
 
 h3. 如果一切一切真的正常了，那么不用看下面的了
 
-非常悲剧的出现了问题了，无限的掉线。准确的说不是掉线，而是路由表每过一段时间就会更新，并把手动添加的路由表直接删除，可是人家明明是静态路由表。至于原因至今未搞明白，下午上网的时候并没有出现这个问题，所以我怀疑是网络的稳定性有关。
+-非常悲剧的出现了问题了，无限的掉线。准确的说不是掉线，而是路由表每过一段时间就会更新，并把手动添加的路由表直接删除，可是人家明明是静态路由表。至于原因至今未搞明白，下午上网的时候并没有出现这个问题，所以我怀疑是网络的稳定性有关。-
 
-所以暂时的解决办法只能写个Daemon脚本一直添加路由表
+-所以暂时的解决办法只能写个Daemon脚本一直添加路由表-
 
 {% highlight sh %}
 #!/bin/bash
@@ -86,9 +58,10 @@ route add default ppp0
 sleep 1
 done
 {% endhighlight %}
-然后用root权限运行脚本后台运行。。。
 
-然后继续查找原因。:(
+-然后用root权限运行脚本后台运行.-
+
+-然后继续查找原因。:(-
 
 h3. 解决
 

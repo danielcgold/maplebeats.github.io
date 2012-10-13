@@ -13,13 +13,12 @@
 .eachcomm a:visited {
     color: black;
 }
-.echcomm a:hover {
-}
-.eachcomm img{
+#comm img{
     height: 40px;
     width: 40px;
     float: left;
-    margin-top: 5px;
+    margin: 5px;
+    border-radius: 10px;
 }
 .comm-reply{
     float: right;
@@ -29,6 +28,7 @@
 }
 .children{
     margin-left: 40px;
+
 }
 #comminput {
     padding-top: 10px;
