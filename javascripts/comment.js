@@ -1,7 +1,7 @@
-//if(location.hostname=='maplebeats.com')
+if(location.hostname=='maplebeats.com')
     var url="http://gae.maplebeats.com/";
-//else
-//   var url="http://localhost:8080/";
+else
+   var url="http://localhost:8080/";
 var commorder = 0;
 function getComm(){
     load_script(url+"jsonp?callback=commentCall&"+"postid="+location.pathname);
@@ -31,12 +31,29 @@ function commentCall(data){
     document.getElementById("pushcomm").disabled=false;
 }
 function pushComm(){
-    var push = serialize(document.comminput);
-    document.getElementById("pushcomm").value='提交评论中...';
-    document.getElementById("pushcomm").disabled=true;
-    var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
-    load_script(data);
-    document.getElementById("commcon").value='';
+    var commcon = document.getElementById("commcon").value;
+    var author = document.getElementById("author").value;
+    var mail = document.getElementById("email").value;
+    var link = document.getElementById("link").value;
+    if(!commcon)
+        alert("请输入评论内容");
+    else if(!author)
+        alert("请输入作者");
+    else if(!mail)
+        alert("请输入邮箱");
+    else if(!link)
+        alert("请输入您的网站");
+    else{
+        localStorage.author = author;
+        localStorage.mail = mail;
+        localStorage.link = link;
+        var push = serialize(document.comminput);
+        document.getElementById("pushcomm").value='提交评论中...';
+        document.getElementById("pushcomm").disabled=true;
+        var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
+        load_script(data);
+        document.getElementById("commcon").value='';
+    }
 }
 function pushCallback(data){
     document.getElementById("pushcomm").value='提交评论';
@@ -64,5 +81,10 @@ function getJsonOrder(json){
 function main(){
     document.getElementById("pushcomm").onclick = pushComm;
     getComm();
+    if(localStorage.author && localStorage.mail && localStorage.link){
+        document.getElementById("email").value=localStorage.mail;
+        document.getElementById("author").value=localStorage.author;
+        document.getElementById("link").value=localStorage.link;
+    }
 }
 main();
