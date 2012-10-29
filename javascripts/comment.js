@@ -39,10 +39,10 @@ function pushComm(){
         alert("请输入评论内容");
     else if(!author)
         alert("请输入作者");
-    else if(!mail)
-        alert("请输入邮箱");
-    else if(!link)
-        alert("请输入您的网站");
+    else if((mail.search(/.*\@.*/)==-1))
+        alert("请输入正确的邮箱");
+    else if((link.search(/.*\..*/)==-1))
+        alert("请输入正确的网站");
     else{
         localStorage.author = author;
         localStorage.mail = mail;
