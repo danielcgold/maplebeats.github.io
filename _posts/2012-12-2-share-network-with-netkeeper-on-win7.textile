@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Netkeeper下分享网络(win7)
-summary: 学校电信为了防止学生些共享网络，于是就用了netkeeper来防共享。这垃圾软件没有一个功能是正常的。以前还好，只是对pppoe帐号进行动态加密。后来更新之后更过分了，用底层来封杀了共享。
+summary: 学校电信为了防止学生共享网络，于是就用了netkeeper来防共享。这垃圾软件没有一个功能是正常的。以前还好，只是对pppoe帐号进行动态加密。后来更新之后更过分了，用底层来封杀了共享。
 ---
 
 可惜写netkeeper果然很是个2B公司，netkeeper进程居然可以直接杀掉。于是本文的重点就在于此。
@@ -12,7 +12,9 @@ h3. 第一步
 
 h3. 第二步
 
-用管理员权限打开cmd，输入 @netsh wlan set hostednetwork mode=allow ssid=name key=passwd@把name和passwd换成自己想要的，密码必须8位以上。
+用 *管理员权限*打开cmd，输入
+@netsh wlan set hostednetwork mode=allow ssid=name key=passwd@
+把name和passwd换成自己想要的，密码必须8位以上。
 
 然后启动它 @netsh wlan start hostednetwork@
 
@@ -28,7 +30,7 @@ h3. 完成
 
 h3. Troubleshooting
 
-有一定机率断网，断掉之后重启netkeeper，再杀掉，重新设置共享即可。
+有一定机率断网，断掉之后重启netkeeper连接，再杀掉，重新设置共享即可。
 再次启动仅需杀掉netkeeper后输入 @netsh wlan start hostednetworks@，设置共享即可。
 求哪位大虾把这个整程写成bat。
 
