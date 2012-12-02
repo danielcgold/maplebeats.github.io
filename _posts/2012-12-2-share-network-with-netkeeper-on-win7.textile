@@ -12,7 +12,7 @@ h3. 第一步
 
 h3. 第二步
 
-用 *管理员权限*打开cmd，输入
+用 *管理员权限* 打开cmd，输入:
 @netsh wlan set hostednetwork mode=allow ssid=name key=passwd@
 把name和passwd换成自己想要的，密码必须8位以上。
 
