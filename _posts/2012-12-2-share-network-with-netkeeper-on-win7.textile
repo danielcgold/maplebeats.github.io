@@ -32,6 +32,6 @@ h3. Troubleshooting
 
 有一定机率断网，断掉之后重启netkeeper连接，再杀掉，重新设置共享即可。
 再次启动仅需杀掉netkeeper后输入 @netsh wlan start hostednetworks@，设置共享即可。
-求哪位大虾把这个整程写成bat。
+求哪位大虾把整个过程写成bat。
 
 p(date). Posted on Sun Dec  2 23:05:38 2012 by "maplebeats":http://maplebeats.com/me
