@@ -14,7 +14,7 @@ h3. 第二步
 
 用管理员权限打开cmd，输入 @netsh wlan set hostednetwork mode=allow ssid=name key=passwd@把name和passwd换成自己想要的，密码必须8位以上。
 
-然后启动它netsh wlan start hostednetwork
+然后启动它 @netsh wlan start hostednetwork@
 
 这时候在网络中心里应该能看到一个Virtual WiFi
 
@@ -28,6 +28,8 @@ h3. 完成
 
 h3. Troubleshooting
 
-I don't know.
+有一定机率断网，断掉之后重启netkeeper，再杀掉，重新设置共享即可。
+再次启动仅需杀掉netkeeper后输入 @netsh wlan start hostednetworks@，设置共享即可。
+求哪位大虾把这个整程写成bat。
 
 p(date). Posted on Sun Dec  2 23:05:38 2012 by "maplebeats":http://maplebeats.com/me
