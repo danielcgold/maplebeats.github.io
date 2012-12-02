@@ -12,7 +12,7 @@ h3. 第一步
 
 h3. 第二步
 
-用管理员权限打开cmd，输入 *netsh wlan set hostednetwork mode=allow ssid=name key=passwd*把name和passwd换成自己想要的，密码必须8位以上。
+用管理员权限打开cmd，输入 @netsh wlan set hostednetwork mode=allow ssid=name key=passwd@把name和passwd换成自己想要的，密码必须8位以上。
 
 然后启动它netsh wlan start hostednetwork
 
@@ -20,13 +20,13 @@ h3. 第二步
 
 h3. 第三步
 
-最后就是设置共享了。打开网络中心，右键ChinaNetWide-->共享-->第一个允许其它...打上勾并选择上你的Virtual WiFi。点击确定～～有警告直接确定过去
+最后就是设置共享了。打开网络中心，右键ChinaNetWide-->共享-->第一个允许其它...打上勾并选择上你的Virtual WiFi。点击确定～～有警告直接确定过去。
 
-h3.完成
+h3. 完成
 
 然后坐等其识别完成并有internet访问权限。
 
-h3.Troubleshooting
+h3. Troubleshooting
 
 I don't know.
 
