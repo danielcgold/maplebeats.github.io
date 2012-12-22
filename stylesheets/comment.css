@@ -1,3 +1,6 @@
+progress{
+    width: 100%;
+}
 .comment {
     padding-top: 10px;
 }
@@ -10,8 +13,9 @@
     margin-top: 5px;
     padding: 5px;
 }
-.eachcomm a:visited {
-    color: black;
+.eachcomm a {
+    font-variant: normal;
+    color: #44A1D0;
 }
 #comm img{
     height: 40px;
