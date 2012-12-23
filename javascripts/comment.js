@@ -56,8 +56,8 @@ function pushComm(){
     }
 }
 function pushCallback(data){
-    document.getElementById("pushcomm").value='提交评论';
     getComm();
+    document.getElementById("pushcomm").value='提交评论';
 }
 function reply(name,order){
     document.getElementById("commcon").value='@'+name+' ';
