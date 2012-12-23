@@ -55,7 +55,8 @@ code { border:1px;padding: 2px;color: #336699;}
     font-size: 200%;
 }
 .head-title h2 {
-    margin: 0;
+    text-decoration: line-through;
+    margin: 0 5px;
     padding-top: 2px;
     float: left;
     font-size: 100%;
