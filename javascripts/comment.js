@@ -16,7 +16,7 @@ function commentCall(data){
         text += '<div class="eachcomm">';
         var childrens = '';
         for(j in data[i]){
-            if(j>0){
+            if(j=1){
                 text += '<div class="children">';
                 childrens += '</div>';
             }
