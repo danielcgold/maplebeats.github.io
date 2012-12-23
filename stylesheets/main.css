@@ -98,7 +98,7 @@ footer {
     background: rgba(128,128,128,0.5);
     color: #FFFFFF;
     width: 100%;
-    height: 130px;
+    height: 150px;
 }
 footer a:hover {
     color: black;
@@ -110,11 +110,11 @@ footer a:hover {
 .power{
     float: left;
     width: 200px;
-    margin: 45px 30px;
+    margin: 45px 20px;
 }
 .link{
     float: left;
-    margin: 35px 30px;
+    margin: 35px 20px;
     width: 200px;
 }
 .link ul li{
@@ -126,7 +126,8 @@ footer a:hover {
 }
 .copyleft {
     float: left;
-    margin: 40px 50px;
+    margin: 40px 10px;
+    width: 150px;
 }
 .copyleft img {
     border-width: 0
