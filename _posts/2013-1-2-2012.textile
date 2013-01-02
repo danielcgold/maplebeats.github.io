@@ -1,0 +1,15 @@
+---
+layout: post
+title: 2012
+summary: 我了个去哦，本来写了一堆2012的总结。结果刚刚leafpad报错内容全被删掉了～！于是算了。于是这总结也难得再写过了，就简短的带过算了。
+---
+
+h3. 上半年
+
+结束大学理论课程。
+
+h3. 下半年
+
+写了几个小软件，束了大学所有的课程。拿到了腾讯的offer，发现了喜欢的妹子。
+
+p(date). Posted on Wed Jan  2 14:41:06 2013 by "maplebeats":http://maplebeats.com/me
