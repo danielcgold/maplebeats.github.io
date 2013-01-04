@@ -22,7 +22,7 @@ function commentCall(data){
             }
             text += '<p><img src="https://secure.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
             text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
-            text += '<p>'+data[i][j].date+'<a class="comm-reply" href="#comminput" onclick=reply(\''+data[i][j].author+'\','+i+')>[回复]</a></p>';
+            text += '<p>'+data[i][j].date+'<a class="comm-reply" href="#comminput" onclick=\"reply(\''+data[i][j].author+'\','+i+');\">[回复]</a></p>';
             text += '<p>'+data[i][j].content+'</p>';
         }
         text += childrens + '</div>';
