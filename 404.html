@@ -23,6 +23,14 @@
            <h1 id='word'>404</h1>
        </div>
        <script>
+           function randomColor() {  
+               var rand = "#"+Math.floor(Math.random()*Math.pow(2,24)).toString(16);  
+               if(rand.length == 7){  
+                   return rand;  
+               }else{  
+                   return randomColor();  
+               }
+           }
            function up(e){
                var size = e.style.fontSize;
                size = parseInt(size.replace('px','')) + 1;
@@ -33,6 +41,9 @@
            w.style.fontSize = '10px';
            var count = 1;
            var t = setInterval(function(){
+               if((count%23)==0){
+                   w.style.color = randomColor();
+               }
                if(count === 200){
                    clearInterval(t);
                    window.location = '/';
