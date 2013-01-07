@@ -3,8 +3,43 @@
     <head>
         <meta charset="utf-8">
         <title>404</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            .wapper{
+                margin-left: auto;
+                margin-right: auto;
+                height: 100%;
+                width: 500px;
+            }
+            #word{
+                font-size: 5px;
+            }
+        </style>
    </head>
    <body>
-       <h1 id="greeting">404</h1>
+       <div class='wapper'>
+           <h1 id='word'>404</h1>
+       </div>
+       <script>
+           function up(e){
+               var size = e.style.fontSize;
+               size = parseInt(size.replace('px','')) + 1;
+               console.log(size);
+               e.style.fontSize = size.toString() + 'px';
+           }
+           var w = document.getElementById('word');
+           w.style.fontSize = '10px';
+           var count = 1;
+           var t = setInterval(function(){
+               if(count === 200){
+                   clearInterval(t);
+                   window.location = '/';
+               }
+               up(w);
+               count++;
+           }, 10);
+       </script>
    </body>
 </html>
