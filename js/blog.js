@@ -31,8 +31,8 @@ Ajax("/post.json", function (data) {
             }
             var builder = '';
             for (var i = this.index*this.Num ; i < this.index*this.Num + this.count; i++) {
-                    builder += ("<li><h2 class=\"title\"><a href=" + data[i].url + ">" + data[i].title + "</a></h2>");
-                    builder += ( data[i].summary + "</li>");
+                    builder += '<li><h2 class="list-title"><a href=' + data[i].url + ">" + data[i].title + "</a></h2>" +
+                    data[i].summary + '</li>';
             }
             return builder;
         }

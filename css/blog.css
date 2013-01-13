@@ -1,1 +1,40 @@
-
+.button{
+    position: fixed;
+}
+#prev{
+    left:0;
+}
+#next{
+    right:0;
+}
+li,ul{
+    list-style: none;
+}
+.list-title{
+    margin: 5px 0 10px 0;
+}
+.list-title a{
+	height:10px;
+	width:80px;
+	font-size:15px;
+	border-radius:3px;
+	background:#5c5c5c;
+	color:white;
+	padding:5px 9px 5px 10px;
+	margin:10px 0 10px -36px;
+	border-bottom:#424242 1px solid;
+    text-decoration: none;
+}
+.list-title a:before{
+	width:4px;
+	height:4px;
+	content:url('../images/corner.png');
+	position:relative;
+	top:14px;
+	left:-8px;
+}
+h2{
+	font-size:20px;
+	font-weight:normal;
+	margin:3px 0;
+}
