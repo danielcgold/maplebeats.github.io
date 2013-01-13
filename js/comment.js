@@ -20,15 +20,15 @@ function commentCall(data){
                 text += '<div class="children">';
                 childrens += '</div>';
             }
-            text += '<p><img src="https://secure.gravatar.com/avatar/'+data[i][j].avatar+'"/>';
-            text += '<a href='+data[i][j].link+">"+data[i][j].author+'</a></p>';
-            text += '<p>'+data[i][j].date+'<a class="comm-reply" href="#comminput" onclick=\"reply(\''+data[i][j].author+'\','+i+');\">[回复]</a></p>';
-            text += '<p>'+data[i][j].content+'</p>';
+            text += '<img src="https://secure.gravatar.com/avatar/'+data[i][j].avatar+'"/>'+
+            '<a href='+data[i][j].link+">"+data[i][j].author+'</a><br>'+
+            '<font class="comm-date">'+data[i][j].date+'</font><a class="comm-reply" href="#comminput" onclick=\"reply(\''+data[i][j].author+'\','+i+');\">[回复]</a><br>'+
+            '<font class="comm-cont">'+data[i][j].content+'</font><br>';
         }
         text += childrens + '</div>';
     }
     document.getElementById("comm").innerHTML = text;
-    document.getElementById("pushcomm").disabled=false;
+    document.getElementById("pushcomm").disabled = false;
 }
 function pushComm(){
     var commcon = document.getElementById("commcon").value;
