@@ -56,3 +56,24 @@ function serialize(form) {
     }
     return parts.join("&");
 }
+function getMousePoint(ev) {
+	var point = {
+		x:0,
+		y:0
+	};
+	if(typeof window.pageYOffset != 'undefined') {
+		point.x = window.pageXOffset;
+		point.y = window.pageYOffset;
+	}
+	else if(typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+		point.x = document.documentElement.scrollLeft;
+		point.y = document.documentElement.scrollTop;
+	}
+	else if(typeof document.body != 'undefined') {
+		point.x = document.body.scrollLeft;
+		point.y = document.body.scrollTop;
+	}
+	point.x += ev.clientX;
+	point.y += ev.clientY;
+	return point;
+}
