@@ -1,12 +1,30 @@
 .button{
+    display: block;
     position: fixed;
     top: 50%;
+    width: 200px;
+    height: 80px;
+    border-radius: 200px;
+    background: #595959;
+}
+.button a{
+    border: 2px solid;
+    border-radius: 150px;
+}
+a:focus{
+    outline: none;
 }
 #prev{
-    left:0;
+    left: -100px;
+}
+#prev a{
+    float: right;
 }
 #next{
-    right:0;
+    right: -100px;
+}
+#next a{
+    float: left;
 }
 li,ul{
     list-style: none;

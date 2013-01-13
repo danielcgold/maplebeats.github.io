@@ -8,14 +8,10 @@ stylesheet:
 ---
 <nav class="updown">
     {% if page.next %}
-        <div id="prev" class="button">
-            <a href="{{ page.next.url }}">PREV</a>
-        </div>
+        <a id="prev" class="button" href="{{ page.next.url }}"></a>
     {% endif %}
     {% if page.previous %}
-        <div id="next" class="button">
-            <a href="{{ page.previous.url }}">NEXT</a>
-        </div>
+        <a id="next" class="button" href="{{ page.previous.url }}"></a>
     {% endif %}
 </nav>
 <div class="inc_author">{{ page.author }}</div>
