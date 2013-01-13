@@ -1,5 +1,6 @@
 .button{
     position: fixed;
+    top: 50%;
 }
 #prev{
     left:0;

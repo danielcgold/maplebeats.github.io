@@ -3,47 +3,86 @@ Ajax("/post.json", function (data) {
     var page = {
         Num : 6,
         MAX : data.length,
-        index : 0,
+        index : 1,
         count : 6,
         next : function () {
-            if(this.index < 0){
-                this.index = 1;
-            }
-            else{
+            if(this.index < (this.MAX/this.Num|0)){
                 this.index += 1;
             }
+            return this.content();
         },
         prev : function () {
-            if(this.index >= (this.MAX/this.Num|0)){
-                this.index = (this.MAX/this.Num|0)-2;
-            }
-            else{
+            if(this.index >1 ){
                 this.index -= 1;
             }
+            return this.content();
         },
         content : function () {
-            if(this.index >= (this.MAX/this.Num|0) && this.MAX%this.Num != 0){
+            var builder = '';
+            var begin = (this.index-1)*this.Num;
+            if(this.index == (this.MAX/this.Num|0)){
                 this.count = this.MAX % this.Num;
-                this.index = this.MAX/this.Num|0;
-            }
-            else{
+            }else{
                 this.count = 6;
             }
-            var builder = '';
-            for (var i = this.index*this.Num ; i < this.index*this.Num + this.count; i++) {
+            for (var i = begin ; i < begin + this.count; i++) {
                     builder += '<li><h2 class="list-title"><a href=' + data[i].url + ">" + data[i].title + "</a></h2>" +
                     data[i].summary + '</li>';
             }
             return builder;
         }
     }
-    document.getElementById("next").onclick = function (){
-        page.next();
-        document.getElementById("posts").innerHTML = page.content();
+    var posts = document.getElementById("posts");
+    var next = document.getElementById("next");
+    var prev = document.getElementById("prev");
+    var button = document.getElementById("nav-button");
+    next.onclick = next_page;
+    prev.onclick = prev_page;
+    function button_page(){
+        if(page.index == 1){
+            prev.style.display = 'none';
+        }else if(page.index == (page.MAX/page.Num|0)){
+            next.style.display = 'none';
+        }else{
+            next.style.display = 'inline';
+            prev.style.display = 'inline';
+        }
     }
-    document.getElementById("prev").onclick = function (){
-        page.prev();
-        document.getElementById("posts").innerHTML = page.content();
+    function next_page(){
+        posts.innerHTML = page.next();
+        button_page();
     }
-    document.getElementById("posts").innerHTML = page.content();
+    function prev_page(){
+        posts.innerHTML = page.prev();
+        button_page();
+    }
+    var mpd = {},
+        mpu={};
+    onmousedown = function(e){
+        var e=e||event;
+        if(e.button==0){
+            mpd = getMousePoint(e);
+        }
+    }
+    onmouseup = function(e){
+        var e=e||event;
+        if(e.button==0){
+            mpu = getMousePoint(e);
+            choice_page(mpu, mpd);
+        }
+    }
+    function choice_page(d, u){
+        var x = d.x - u.x;
+        var y = d.y - u.y;
+        if(y<25 && y>-25){
+            button_page();
+            if(x>20){
+                next_page();
+            }else if(x<-20){
+                prev_page();
+            }
+        }
+    }
+    //init
+    posts.innerHTML = page.content();
 });

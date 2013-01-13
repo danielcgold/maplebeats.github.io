@@ -4,8 +4,20 @@ javascript:
     - /js/comment.js
 stylesheet:
     - /css/comment.css
+    - /css/blog.css
 ---
-
+<nav class="updown">
+    {% if page.next %}
+        <div id="prev" class="button">
+            <a href="{{ page.next.url }}">PREV</a>
+        </div>
+    {% endif %}
+    {% if page.previous %}
+        <div id="next" class="button">
+            <a href="{{ page.previous.url }}">NEXT</a>
+        </div>
+    {% endif %}
+</nav>
 <div class="inc_author">{{ page.author }}</div>
 <h1>{{ page.title }}</h1>
 <div class="inc_time">Post on {{ page.date | date_to_string }}</div>
