@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: shell从文件中赋值给变量
 summary: 纠结了好久,没想到这么简单...郁闷
 ---

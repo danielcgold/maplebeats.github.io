@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: Netkeeper下分享网络(win7)
 summary: 学校电信为了防止学生共享网络，于是就用了netkeeper来防共享。这垃圾软件没有一个功能是正常的。以前还好，只是对pppoe帐号进行动态加密。后来更新之后更过分了，用底层来封杀了共享。
 ---
@@ -34,4 +35,3 @@ h3. Troubleshooting
 再次启动仅需杀掉netkeeper后输入 @netsh wlan start hostednetworks@，设置共享即可。
 求哪位大虾把整个过程写成bat。
 
-p(date). Posted on Sun Dec  2 23:05:38 2012 by "maplebeats":http://maplebeats.com/me

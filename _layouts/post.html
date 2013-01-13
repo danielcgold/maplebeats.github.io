@@ -1,24 +1,17 @@
 ---
-layout: default
+layout: blog
 javascript:
-    - /javascripts/comment.js
+    - /js/comment.js
 stylesheet:
-    - /stylesheets/comment.css
+    - /css/comment.css
 ---
-<div class="post">
-  <h1>{{ page.title }}</h1>
-      {{ page.summary }}
-      {{ content }}
-    <nav class="relate">
-        <h3>Related Posts</h3>
-        <ul>
-             {% for post in site.related_posts limit:3 %}
-                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-        </ul>
-        {% include comment.html %}
-    </nav>
-</div>
-<aside class="aside">
-{% include me.html %}
-</aside>
+
+<div class="inc_author">{{ page.author }}</div>
+<h1>{{ page.title }}</h1>
+<div class="inc_time">Post on {{ page.date | date_to_string }}</div>
+<div class="diver"></div>
+<article>
+{{ page.summary }}
+{{ content }}
+</article>
+{% include comment.html %}

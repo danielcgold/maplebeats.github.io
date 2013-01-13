@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 关于这个博客
 summary: 为什么会在这里，为什么会产生这玩意
 ---

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: Python study notes(2)
 summary: 有点进步,但是依然差得很远
 ---

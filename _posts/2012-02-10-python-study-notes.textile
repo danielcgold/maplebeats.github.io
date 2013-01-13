@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: Python study notes(3)
 ---
 自上一篇学习笔记已经有一段时间了,番外篇不算哈~因为这几天都在学车,所以一直没在家里,所以...不过还好,运气不错.抽到了第一组1号,发挥不错...顺利的拿到了驾照 ≧^◡^≦ 学车真的是恶心至极,总算是解放了（╯‵□′）╯︵┴─┴ 
@@ -26,7 +27,6 @@ def writefile(d_file):
 	f.close()
 	os.system("gedit %s" % d_file)
 	f = open(d_file,'a')
-	f.write('<p class=date>Posted on %s by \"maplebeats\":http://maplebeats.com/me</p>' %
 			time.asctime())
 	f.close()
 
@@ -44,4 +44,3 @@ pushfile()
 {% endhighlight %}
 
 写这个小程序,对python算是进步很多了.这算是我写的第一个python程序吧,抄书那个肯定不算.只涉及了os,time两个标准库,本来打算实现和Shakefile完全一样的功能的,但是偷懒就不了了之了.还学会了参数的传递,书上肯定有,但是我没找到,所以google出来的~当然,这篇文章是用来测试这这程序工作是否正常的 (≧▽≦)y 
-<p class=date>Posted on 2012-02-10 14:35:44 by "maplebeats":http://maplebeats.com/me</p>

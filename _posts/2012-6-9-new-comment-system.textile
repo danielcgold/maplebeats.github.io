@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 新的评论系统
 summary: 用了这么久的disqus，越来越对它感觉不爽了。样式控制不自由，js臃肿，而且还访问慢，另外提交评论也麻烦。以前用了这么久的wp，所以一直想要一个和wp评论相似度非常高的评论系统，所以用过些国内的评论系统。然而，国内的东西用起来实在是让人心寒。
 ---
@@ -23,4 +24,3 @@ h3. 吐槽
 这两天被json折磨得真惨,以及python2.x的编码问题。但是最让我气愤的还是disqus的评论导出，从昨天开始就了导出，现在没有任何邮件？它这是要做什么？
 
 
-p(date). Posted on Sat Jun  9 18:08:52 2012 by "maplebeats":http://maplebeats.com/me

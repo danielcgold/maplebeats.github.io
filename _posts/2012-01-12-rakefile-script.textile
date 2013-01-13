@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 自动生成文章script
 summary: 以后写文章就方便啦
 ---

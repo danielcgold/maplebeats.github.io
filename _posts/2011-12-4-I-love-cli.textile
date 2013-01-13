@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 命令行也不过如此
 summary: 其实黑黑的界面并不可怕
 ---

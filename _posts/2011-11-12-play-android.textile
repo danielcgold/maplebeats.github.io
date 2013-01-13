@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: android心得
 summary: 折腾了两天手机，感觉非常好
 ---

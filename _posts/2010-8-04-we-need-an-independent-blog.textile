@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 自行架设博客是必要的
 summary: Independent blog
 ---

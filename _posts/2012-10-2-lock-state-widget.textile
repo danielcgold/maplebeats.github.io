@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: awesome大小写锁定widget
 summary: 经常用本本的键盘，没有大小写锁定的指示灯很是蛋疼。一直没找到现成的widget，所以就自己写了一个。顺带把Numlock也显示了，现在状态栏的widget好长的一排啊。。。
 ---
@@ -49,4 +50,3 @@ h3. 结语
 国庆快乐(≧▽≦)y
 最近发生的事太多了，好几次都想下“笔”写博客，但是都收回来了。一切的一切等我找到实习了，也许就会好些吧。
 
-p(date). Posted on Tue Oct  2 14:12:56 2012 by "maplebeats":http://maplebeats.com/me

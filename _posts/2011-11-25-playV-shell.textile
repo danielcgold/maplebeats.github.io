@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 连续播放视频shell
 summary: 自己写的一个用来放动漫的shell
 ---

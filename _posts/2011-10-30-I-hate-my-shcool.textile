@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 我到底在学什么
 summary: 一开始就走向了一条错误的道路
 ---

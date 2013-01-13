@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 又喜又忧的周末
 summary: 真不知道说什么好了
 ---

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 神奇的网速
 summary: 联通网自动升级了
 ---

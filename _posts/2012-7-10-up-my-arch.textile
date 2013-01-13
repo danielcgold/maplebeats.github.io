@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 升级arch
 summary: 无聊蛋疼，闷得慌。下午把grub0.97换成syslinux，晚上把内核换成ck。打造我的完美洗发水，去屑效果杠杠的＠＠。
 ---
@@ -30,4 +31,3 @@ h3. 修复
 
 又又出问题了edd load error。不过这次我有些明白了，好像是我的配置文件没写对。无所谓了，不过这次用上了我的U盘了。如果只是引导坏掉没有必要做livecd什么的，拿出U盘到 *另*一台装有grub的电脑上，运行 @grub-install --root-directory=/media/xxxx /dev/sdb@。插上要修复的电脑，从u盘启动就能进去grub的命令行了。首先选择硬盘 @root (hd1,0)@，当然这个是我的配置，意思是第二块硬盘的第一个分区，可以自动补全来看到底是哪个。再运行 @kernel /vmlinux-linux root=/dev/sda3 ro@，依然只是我的配置而已。最后 @initrd /initramfs-linux.img@回车，输入boot...该干嘛干嘛吧^.^
 
-p(date). Posted on Tue Jul 10 01:09:35 2012 by "maplebeats":http://maplebeats.com/me

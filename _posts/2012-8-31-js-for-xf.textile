@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: web旋风插件
 summary: 又一只无聊产品，linux下载总是那么蛋疼+蛋碎。自己动手丰衣足食，嘿嘿。暂时只实现了生成aria2c的下载命令，于是version 0.1～
 ---
@@ -31,4 +32,3 @@ h3. 可恨的牙齿
 
 h3. 我好像在技术文里插了莫名其妙的东东。
 
-p(date). Posted on Fri Aug 31 14:34:47 2012 by "maplebeats":http://maplebeats.com/me

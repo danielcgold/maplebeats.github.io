@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: Google Apps评论系统
 summary: 我有一个新的想法，关于评论系统的。disqus的速度已经让我忍无可忍了，而且样式的控制也不在自己手上，感觉非常不爽。所以我想用google engine来自己做一个。不过...
 ---
@@ -22,4 +23,3 @@ h3. 吐槽
 
 该死的python2.x，编码问题真是让人崩溃。json也是个脑残的格式，虽然非常的简单。。。
 
-p(date). Posted on Wed Jun  6 13:17:46 2012 by "maplebeats":http://maplebeats.com/me

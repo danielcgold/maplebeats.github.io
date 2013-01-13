@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 我的安卓软件集
 summary: 下了一大把的软件
 ---

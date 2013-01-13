@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 一切都结束了
 summary: 又一个新的开始
 ---

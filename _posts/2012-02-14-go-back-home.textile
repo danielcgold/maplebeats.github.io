@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: show图
 ---
 <a href="http://www.flickr.com/photos/maplebeats/6873460773/" title="Flickr 上 楓葉飯糰 的 IMG_20120214_111617"><img src="http://farm8.staticflickr.com/7206/6873460773_343a680d04.jpg" width="650" alt="IMG_20120214_111617"></a>
@@ -31,4 +32,3 @@ title: show图
 最后,show一下无比简陋的博客文章生成程序~
 <a href="http://www.flickr.com/photos/maplebeats/6873583179/" title="Flickr 上 楓葉飯糰 的 Screenshot-2012-02-14 11:59:41"><img src="http://farm8.staticflickr.com/7194/6873583179_1ea6ece93f.jpg" width="495" height="500" alt="Screenshot-2012-02-14 11:59:41"></a>
 
-<p class=date>Posted on Tue Feb 14 12:01:29 2012 by "maplebeats":http://maplebeats.com/me</p>

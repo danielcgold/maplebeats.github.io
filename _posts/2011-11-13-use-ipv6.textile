@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 教程
 summary: 当被逼急了的时候，总得想办法去解决
 ---

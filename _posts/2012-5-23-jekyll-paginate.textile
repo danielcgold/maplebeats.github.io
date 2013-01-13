@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: jekyll显示分页
 summary: 博客文章很多，然后又想分页显示。但是jekyll设置分页显示非常的简单，但是在显示的时候有点小麻烦。因为静态分页，所以每一页都要整页面刷新，github的速度虽然比较不错，但是有时候还是感觉很不爽。于是可以利用ajax＋json实现一个简单的分页，这样子比较快速方便。
 ---
@@ -79,4 +80,3 @@ h3. PS
 
 之所以写这个，是因为我放弃了jquery转向dojo。所以我打算把jquery从我的博客里去除，所以以前那个html5音乐没有了。加上分页依赖jquery,而我打算用dojo重写它，虽然进展并不顺利QAQ。就把这个留给有用的人吧，不过用jekyll建博客的我想不会写不出这玩意～。～
 
-p(date). Posted on Wed May 23 10:40:35 2012 by "maplebeats":http://maplebeats.com/me

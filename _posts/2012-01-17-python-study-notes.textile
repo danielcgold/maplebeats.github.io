@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: Python study notes(1)
 summary: 正式开始学python
 ---

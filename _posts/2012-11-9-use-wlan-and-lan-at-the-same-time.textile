@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 配置本地路由表
 summary: 最近项目从外网切换到了内网，对于我这种只能用WIFI上外网的来说，不得不想办法解决掉它。内网插上网线就可以用networkmanager认证上去,但是这时候的本地路由会默认走有线，无线网就这样子被莫名其妙废掉了，这可不行。
 ---
@@ -40,4 +41,3 @@ h3. TIPS
 
 每次重新连网就要重新编辑本地路由表（坑爹水晶头，一碰就断网），可以写个脚本来自动处理。其实用ip命令来操作其实会更好，不用nm来连网也会更好，但是我偷懒了...手动配置wpa_supplicant.conf真心不是个好主意。
 
-p(date). Posted on Fri Nov  9 11:41:40 2012 by "maplebeats":http://maplebeats.com/me

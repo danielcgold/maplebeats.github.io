@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 叛逃到KDE
 summary: 换到KDE好像已经一周多了，不得不提一下它。现在的KDE界面和我几年前用kubuntu/opensuse的时候区别不是很大，但是稳定性确实提升非常大。至少现在我还没遇见过自己莫名其妙死掉的情况，玻璃界面也很养眼。
 ---
@@ -24,4 +25,3 @@ h3. 后记
 
 明天就世界末日了，祝大家开心吧～～
 
-p(date). Posted on Thu Dec 20 21:56:24 2012 by "maplebeats":http://maplebeats.com/me

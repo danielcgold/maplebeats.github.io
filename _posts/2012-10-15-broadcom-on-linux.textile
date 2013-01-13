@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 更新3.6.2内核
 summary: 昨天linux-ck更新到了3.6.2。于是嘛，本着不更新不舒服斯基，果断编译之。兴冲冲的重启了，然后悲剧了。开机马上就报一堆错，但是使用一些命令正常，而且很容易卡住。心里暗想是不是就这样子滚死了。
 ---
@@ -26,4 +27,3 @@ h3. Tips
 
 明天腾迅面试求RP。虽然不报什么希望,走到哪里算哪里吧:(
 
-p(date). Posted on Mon Oct 15 22:39:41 2012 by "maplebeats":http://maplebeats.com/me

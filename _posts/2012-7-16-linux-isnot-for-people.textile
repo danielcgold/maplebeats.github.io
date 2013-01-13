@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: linux果然不是人用的
 summary: 花了8小时，我终于在我的本本上装了ubuntu！你没有看错，8小时！而且最后装上的居然是ubuntu！我已经无力吐槽了。
 ---
@@ -19,4 +20,3 @@ h3. 吐槽
 无力吐槽。自尊心都打击了没了。
 还是说句，unity真丑。
 
-p(date). Posted on Mon Jul 16 18:44:51 2012 by "maplebeats":http://maplebeats.com/me

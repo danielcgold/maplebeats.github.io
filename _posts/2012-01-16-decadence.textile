@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 颓废
 summary: 放假这么多天,完全处于空虚状态
 ---

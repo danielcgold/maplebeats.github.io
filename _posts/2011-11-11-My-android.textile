@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 入手中兴V880,too
 summary: 换掉跟了自己两年的wm手机，跟上时代！
 ---

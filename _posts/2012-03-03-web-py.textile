@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: web.py使用心得
 ---
 开学过了一周，就被安排神马计算机技能培训。要的成果就是一个连接数据库的动态网站，仅此而已。什么也不讲，那老师只讲了一下，用asp或者php语言连接到数据库就行了。然后还说了句php是linux平台下的，我果断扔了句php是跨平台的。这水平还当老师～
@@ -38,4 +39,3 @@ class Login:
 web.py连接mysql和postgresql比较简单，wiki上有详细说明。我要提的就是关于sqlite，因为这种小玩意用mysql等完全就是杀鸡用牛刀，于是用python本身就自带的sqlite。但是web.py的连接数据库好像并不支持sqlite，所以请用python-sqlite语句对sqlite进行操作。在code.py开头最好不要定义web.py的数据库为sqlite，虽然这样子能连接上数据库，但是这毫意义还会对后面的数据为操作产生干扰。
 
 我写的DKP管理系统的源码就不po出来了，虽然重写了一次，但是还是很丑。下周的目标就是用cgi重写一个，用现成的库虽然是挺不错，但是对于初学者来说并不是好事，对吧。
-<p class=date>Posted on Sat Mar  3 12:43:27 2012 by "maplebeats":http://maplebeats.com/me</p>

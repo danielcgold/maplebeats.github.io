@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 安装Ubuntu曲折之路@.O!
 summary: my ubuntu install road
 ---

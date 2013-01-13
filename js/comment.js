@@ -1,7 +1,7 @@
-if(location.hostname=='maplebeats.com')
+//if(location.hostname=='maplebeats.com')
     var url="http://gae.maplebeats.com/";
-else
-   var url="http://localhost:8080/";
+//else
+//   var url="http://localhost:8080/";
 var commorder = 0;
 function getComm(){
     load_script(url+"jsonp?callback=commentCall&"+"postid="+location.pathname);

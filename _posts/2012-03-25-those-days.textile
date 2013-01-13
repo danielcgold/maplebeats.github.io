@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 这些天
 summary: 转眼已经第五周了？好像是第六周了吧。开学日子越久，心就越烦，事也越来越多。都记不清逃了多少课了，全是因为一件事，早上7点半起不来＠～＠。更可气的时候我那渣一般的课表，一到周五早上都有课。
 ---
@@ -20,4 +21,3 @@ summary: 转眼已经第五周了？好像是第六周了吧。开学日子越�
 
 最后就以我的化物语桌面结尾了，伪物语也完结了。不过不怕，物语系列有12部呢。哈哈～
 <img src="http://farm8.staticflickr.com/7093/7012945789_dba5c3448c.jpg" width="650">
-<p class=date>Posted on Sun Mar 25 12:17:35 2012 by "maplebeats":http://maplebeats.com/me</p>

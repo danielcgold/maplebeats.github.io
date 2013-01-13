@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 旋风网页分析笔记
 ---
 今天对旋风网页版进行抓包得到的成果，记录一下，以免忘记。
@@ -39,4 +40,3 @@ http://pinghot.qq.com/pingd?dm=lixian.qq.com.hot&url=/main.html&arg=-&hottag=ISD
 成品：https://github.com/maplebeats/Scripts/blob/master/xuanfeng.py
 依赖aria2和python3。。。本来有很多打算的，结果到最后成一个小脚本了～。～
 
-<p class=date>Posted on Fri Mar  9 20:18:18 2012 by "maplebeats":http://maplebeats.com/me</p>

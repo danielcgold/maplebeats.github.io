@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: Chinanet拔号连接
 summary: 昨天在网上买的Chinanet又被封了，然后找客服换号的时候，调戏了下客服:(...不过调戏了半天才知道，原来Chinanet也能用pppoe拔号。于是找了下Networkmanager的设置。。。果然没有设置拔号网卡的选项，配置文件里也没有。果断换到比较熟悉的rp-pppoe(为什么比较熟悉呢。。。因为。。。该死的学校电信)
 ---
@@ -67,4 +68,3 @@ h3. 解决
 
 纠结到了2点钟，分析半天日志，终于找到原因了。原因就是DHCP，该死的电信分配的ip有效时间居然只有240秒！然后在log里老是能看到续期，续期，续期。。。每一次续期，路由表都会被重置，重置。。。关掉nm的DHCP之后，一切都正常了。。。又可以安心上网了
 
-p(date). Posted on Thu Oct 11 12:14:11 2012 by "maplebeats":http://maplebeats.com/me

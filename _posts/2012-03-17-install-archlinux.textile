@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 重回洗发水
 summary: 在淘宝上买了个无线路由器，85块大洋。用手机试了试，可以在家里所有地方收到信号，很是满意。自上次装arch已经快是一年以前了。我还记得当时因为arch一个很sb的更新，然后我又做了一件很sb的事。因为太傻了，我就不细说了。。。
 ---
@@ -13,4 +14,3 @@ summary: 在淘宝上买了个无线路由器，85块大洋。用手机试了试
 reboot，总算成功了。终端一直报错sata1，sata1接的是我的CD－ROM。恶心到了，直接把它线拔了。余下的工作就正常多了。。。但是还是被ubuntu害了，在新建用户以前我就应该进home里把配置文件全删掉。但是我没这么干，导致后面好几个软件都出了问题。
 
 
-<p class=date>Posted on Sat Mar 17 05:31:29 2012 by "maplebeats":http://maplebeats.com/me</p>

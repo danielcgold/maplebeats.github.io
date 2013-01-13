@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 同步了一下以前的文章
 summary: 把有些文章移过来了
 ---

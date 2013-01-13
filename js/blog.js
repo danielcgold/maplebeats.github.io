@@ -1,10 +1,10 @@
 Ajax("/post.json", function (data) {
     data = eval(data);
     var page = {
-        Num : 5,
+        Num : 6,
         MAX : data.length,
         index : 0,
-        count : 5,
+        count : 6,
         next : function () {
             if(this.index < 0){
                 this.index = 1;
@@ -27,7 +27,7 @@ Ajax("/post.json", function (data) {
                 this.index = this.MAX/this.Num|0;
             }
             else{
-                this.count = 5;
+                this.count = 6;
             }
             var builder = '';
             for (var i = this.index*this.Num ; i < this.index*this.Num + this.count; i++) {
@@ -37,14 +37,13 @@ Ajax("/post.json", function (data) {
             return builder;
         }
     }
-    document.getElementById("next").onclick=next;
-    function next(){
+    document.getElementById("next").onclick = function (){
         page.next();
-        document.getElementById("posts").innerHTML=page.content();
+        document.getElementById("posts").innerHTML = page.content();
     }
-    document.getElementById("prev").onclick=prev;
-    function prev(){
+    document.getElementById("prev").onclick = function (){
         page.prev();
-        document.getElementById("posts").innerHTML=page.content();
+        document.getElementById("posts").innerHTML = page.content();
     }
+    document.getElementById("posts").innerHTML = page.content();
 });

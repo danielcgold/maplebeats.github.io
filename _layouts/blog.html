@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+            {% if page.title %}
+                {{ page.title}}
+            {% else %}
+                {{ site.title}}
+            {% endif %}
+        </title>
+		<link href='http://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic' rel='stylesheet'>
+		<link rel="stylesheet" href="/css/layout.css" />
+        <link rel="stylesheet" href="/css/syntax.css" />
+        {% for css in page.stylesheet %}
+            <link rel="stylesheet" href="{{ css }}" />
+        {% endfor %}
+	</head>
+	<body>
+		<header>
+			<div class="logobar">
+                <div class="logobar_title">Hello</div>
+			</div>
+		</header>
+		<div class="inc">
+            {{ content }}
+		</div>
+		<footer>
+            Powered By GitHub Lnc.<br>
+            Theme By Losses Don.
+		</footer>
+        <script src="/js/lib.js"></script>
+        {% for js in page.javascript %}
+            <script src="{{ js }}"></script>
+        {% endfor %}
+</html>

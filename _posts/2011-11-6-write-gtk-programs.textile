@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: C＋GTK学习
 summary: 不做不知道，一做吓一跳
 ---

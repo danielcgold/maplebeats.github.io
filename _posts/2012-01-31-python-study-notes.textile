@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: Python study notes($$)
 ---
 好吧,我是标题党.这几天python基本没什么进步,写得很少...心思全在其它地方去了,哪里去了?我也不知道,感觉又发了几天呆.
@@ -13,4 +14,3 @@ title: Python study notes($$)
 晚上听说360和weibo合作了,于是我把 -127.0.0.1 weibo.com- 加入了hosts.因为goagent非常给力,所以转回twitter无压力~下次有空,把twitter和blog用js整合一下.当然也有考虑过g+,已经被邀请过无数次了,依然没开通.
 
 吐槽:伪物语在第4集终于出现让我满意的了~ *小忍* 话说,没想到战场原也有弱点~.~
-<p class=date>Posted on Tue Jan 31 21:55:16 2012 by "maplebeats":http://maplebeats.com/me</p>

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 春天到了
 summary: 自大三以来，应该从大二就开始了吧。班级活动越来越少了，然后一学期也许就一次。然后这学期就定在了这个春暖花开的日子，依然是吃了玩。全班到山下去吃自助餐～。～
 ---
@@ -20,4 +21,3 @@ summary: 自大三以来，应该从大二就开始了吧。班级活动越来�
 
 <img src="http://farm8.staticflickr.com/7045/6892389792_3329027213.jpg" width="400">
 一不小心混分已经混到9K啦！开学的时候到达8K的。看来离1W不远了。
-<p class=date>Posted on Mon Apr  2 21:33:53 2012 by "maplebeats":http://maplebeats.com/me</p>

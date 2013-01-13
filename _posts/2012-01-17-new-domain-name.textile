@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: 域名
 summary: 给博客绑定了独立域名
 ---

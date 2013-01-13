@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: startx与systemd搞基攻略
 summary: 最近一直是用的startx启动图形界面，每次都要自己登陆一次然后startx。用处了感觉重复劳动了，于是打算开机启动awesome算了。但是我用的systemd，于是service还是得自己写。
 ---
@@ -42,4 +43,3 @@ h3. 吐槽
 
 昨晚，应该说是今早。看了一部动漫，好像叫《sl》？就是讲一种只能女性驾驭的机械，结果有个男人也能够控制了。于是后宫就开始了，全是他的各种青梅竹马。看了几集，觉得太扯了，于是睡着了。
 
-p(date). Posted on Sun Aug  5 20:36:57 2012 by "maplebeats":http://maplebeats.com/me

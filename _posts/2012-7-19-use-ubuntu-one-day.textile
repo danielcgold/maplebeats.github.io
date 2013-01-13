@@ -1,5 +1,6 @@
 ---
 layout: post
+author: maplebeats
 title: ubuntu一日游
 summary: 上次更新失败加上在家过久智商降低重装成了ubuntu。用了一天，配置得有模有样了，然后卸载之，换回arch。并不是说ubuntu12.04差，而是ubuntu已经完全不适合我了。在软件中心里装了几个软件，然后发现版本实在太低，另外我非常喜欢systemd。还有个很蛋疼的原因，装上之后感觉ubuntu已经完全不受我控制。
 ---
@@ -23,4 +24,3 @@ h3. 吐槽
 我居然还能看懂高一的物理化学生物。。。
 《绯红的欠片》把男女对换一下，就是一部非常好的后宫漫了。。。
 
-p(date). Posted on Thu Jul 19 23:25:36 2012 by "maplebeats":http://maplebeats.com/me
