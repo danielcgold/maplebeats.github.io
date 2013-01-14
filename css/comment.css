@@ -2,7 +2,7 @@
     padding-top: 10px;
 }
 #commcon {
-    width: 100%;
+    width: 90%;
     height: 80px;
 } 
 .eachcomm {
@@ -41,7 +41,12 @@
 .userinfo{
     font-style: oblique;
 }
-#commcon,#email,#link,#author{
-    border: 2px solid #FFFFFF;
-    background: rgba(255,255,255,0.5);
+#pushcomm,#commcon,#email,#link,#author{
+    margin: 5px;
+}
+button, input, textarea {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px 3px 3px 3px;
+    font-family: inherit;
+    padding: 0.428571rem;
 }

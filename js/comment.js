@@ -83,10 +83,13 @@ function getJsonOrder(json){
 function main(){
     document.getElementById("pushcomm").onclick = pushComm;
     getComm();
+    var email =  document.getElementById("email");
+    var author = document.getElementById("author");
+    var link = document.getElementById("link");
     if(localStorage.author && localStorage.mail && localStorage.link){
-        document.getElementById("email").value=localStorage.mail;
-        document.getElementById("author").value=localStorage.author;
-        document.getElementById("link").value=localStorage.link;
+        email.value=localStorage.mail;
+        author.value=localStorage.author;
+        link.value=localStorage.link;
     }
 }
 main();
