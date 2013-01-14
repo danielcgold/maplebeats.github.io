@@ -2,31 +2,30 @@
     display: block;
     position: fixed;
     top: 30%;
-    width: 200px;
-    height: 80px;
+    width: 150px;
+    height: 60px;
     border-radius: 200px;
-    background: #595959;
-}
-.button a{
-    border: 2px solid;
-    border-radius: 150px;
 }
 a:focus{
     outline: none;
 }
 #prev{
-    left: -150px;
+    border: 10px solid #595959;
+    border-radius: 150px;
+    left: -120px;
     float: right;
 }
 #prev:hover{
-    left: -100px;
+    left: -80px;
 }
 #next{
-    right: -150px;
+    border: 10px solid #595959;
+    border-radius: 150px;
+    right: -120px;
     float: left;
 }
 #next:hover{
-    right: -100px;
+    right: -80px;
 }
 li,ul{
     list-style: none;

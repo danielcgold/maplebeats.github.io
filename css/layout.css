@@ -82,3 +82,7 @@ footer{
 	font-style:italic;
 	text-align:center;
 }
+footer a{
+	color:#7D8184;
+    text-decoration: none;
+}
