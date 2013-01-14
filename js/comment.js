@@ -26,8 +26,8 @@ function commentCall(data){
             '<font class="comm-cont">'+data[i][j].content+'</font><br>';
         }
         text += childrens + '</div>';
+        document.getElementById("comm").innerHTML = text;
     }
-    document.getElementById("comm").innerHTML = text;
     document.getElementById("pushcomm").disabled = false;
 }
 function pushComm(){

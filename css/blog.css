@@ -14,6 +14,7 @@ a:focus{
     border-radius: 150px;
     left: -120px;
     float: right;
+    transition: right 1s;
 }
 #prev:hover{
     left: -80px;
@@ -23,6 +24,7 @@ a:focus{
     border-radius: 150px;
     right: -120px;
     float: left;
+    transition: right 1s;
 }
 #next:hover{
     right: -80px;
