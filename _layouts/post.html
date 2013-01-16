@@ -5,13 +5,14 @@ javascript:
 stylesheet:
     - /css/comment.css
     - /css/blog.css
+    - /css/font.css
 ---
 <nav class="updown">
     {% if page.next %}
-        <a id="prev" class="button" href="{{ page.next.url }}"></a>
+        <a id="prev" class="button" href="{{ page.next.url }}"><i class="icon-reply-1"></i></a>
     {% endif %}
     {% if page.previous %}
-        <a id="next" class="button" href="{{ page.previous.url }}"></a>
+        <a id="next" class="button" href="{{ page.previous.url }}"><i class="icon-forward-1"></i></a>
     {% endif %}
 </nav>
 <div class="inc_author">{{ page.author }}</div>

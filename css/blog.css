@@ -5,29 +5,28 @@
     width: 150px;
     height: 60px;
     border-radius: 200px;
+    box-shadow: 2px 2px 5px #333333; 
+    border: 5px solid #595959;
+    border-radius: 150px;
 }
 a:focus{
     outline: none;
 }
 #prev{
-    border: 10px solid #595959;
-    border-radius: 150px;
     left: -120px;
     float: right;
     transition: left 1s;
 }
 #prev:hover{
-    left: -80px;
+    left: -90px;
 }
 #next{
-    border: 10px solid #595959;
-    border-radius: 150px;
     right: -120px;
     float: left;
     transition: right 1s;
 }
 #next:hover{
-    right: -80px;
+    right: -90px;
 }
 li,ul{
     list-style: none;
