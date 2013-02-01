@@ -1,0 +1,53 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "search": [
+        "forward"
+      ],
+      "code": 10150,
+      "uid": "ec347024a3640deebeeab53fd0d5ad03",
+      "css": "forward",
+      "orig_css": "forward",
+      "orig_code": 10150,
+      "src": "entypo",
+      "from": 10150
+    },
+    {
+      "search": [
+        "forward"
+      ],
+      "code": 59393,
+      "from": 10150,
+      "uid": "7p5gflyid3o4gtesy94a6erq94e4pz7u",
+      "css": "forward-1",
+      "orig_css": "forward",
+      "orig_code": 59393,
+      "src": "typicons"
+    },
+    {
+      "search": [
+        "reply"
+      ],
+      "code": 59154,
+      "uid": "b6fc2f656ef87275889422e19550680a",
+      "css": "reply",
+      "orig_css": "reply",
+      "orig_code": 59154,
+      "src": "entypo",
+      "from": 59154
+    },
+    {
+      "search": [
+        "reply"
+      ],
+      "code": 59392,
+      "from": 59154,
+      "uid": "28r0xthd180mg0wnfh8ek3mtn761hs11",
+      "css": "reply-1",
+      "orig_css": "reply",
+      "orig_code": 59392,
+      "src": "typicons"
+    }
+  ]
+}
