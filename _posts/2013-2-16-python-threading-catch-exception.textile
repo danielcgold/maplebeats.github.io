@@ -24,20 +24,19 @@ h3. Right way
 {% highlight py %}
 def right():
     while True:
-        b = threading.Thread(target=sth)
-        b.start()
+        sth()
 
 def sth():
     #Do sth
     pass
 {% endhighlight %}
 
-这样子写就能正确的捕获异常，很容易就能捕获异常了。我在书上还看到了一种写法，我想这个办法应该会更好。上面的写法有一个局限就是程序阻塞在了right这个函数这里无法进行后面的运算。
+这样子写就能正确的捕获异常，很容易就能捕获异常了,但是这个没有用来到线程。我在书上还看到了一种写法，我想这个办法应该会更好。上面的写法有一个局限就是程序阻塞在了right这个函数这里无法进行后面的运算。
 
 {% highlight py %}
 def right2():
     c = threading.Thread(target=sth2)
-    c.setDaemon(True)
+    c.setDaemon(True) #c.daemon = True会更好
     c.start()
     #Do other things
     c.join()
