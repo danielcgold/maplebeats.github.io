@@ -52,4 +52,5 @@ def sth2():
 h3. 探究
 
 测试代码在这里 https://gist.github.com/maplebeats/4965884
+运行结果,ctrl+c下，test1会报ignored错误，test{2,3}输出都为success.
 其实具体的原因我也不了解，粗略的搜了下，有的说是python的bug。还有的说是因为线程捕获异常本来就麻烦，不知道哪个线程会触发。写这个的目的就是抛砖引玉:D 
