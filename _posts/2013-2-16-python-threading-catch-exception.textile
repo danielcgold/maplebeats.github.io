@@ -1,0 +1,55 @@
+---
+layout: post
+author: maplebeats
+title: python线程异常处理
+summary: 前段时间给bot加上退出功能之后，想捕获keyboardinterrupt也就是ctrl+c终止，但是老是无法捕获，很奇怪。最后把多线程去掉之后才发现了原因。
+---
+
+h3. Wrong way
+
+需要一个线程无限循环来处理事件的时候怎么做呢，以前不知道在哪里学的，我就按下面的代码做了。
+
+{% highlight py %}
+def wrong():
+    #Do sth.
+    a = threading.Thread(target=wrong)
+    a.start()    
+{% endhighlight %}
+
+这个代码表面上没有任何问题，线程自己调用自己，用起来也没有任何问题:D。我几个月来一直是这么用的，从来没出过什么问题。
+然而当你想捕获异常的时候就会发现问题了。当我想捕获ctrl+c，来保证退出程序之后能处理某些事的时候,用try会直接触发 @ <module 'threading' from '/usr/lib/python3.3/threading.py'> ignored @ 而不是自己想要的结果。
+
+h3. Right way
+
+{% highlight py %}
+def right():
+    while True:
+        b = threading.Thread(target=sth)
+        b.start()
+
+def sth():
+    #Do sth
+    pass
+{% endhighlight %}
+
+这样子写就能正确的捕获异常，很容易就能捕获异常了。我在书上还看到了一种写法，我想这个办法应该会更好。上面的写法有一个局限就是程序阻塞在了right这个函数这里无法进行后面的运算。
+
+{% highlight py %}
+def right2():
+    c = threading.Thread(target=sth2)
+    c.setDaemon(True)
+    c.start()
+    #Do other things
+    c.join()
+
+def sth2():
+    while True:
+        #Do sth
+        pass
+{% endhighlight %}
+
+因为是while True，所以setDaemon就不足为奇了，join就是保证线程还未完成前主程序就退出了,所以要放到最后。这样子线程就不会阻塞了。
+
+h3. 探究
+
+其实具体的原因我也不了解，粗略的搜了下，有的说是python的bug。还有的说是因为线程捕获异常本来就麻烦，不知道哪个线程会触发。写这个的目的就是抛砖引玉:D 
