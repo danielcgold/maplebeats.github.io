@@ -3,14 +3,14 @@
     <form action="javascript:void(0);" id="comminput" name="comminput">
         <div class="userinfo">
             <label for="author">Name<font color="red">*</font></label><br>
-            <input type="text" name="author" id="author" value=''/><br>
+            <input type="text" name="author" id="author" placeholder="yourname" required="true"/><br>
             <label for="link">Website<font color="red">*</font></label><br>
-            <input type="text" name="link" id="link"/><br>
+            <input type="text" name="link" id="link" placeholder="www.ooxx.com" required="true"/><br>
             <label for="email">Email<font color="red">*</font></label><br>
-            <input type="text" name="email" id="email"/><br>
+            <input type="text" name="email" id="email" placeholder="user@ooxx.com" required="true"/><br>
         </div>
         <label for="commcon">Comment</label><br>
-        <textarea name="commcon" id="commcon"></textarea><br>
+        <textarea name="commcon" id="commcon" placeholder="在这里吐槽吧~" required="true"></textarea><br>
         <input type="submit" id="pushcomm" class="pushcomm" value="提交评论"/><br>
     </form>
 </div>
