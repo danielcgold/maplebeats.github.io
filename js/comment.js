@@ -35,25 +35,15 @@ function pushComm(){
     var author = document.getElementById("author").value;
     var mail = document.getElementById("email").value;
     var link = document.getElementById("link").value;
-    if(!commcon)
-        alert("请输入评论内容");
-    else if(!author)
-        alert("请输入作者");
-    else if((mail.search(/.*\@.*/)==-1))
-        alert("请输入正确的邮箱");
-    else if((link.search(/.*\..*/)==-1))
-        alert("请输入正确的网站");
-    else{
-        localStorage.author = author;
-        localStorage.mail = mail;
-        localStorage.link = link;
-        var push = serialize(document.comminput);
-        document.getElementById("pushcomm").value='提交评论中...';
-        document.getElementById("pushcomm").disabled=true;
-        var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
-        load_script(data);
-        document.getElementById("commcon").value='';
-    }
+    localStorage.author = author;
+    localStorage.mail = mail;
+    localStorage.link = link;
+    var push = serialize(document.comminput);
+    document.getElementById("pushcomm").value='提交评论中...';
+    document.getElementById("pushcomm").disabled=true;
+    var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
+    load_script(data);
+    //document.getElementById("commcon").value='';
 }
 function pushCallback(data){
     setTimeout(function(){
