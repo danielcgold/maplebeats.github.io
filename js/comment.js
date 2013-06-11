@@ -53,8 +53,8 @@ function pushCallback(data){
     },1000);
 }
 function scollToCommt(num){
-	var id = 'commt' + num;
-	document.getElementById(id).focus();
+	var id = '#commt' + num;
+	window.location.href= id;
 }
 function reply(name,order){
     document.getElementById("commcon").value='@'+name+' ';
