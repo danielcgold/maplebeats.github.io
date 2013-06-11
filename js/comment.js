@@ -53,7 +53,7 @@ function pushCallback(data){
     },1000);
 }
 function scollToCommt(num){
-	var id = 'commt' + i;
+	var id = 'commt' + num;
 	document.getElementById(id).focus();
 }
 function reply(name,order){
