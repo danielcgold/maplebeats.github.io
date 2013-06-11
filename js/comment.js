@@ -13,7 +13,7 @@ function commentCall(data){
         data[i].sort(function(a,b){
             return a.date > b.date ? 1: -1;
         });
-        text += '<div class="eachcomm">';
+        text += '<div class="eachcomm" id="commt'+ i +'">';
         var childrens = '';
         for(j in data[i]){
             if(j==1){
@@ -43,13 +43,18 @@ function pushComm(){
     document.getElementById("pushcomm").disabled=true;
     var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
     load_script(data);
-    //document.getElementById("commcon").value='';
+    document.getElementById("commcon").reset();
 }
 function pushCallback(data){
     setTimeout(function(){
         getComm();
         document.getElementById("pushcomm").value='提交评论';
+		scollToCommt(commorder);
     },1000);
+}
+function scollToCommt(num){
+	var id = 'commt' + i;
+	document.getElementById(id).focus();
 }
 function reply(name,order){
     document.getElementById("commcon").value='@'+name+' ';
