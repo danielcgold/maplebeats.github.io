@@ -75,9 +75,14 @@ function getJsonOrder(json){
     }
     return 0;
 }
+function checkUrl(){
+	var href = window.location.href;
+	window.location.href = href;
+}
 function main(){
     document.getElementById("pushcomm").onclick = pushComm;
     getComm();
+    checkUrl();
     var email =  document.getElementById("email");
     var author = document.getElementById("author");
     var link = document.getElementById("link");
