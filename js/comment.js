@@ -29,6 +29,7 @@ function commentCall(data){
         document.getElementById("comm").innerHTML = text;
     }
     document.getElementById("pushcomm").disabled = false;
+    checkUrl();
 }
 function pushComm(){
     var commcon = document.getElementById("commcon").value;
@@ -77,12 +78,14 @@ function getJsonOrder(json){
 }
 function checkUrl(){
 	var href = window.location.href;
-	window.location.href = href;
+	var id = href.split('#')[1];
+	if(id){
+		window.location.href = '#' + id;
+	}
 }
 function main(){
     document.getElementById("pushcomm").onclick = pushComm;
     getComm();
-    checkUrl();
     var email =  document.getElementById("email");
     var author = document.getElementById("author");
     var link = document.getElementById("link");
