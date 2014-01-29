@@ -1,2 +1,3 @@
 source: .
 pygments: true
+excerpt_separator: ""
