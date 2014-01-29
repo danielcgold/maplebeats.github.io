@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 	<head>
-		<meta charset="utf-8">
-		<title>
-           Welcome to maplebeats' index
-        </title>
-        <style>
-            body{
-                text-align: center;
-            }
-            footer{
-                font-size: 13px;
-                color: rgb(125, 129, 132);
-                font-family: fanwood;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #time{
-                margin-top: 200px;
-                color: red;
-                font-size: 500%;
-            }
-        </style>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Maplebeats' Website Menu</title>
+		<meta name="author" content="maplebeats" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
 	</head>
-    <body>
-        <div>
-            <a href="http://cn.linkedin.com/pub/maple-beats/64/137/478"><img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View maple beats's profile on LinkedIn"></a>
-        </div>
-        <div id='time'>
-            5
-        </div>
-        <footer>
-            <a href='/blog'>BLOG</a>
-            <a href='http://share.maplebeats.com'>SHARE</a>
-            <a href='/photos'>PHOTOS</a>
-        </footer>
-        <script src="/js/index.js"></script>
-    </body>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Search" type="search" class="gn-search">
+									<a class="gn-icon gn-icon-search"><span>Search</span></a>
+								</li>
+								<li>
+								<li><a href="http://twitter.com/maplebeats" class="gn-icon gn-icon-illustrator">Twitter</a></li>
+								<li><a href="http://user.qzone.qq.com/503979672/4" class="gn-icon gn-icon-photoshop">Photos</a></li>
+								</li>
+								<li>
+									<a class="gn-icon gn-icon-archive">Archives</a>
+									<ul class="gn-submenu">
+										<li><a href="http://blog.maplebeats.com/?m" class="gn-icon gn-icon-article">Articles</a></li>
+										<li><a class="gn-icon gn-icon-pictures">Tags</a></li>
+									</ul>
+								</li>
+								<li><a class="gn-icon gn-icon-help">Help</a></li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="/">maplebeats</a></li>
+				<li><a class="codrops-icon codrops-icon-prev" href="http://blog.maplebeats.com"><span>GO TO MY BLOG</span></a></li>
+				<li><a class="codrops-icon codrops-icon-drop" href="http://maplebeats.com/blog"><span>GO TO MY JEKYLL BLOG</span></a></li>
+			</ul>
+			<header>
+				<h1>Nothing</h1>
+				<span>PIA!</span>
+			</header> 
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	</body>
 </html>
