@@ -6,7 +6,7 @@ Ajax("/post.json", function (data) {
         index : 1,
         count : 6,
         next : function () {
-            if(this.index < (this.MAX/this.Num|0)){
+            if(this.index < (this.MAX/this.Num|0)+1){
                 this.index += 1;
             }
             return this.content();
@@ -20,7 +20,7 @@ Ajax("/post.json", function (data) {
         content : function () {
             var builder = '';
             var begin = (this.index-1)*this.Num;
-            if(this.index == (this.MAX/this.Num|0)){
+            if(this.index == (this.MAX/this.Num|0)+1){
                 this.count = this.MAX % this.Num;
             }else{
                 this.count = 6;
@@ -41,7 +41,7 @@ Ajax("/post.json", function (data) {
     function button_page(){
         if(page.index == 1){
             prev.style.display = 'none';
-        }else if(page.index == (page.MAX/page.Num|0)){
+        }else if(page.index == (page.MAX/page.Num|0)+1){
             next.style.display = 'none';
         }else{
             next.style.display = 'inline';
