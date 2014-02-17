@@ -94,5 +94,7 @@ function main(){
         author.value=localStorage.author;
         link.value=localStorage.link;
     }
+    var comminput = document.getElementById("comminput");
+    comminput.style.display = 'inline';
 }
 main();
