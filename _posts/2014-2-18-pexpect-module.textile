@@ -1,0 +1,43 @@
+---
+layout: post
+author: maplebeats
+title: pexpect自动交互模块
+summary: 一直在用各种expect脚本在完成各种事情，但是一直都没有整理过，也没有认真学过expect的语法，昨天给30台机器安装hadoop的时候写了好久的expect胶柱脚本才搞定。所以今天下午比较闲(偷懒)的时候就开始研究expect语法，以前没学过tcl，越用越蛋疼，就怒换切到pexpect。
+---
+
+h3. pexpect介绍
+
+Pexpect 是一个用来启动子程序并对其进行自动控制的 Python 模块。 Pexpect 可以用来和像 ssh、ftp、passwd、telnet 等命令行程序进行自动交互。
+
+h3. 其它工具
+
+实际上expect的主要作用还是用于系统管理，fabric实际上也是可以做到的，而且会更好，但是这玩意在我安装后使用了官方的example之后就感到了一丝丝的蛋疼。厂里由于fabric还引起过一次事故，细节我没有去了解，就是我厂SA开始使用fabric进行批处理，结果没想到fabric居然在运行后更改了/tmp目录的权限，导致几百台机器上使用tmp的服务都GG了(这也不能全怪fabric，厂里/tmp的目录权限设置本身就有点点奇怪)。
+
+h3. 基本使用
+
+{% highlight py %}
+#!/usr/bin/env python
+import pexpect
+import sys
+
+ssh = pexpect.spawn("ssh user@host")
+
+ssh.logfile = sys.stdout
+
+r = ssh.expect(['password:'])
+
+if r == 0:
+    ssh.sendline('xxxxx')
+
+ssh.expect(pexpect.EOF)
+{% endhighlight %}
+
+expect脚本代码比较简单，很容易看懂。pexpect也是一样的,首先用spawn启动需要自动交互的程序ssh，得到一个ssh的spawn对象。把ssh的logfile打印到标准输出方便调试，不然的话什么也看不到的哦。
+后面就比较重要了，r的返回值的意思是匹配到了传入的第几个参数，从0开始。当然这里我知道它返回的肯定是0，如果没有找到匹配，会抛出异常的。PS:传入参数的是re正则不能用通配符。
+出现了交互就可以给命令行发送输入了，sendline('xxx')和send('xxx\n')效果其实是一样的，不过挺方便的。
+最后一句很重要，如果在python交互模式下就不需要这一句，但是在脚本里一定要写上这个，作用是等待ssh返回EOF。如果不等待，后果就是程序直接结束了...结束了...spawn也结束了。所以在最后一定要有一个等待程序，能达到这个目的的语句都可以，不限于最后一句，用ssh.read()也是可以的。
+
+h3. 作用
+
+厂里最新的机器上全都预装的python2.6+，并且带了一堆库，并且并且可以使用yum。虽然大部分运营机还是用的那蛋疼的suse10，不过我已经不需要考虑它们的兼容了，心情大好。所以打算重启我的运维LIB计划。这算是第一步吧。
+工作这么久，都没写啥好文章。打算后面带点干货出来，有空把我厂里最强大的统一应用框架(total application frame)讲讲。
