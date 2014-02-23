@@ -29,6 +29,7 @@ function commentCall(data){
         document.getElementById("comm").innerHTML = text;
     }
     document.getElementById("pushcomm").disabled = false;
+    document.getElementById("commcon").value = '' //reset comment
     checkUrl();
 }
 function pushComm(){
@@ -44,7 +45,6 @@ function pushComm(){
     document.getElementById("pushcomm").disabled=true;
     var data = url+"comm?postid="+location.pathname+"&callback=pushCallback"+"&order="+commorder + "&"+push;
     load_script(data);
-    document.getElementById("commcon").reset();
 }
 function pushCallback(data){
     setTimeout(function(){
