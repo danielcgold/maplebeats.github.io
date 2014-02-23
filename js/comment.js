@@ -29,7 +29,7 @@ function commentCall(data){
         document.getElementById("comm").innerHTML = text;
     }
     document.getElementById("pushcomm").disabled = false;
-    document.getElementById("commcon").value = '' //reset comment
+    document.getElementById("commcon").value = ''; //reset comment
     checkUrl();
 }
 function pushComm(){
