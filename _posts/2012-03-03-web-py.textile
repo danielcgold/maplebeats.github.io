@@ -39,3 +39,28 @@ class Login:
 web.py连接mysql和postgresql比较简单，wiki上有详细说明。我要提的就是关于sqlite，因为这种小玩意用mysql等完全就是杀鸡用牛刀，于是用python本身就自带的sqlite。但是web.py的连接数据库好像并不支持sqlite，所以请用python-sqlite语句对sqlite进行操作。在code.py开头最好不要定义web.py的数据库为sqlite，虽然这样子能连接上数据库，但是这毫意义还会对后面的数据为操作产生干扰。
 
 我写的DKP管理系统的源码就不po出来了，虽然重写了一次，但是还是很丑。下周的目标就是用cgi重写一个，用现成的库虽然是挺不错，但是对于初学者来说并不是好事，对吧。
+
+2014.12.29 update
+今天我徒弟在使用webpy的时候遇见了一个问题，在使用下面这个用例的时候webpy在终端启动会报错error: No socket could be created
+
+{% highlight py %}
+#!/usr/bin/env python
+
+import web
+
+urls = (
+"/","index"
+)
+
+class index:
+    def GET(self):
+        return "hello world"
+
+app = web.application(urls, globals())
+app.run()
+{% endhighlight %}
+
+WTF!我看了半天也没有发现有问题。然后再和生产环境上对比发现，没问题呀，我生产环境上也是这么写的一点问题也没有。
+但是生产环境下我关闭了调试模式，于是把重点关注到了调试模式上。当我把app.run使用 if __name__ == "__main__":封装起来后发现程序正常了。
+原来webpy的调试模式会自己调用自己本身重载类达到动态调试的目的，那么上面这个程序就会有个问题。我父进程已经绑定了一个端口，当父进程重载文件的时候必定会运行它。所以app.run()会被运行开始绑定端口之类的操作，那必然导致端口冲突，因为父进程已经绑定了。
+
